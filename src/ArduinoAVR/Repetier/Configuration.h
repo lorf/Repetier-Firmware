@@ -67,7 +67,7 @@
 #define DRIVE_SYSTEM 0
 #define XAXIS_STEPS_PER_MM 100
 #define YAXIS_STEPS_PER_MM 100
-#define ZAXIS_STEPS_PER_MM 1600
+#define ZAXIS_STEPS_PER_MM 400
 #define EXTRUDER_FAN_COOL_TEMP 50
 #define PDM_FOR_EXTRUDER 0
 #define PDM_FOR_COOLER 0
@@ -98,14 +98,14 @@
 #define EXT0_MAX_FEEDRATE 50
 #define EXT0_MAX_START_FEEDRATE 20
 #define EXT0_MAX_ACCELERATION 5000
-#define EXT0_HEAT_MANAGER 3
+#define EXT0_HEAT_MANAGER 1
 #define EXT0_PREHEAT_TEMP 190
 #define EXT0_WATCHPERIOD 1
 #define EXT0_PID_INTEGRAL_DRIVE_MAX 230
-#define EXT0_PID_INTEGRAL_DRIVE_MIN 40
-#define EXT0_PID_PGAIN_OR_DEAD_TIME 7
-#define EXT0_PID_I 2
-#define EXT0_PID_D 40
+#define EXT0_PID_INTEGRAL_DRIVE_MIN 130
+#define EXT0_PID_PGAIN_OR_DEAD_TIME 8
+#define EXT0_PID_I 0.35
+#define EXT0_PID_D 41
 #define EXT0_PID_MAX 255
 #define EXT0_ADVANCE_K 0
 #define EXT0_ADVANCE_L 0
@@ -164,22 +164,22 @@
 
 #define HAVE_HEATED_BED 1
 #define HEATED_BED_PREHEAT_TEMP 55
-#define HEATED_BED_MAX_TEMP 120
+#define HEATED_BED_MAX_TEMP 150
 #define SKIP_M190_IF_WITHIN 3
 #define HEATED_BED_SENSOR_TYPE 1
 #define HEATED_BED_SENSOR_PIN TEMP_1_PIN
 #define HEATED_BED_HEATER_PIN 12
 #define HEATED_BED_SET_INTERVAL 5000
-#define HEATED_BED_HEAT_MANAGER 0
+#define HEATED_BED_HEAT_MANAGER 1
 #define HEATED_BED_PID_INTEGRAL_DRIVE_MAX 255
 #define HEATED_BED_PID_INTEGRAL_DRIVE_MIN 80
-#define HEATED_BED_PID_PGAIN_OR_DEAD_TIME   196
-#define HEATED_BED_PID_IGAIN   33
-#define HEATED_BED_PID_DGAIN 290
+#define HEATED_BED_PID_PGAIN_OR_DEAD_TIME   260
+#define HEATED_BED_PID_IGAIN   114
+#define HEATED_BED_PID_DGAIN 149
 #define HEATED_BED_PID_MAX 255
 #define HEATED_BED_DECOUPLE_TEST_PERIOD 300000
 #define MIN_EXTRUDER_TEMP 150
-#define MAXTEMP 275
+#define MAXTEMP 240
 #define MIN_DEFECT_TEMPERATURE -10
 #define MAX_DEFECT_TEMPERATURE 290
 #define MILLISECONDS_PREHEAT_TIME 30000
@@ -332,8 +332,8 @@ It also can add a delay to wait for spindle to run on full speed.
 #define X_MAX_LENGTH 245
 #define Y_MAX_LENGTH 210
 #define Z_MAX_LENGTH 230
-#define X_MIN_POS -38
-#define Y_MIN_POS -7
+#define X_MIN_POS -32
+#define Y_MIN_POS -9
 #define Z_MIN_POS 0
 #define PARK_POSITION_X 0
 #define PARK_POSITION_Y 220
@@ -370,14 +370,14 @@ It also can add a delay to wait for spindle to run on full speed.
 
 #define DELTASEGMENTS_PER_PRINTLINE 24
 #define STEPPER_INACTIVE_TIME 360L
-#define MAX_INACTIVE_TIME 0L
+#define MAX_INACTIVE_TIME 600L
 #define MAX_FEEDRATE_X 400
 #define MAX_FEEDRATE_Y 400
 #define MAX_FEEDRATE_Z 5
 #define HOMING_FEEDRATE_X 100
 #define HOMING_FEEDRATE_Y 100
 #define HOMING_FEEDRATE_Z 4
-#define HOMING_ORDER HOME_ORDER_XYZ
+#define HOMING_ORDER HOME_ORDER_YXZ
 #define ZHOME_PRE_RAISE 0
 #define ZHOME_PRE_RAISE_DISTANCE 10
 #define RAISE_Z_ON_TOOLCHANGE 0
@@ -440,8 +440,8 @@ It also can add a delay to wait for spindle to run on full speed.
 
 // ################# Misc. settings ##################
 
-#define BAUDRATE 115200
-#define ENABLE_POWER_ON_STARTUP 1
+#define BAUDRATE 230400
+#define ENABLE_POWER_ON_STARTUP 0
 #define POWER_INVERTING 0
 #define AUTOMATIC_POWERUP 0
 #define KILL_METHOD 1
@@ -451,7 +451,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ECHO_ON_EXECUTE 1
 #define EEPROM_MODE 1
 #undef PS_ON_PIN
-#define PS_ON_PIN ORIG_PS_ON_PIN
+#define PS_ON_PIN -1
 #define JSON_OUTPUT 0
 
 /* ======== Servos =======
@@ -473,7 +473,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define FAN_KICKSTART_TIME  200
 #define MAX_FAN_PWM 255
 
-        #define FEATURE_WATCHDOG 0
+        #define FEATURE_WATCHDOG 1
 
 // #################### Z-Probing #####################
 
@@ -484,8 +484,8 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define EXTRUDER_IS_Z_PROBE 0
 #define Z_PROBE_DISABLE_HEATERS 0
 #define Z_PROBE_BED_DISTANCE 10
-#define Z_PROBE_PIN -1
-#define Z_PROBE_PULLUP 0
+#define Z_PROBE_PIN ORIG_Z_MIN_PIN
+#define Z_PROBE_PULLUP 1
 #define Z_PROBE_ON_HIGH 0
 #define Z_PROBE_X_OFFSET 0
 #define Z_PROBE_Y_OFFSET 0
@@ -494,24 +494,24 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_XY_SPEED 150
 #define Z_PROBE_SWITCHING_DISTANCE 1
 #define Z_PROBE_REPETITIONS 1
-#define Z_PROBE_HEIGHT 40
+#define Z_PROBE_HEIGHT 5
 #define Z_PROBE_DELAY 0
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define Z_PROBE_RUN_AFTER_EVERY_PROBE ""
 #define Z_PROBE_REQUIRES_HEATING 0
 #define Z_PROBE_MIN_TEMPERATURE 150
-#define FEATURE_AUTOLEVEL 0
+#define FEATURE_AUTOLEVEL 1
 #define FEATURE_SOFTWARE_LEVELING 0
-#define Z_PROBE_X1 20
-#define Z_PROBE_Y1 20
-#define Z_PROBE_X2 160
-#define Z_PROBE_Y2 20
-#define Z_PROBE_X3 100
-#define Z_PROBE_Y3 160
-#define BED_LEVELING_METHOD 0
+#define Z_PROBE_X1 30
+#define Z_PROBE_Y1 30
+#define Z_PROBE_X2 190
+#define Z_PROBE_Y2 30
+#define Z_PROBE_X3 30
+#define Z_PROBE_Y3 190
+#define BED_LEVELING_METHOD 1
 #define BED_CORRECTION_METHOD 0
-#define BED_LEVELING_GRID_SIZE 5
+#define BED_LEVELING_GRID_SIZE 3
 #define BED_LEVELING_REPETITIONS 5
 #define BED_MOTOR_1_X 0
 #define BED_MOTOR_1_Y 0
@@ -555,8 +555,8 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define LANGUAGE_CZ_ACTIVE 0
 #define LANGUAGE_PL_ACTIVE 0
 #define LANGUAGE_TR_ACTIVE 0
-#define UI_PRINTER_NAME "P802_8_V1.5"
-#define UI_PRINTER_COMPANY "Zonestar 3D printer"
+#define UI_PRINTER_NAME "Anet A8-B"
+#define UI_PRINTER_COMPANY "RepRap"
 #define UI_PAGES_DURATION 4000
 #define UI_SPEEDDEPENDENT_POSITIONING 0
 #define UI_DISABLE_AUTO_PAGESWITCH 1
@@ -564,14 +564,14 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define FEATURE_UI_KEYS 0
 #define UI_ENCODER_SPEED 1
 #define UI_REVERSE_ENCODER 0
-#define UI_KEY_BOUNCETIME 20
-#define UI_KEY_FIRST_REPEAT 500
+#define UI_KEY_BOUNCETIME 10
+#define UI_KEY_FIRST_REPEAT 250
 #define UI_KEY_REDUCE_REPEAT 50
 #define UI_KEY_MIN_REPEAT 50
 #define FEATURE_BEEPER 0
 #define CASE_LIGHTS_PIN -1
 #define CASE_LIGHT_DEFAULT_ON 1
-#define UI_START_SCREEN_DELAY 3000
+#define UI_START_SCREEN_DELAY 300
 #define UI_DYNAMIC_ENCODER_SPEED 1
         /**
 Beeper sound definitions for short beeps during key actions
@@ -622,12 +622,12 @@ Values must be in range 1..255
 {
     "editMode": 2,
     "processor": 0,
-    "baudrate": 115200,
+    "baudrate": 230400,
     "bluetoothSerial": -1,
     "bluetoothBaudrate": 115200,
     "xStepsPerMM": 100,
     "yStepsPerMM": 100,
-    "zStepsPerMM": 1600,
+    "zStepsPerMM": 400,
     "xInvert": 0,
     "x2Invert": 0,
     "xInvertEnable": 0,
@@ -643,8 +643,8 @@ Values must be in range 1..255
     "extruder": [
         {
             "id": 0,
-            "heatManager": 3,
-            "pidDriveMin": 40,
+            "heatManager": 1,
+            "pidDriveMin": 130,
             "pidDriveMax": 230,
             "pidMax": 255,
             "sensorType": 1,
@@ -656,9 +656,9 @@ Values must be in range 1..255
             "invertEnable": "0",
             "acceleration": 5000,
             "watchPeriod": 1,
-            "pidP": 7,
-            "pidI": 2,
-            "pidD": 40,
+            "pidP": 8,
+            "pidI": 0.35,
+            "pidD": 41,
             "advanceK": 0,
             "advanceL": 0,
             "waitRetractTemp": 150,
@@ -745,9 +745,9 @@ Values must be in range 1..255
     "backlashY": 0,
     "backlashZ": 0,
     "stepperInactiveTime": 360,
-    "maxInactiveTime": 0,
-    "xMinPos": -38,
-    "yMinPos": -7,
+    "maxInactiveTime": 600,
+    "xMinPos": -32,
+    "yMinPos": -9,
     "zMinPos": 0,
     "xLength": 245,
     "yLength": 210,
@@ -792,7 +792,7 @@ Values must be in range 1..255
     "moveCacheSize": 16,
     "moveCacheLow": 10,
     "lowTicksPerMove": 250000,
-    "enablePowerOnStartup": "1",
+    "enablePowerOnStartup": "0",
     "echoOnExecute": "1",
     "sendWaits": "1",
     "ackWithLineNumber": "1",
@@ -841,14 +841,14 @@ Values must be in range 1..255
     "servo1Pin": -1,
     "servo2Pin": -1,
     "servo3Pin": -1,
-    "featureWatchdog": "0",
+    "featureWatchdog": "1",
     "hasHeatedBed": "1",
     "enableZProbing": "0",
     "extrudeMaxLength": 160,
-    "homeOrder": "HOME_ORDER_XYZ",
+    "homeOrder": "HOME_ORDER_YXZ",
     "featureController": 24,
-    "uiPrinterName": "P802_8_V1.5",
-    "uiPrinterCompany": "Zonestar 3D printer",
+    "uiPrinterName": "Anet A8-B",
+    "uiPrinterCompany": "RepRap",
     "uiPagesDuration": 4000,
     "uiHeadline": "",
     "uiDisablePageswitch": "1",
@@ -856,8 +856,8 @@ Values must be in range 1..255
     "featureKeys": "0",
     "uiEncoderSpeed": 1,
     "uiReverseEncoder": "0",
-    "uiKeyBouncetime": 20,
-    "uiKeyFirstRepeat": 500,
+    "uiKeyBouncetime": 10,
+    "uiKeyFirstRepeat": 250,
     "uiKeyReduceRepeat": 50,
     "uiKeyMinRepeat": 50,
     "featureBeeper": "0",
@@ -868,18 +868,18 @@ Values must be in range 1..255
     "uiExtruderFeedrate": 2,
     "uiExtruderRetractDistance": 3,
     "uiSpeeddependentPositioning": "0",
-    "maxBedTemperature": 120,
+    "maxBedTemperature": 150,
     "bedSensorType": 1,
     "bedSensorPin": "TEMP_1_PIN",
     "bedHeaterPin": 12,
-    "bedHeatManager": 0,
+    "bedHeatManager": 1,
     "bedPreheat": 55,
     "bedUpdateInterval": 5000,
     "bedPidDriveMin": 80,
     "bedPidDriveMax": 255,
-    "bedPidP": 196,
-    "bedPidI": 33,
-    "bedPidD": 290,
+    "bedPidP": 260,
+    "bedPidI": 114,
+    "bedPidD": 149,
     "bedPidMax": 255,
     "bedDecoupleTestPeriod": 300,
     "caseLightPin": -1,
@@ -929,7 +929,7 @@ Values must be in range 1..255
     "skipM109Within": 2,
     "extruderFanCoolTemp": 50,
     "minTemp": 150,
-    "maxTemp": 275,
+    "maxTemp": 240,
     "minDefectTemp": -10,
     "maxDefectTemp": 290,
     "arcSupport": "1",
@@ -948,33 +948,33 @@ Values must be in range 1..255
     "fanThermoThermistorPin": -1,
     "fanThermoThermistorType": 1,
     "scalePidToMax": "1",
-    "zProbePin": -1,
+    "zProbePin": "ORIG_Z_MIN_PIN",
     "zProbeBedDistance": 10,
     "zProbeDisableHeaters": "0",
-    "zProbePullup": "0",
+    "zProbePullup": "1",
     "zProbeOnHigh": "0",
     "zProbeXOffset": 0,
     "zProbeYOffset": 0,
     "zProbeWaitBeforeTest": "0",
     "zProbeSpeed": 2,
     "zProbeXYSpeed": 150,
-    "zProbeHeight": 40,
+    "zProbeHeight": 5,
     "zProbeStartScript": "",
     "zProbeFinishedScript": "",
-    "featureAutolevel": "0",
-    "zProbeX1": 20,
-    "zProbeY1": 20,
-    "zProbeX2": 160,
-    "zProbeY2": 20,
-    "zProbeX3": 100,
-    "zProbeY3": 160,
+    "featureAutolevel": "1",
+    "zProbeX1": 30,
+    "zProbeY1": 30,
+    "zProbeX2": 190,
+    "zProbeY2": 30,
+    "zProbeX3": 30,
+    "zProbeY3": 190,
     "zProbeSwitchingDistance": 1,
     "zProbeRepetitions": 1,
     "zProbeEveryPoint": "",
     "sdSupport": "0",
     "sdCardDetectPin": -1,
     "sdCardDetectInverted": "0",
-    "uiStartScreenDelay": 3000,
+    "uiStartScreenDelay": 300,
     "xEndstopBackMove": 5,
     "yEndstopBackMove": 5,
     "zEndstopBackMove": 2,
@@ -998,7 +998,7 @@ Values must be in range 1..255
     "babystepMultiplicator": 1,
     "pdmForHeater": "0",
     "pdmForCooler": "0",
-    "psOn": "ORIG_PS_ON_PIN",
+    "psOn": -1,
     "mixingExtruder": "0",
     "decouplingTestMaxHoldVariance": 20,
     "decouplingTestMinTempRise": 1,
@@ -1200,9 +1200,9 @@ Values must be in range 1..255
     "cncSafeZ": 150,
     "startupGCode": "",
     "jsonOutput": "0",
-    "bedLevelingMethod": 0,
+    "bedLevelingMethod": 1,
     "bedCorrectionMethod": 0,
-    "bedLevelingGridSize": 5,
+    "bedLevelingGridSize": 3,
     "bedLevelingRepetitions": 5,
     "bedMotor1X": 0,
     "bedMotor1Y": 0,
