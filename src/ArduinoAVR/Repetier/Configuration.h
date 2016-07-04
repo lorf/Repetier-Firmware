@@ -376,7 +376,7 @@ It also can add a delay to wait for spindle to run on full speed.
 
 // ################# Misc. settings ##################
 
-#define BAUDRATE 230400
+#define BAUDRATE 115200
 #define ENABLE_POWER_ON_STARTUP 0
 #define POWER_INVERTING 0
 #define KILL_METHOD 1
@@ -555,7 +555,7 @@ Values must be in range 1..255
 {
     "editMode": 2,
     "processor": 0,
-    "baudrate": 230400,
+    "baudrate": 115200,
     "bluetoothSerial": -1,
     "bluetoothBaudrate": 115200,
     "xStepsPerMM": 100,
