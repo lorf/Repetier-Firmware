@@ -329,11 +329,11 @@ It also can add a delay to wait for spindle to run on full speed.
 #define X_HOME_DIR -1
 #define Y_HOME_DIR -1
 #define Z_HOME_DIR -1
-#define X_MAX_LENGTH 245
-#define Y_MAX_LENGTH 210
+#define X_MAX_LENGTH 265
+#define Y_MAX_LENGTH 228
 #define Z_MAX_LENGTH 230
-#define X_MIN_POS -32
-#define Y_MIN_POS -9
+#define X_MIN_POS -36
+#define Y_MIN_POS -11
 #define Z_MIN_POS 0
 #define PARK_POSITION_X 0
 #define PARK_POSITION_Y 220
@@ -483,35 +483,35 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define FEATURE_Z_PROBE 0
 #define EXTRUDER_IS_Z_PROBE 0
 #define Z_PROBE_DISABLE_HEATERS 0
-#define Z_PROBE_BED_DISTANCE 10
+#define Z_PROBE_BED_DISTANCE 5
 #define Z_PROBE_PIN ORIG_Z_MIN_PIN
 #define Z_PROBE_PULLUP 1
 #define Z_PROBE_ON_HIGH 0
-#define Z_PROBE_X_OFFSET 0
-#define Z_PROBE_Y_OFFSET 0
+#define Z_PROBE_X_OFFSET -24
+#define Z_PROBE_Y_OFFSET -43
 #define Z_PROBE_WAIT_BEFORE_TEST 0
 #define Z_PROBE_SPEED 2
 #define Z_PROBE_XY_SPEED 150
 #define Z_PROBE_SWITCHING_DISTANCE 1
 #define Z_PROBE_REPETITIONS 1
-#define Z_PROBE_HEIGHT 5
+#define Z_PROBE_HEIGHT 4.63
 #define Z_PROBE_DELAY 0
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define Z_PROBE_RUN_AFTER_EVERY_PROBE ""
-#define Z_PROBE_REQUIRES_HEATING 0
+#define Z_PROBE_REQUIRES_HEATING 1
 #define Z_PROBE_MIN_TEMPERATURE 150
-#define FEATURE_AUTOLEVEL 1
+#define FEATURE_AUTOLEVEL 0
 #define FEATURE_SOFTWARE_LEVELING 0
-#define Z_PROBE_X1 30
-#define Z_PROBE_Y1 30
-#define Z_PROBE_X2 190
-#define Z_PROBE_Y2 30
-#define Z_PROBE_X3 30
-#define Z_PROBE_Y3 190
+#define Z_PROBE_X1 55
+#define Z_PROBE_Y1 83
+#define Z_PROBE_X2 207
+#define Z_PROBE_Y2 83
+#define Z_PROBE_X3 55
+#define Z_PROBE_Y3 216
 #define BED_LEVELING_METHOD 1
 #define BED_CORRECTION_METHOD 0
-#define BED_LEVELING_GRID_SIZE 3
+#define BED_LEVELING_GRID_SIZE 2
 #define BED_LEVELING_REPETITIONS 5
 #define BED_MOTOR_1_X 0
 #define BED_MOTOR_1_Y 0
@@ -746,11 +746,11 @@ Values must be in range 1..255
     "backlashZ": 0,
     "stepperInactiveTime": 360,
     "maxInactiveTime": 600,
-    "xMinPos": -32,
-    "yMinPos": -9,
+    "xMinPos": -36,
+    "yMinPos": -11,
     "zMinPos": 0,
-    "xLength": 245,
-    "yLength": 210,
+    "xLength": 265,
+    "yLength": 228,
     "zLength": 230,
     "alwaysCheckEndstops": "1",
     "disableX": "0",
@@ -843,7 +843,7 @@ Values must be in range 1..255
     "servo3Pin": -1,
     "featureWatchdog": "1",
     "hasHeatedBed": "1",
-    "enableZProbing": "0",
+    "enableZProbing": "1",
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_YXZ",
     "featureController": 24,
@@ -949,25 +949,25 @@ Values must be in range 1..255
     "fanThermoThermistorType": 1,
     "scalePidToMax": "1",
     "zProbePin": "ORIG_Z_MIN_PIN",
-    "zProbeBedDistance": 10,
+    "zProbeBedDistance": 5,
     "zProbeDisableHeaters": "0",
     "zProbePullup": "1",
     "zProbeOnHigh": "0",
-    "zProbeXOffset": 0,
-    "zProbeYOffset": 0,
+    "zProbeXOffset": -24,
+    "zProbeYOffset": -43,
     "zProbeWaitBeforeTest": "0",
     "zProbeSpeed": 2,
     "zProbeXYSpeed": 150,
-    "zProbeHeight": 5,
+    "zProbeHeight": 4.63,
     "zProbeStartScript": "",
     "zProbeFinishedScript": "",
     "featureAutolevel": "1",
-    "zProbeX1": 30,
-    "zProbeY1": 30,
-    "zProbeX2": 190,
-    "zProbeY2": 30,
-    "zProbeX3": 30,
-    "zProbeY3": 190,
+    "zProbeX1": 55,
+    "zProbeY1": 83,
+    "zProbeX2": 207,
+    "zProbeY2": 83,
+    "zProbeX3": 55,
+    "zProbeY3": 216,
     "zProbeSwitchingDistance": 1,
     "zProbeRepetitions": 1,
     "zProbeEveryPoint": "",
@@ -1202,7 +1202,7 @@ Values must be in range 1..255
     "jsonOutput": "0",
     "bedLevelingMethod": 1,
     "bedCorrectionMethod": 0,
-    "bedLevelingGridSize": 3,
+    "bedLevelingGridSize": 2,
     "bedLevelingRepetitions": 5,
     "bedMotor1X": 0,
     "bedMotor1Y": 0,
@@ -1210,7 +1210,7 @@ Values must be in range 1..255
     "bedMotor2Y": 0,
     "bedMotor3X": 100,
     "bedMotor3Y": 200,
-    "zProbeRequiresHeating": "0",
+    "zProbeRequiresHeating": "1",
     "zProbeMinTemperature": 150,
     "adcKeypadPin": "1",
     "sharedExtruderHeater": "0",
