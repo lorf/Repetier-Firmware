@@ -501,7 +501,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_RUN_AFTER_EVERY_PROBE ""
 #define Z_PROBE_REQUIRES_HEATING 1
 #define Z_PROBE_MIN_TEMPERATURE 150
-#define FEATURE_AUTOLEVEL 0
+#define FEATURE_AUTOLEVEL 1
 #define FEATURE_SOFTWARE_LEVELING 0
 #define Z_PROBE_X1 55
 #define Z_PROBE_Y1 83
@@ -843,7 +843,7 @@ Values must be in range 1..255
     "servo3Pin": -1,
     "featureWatchdog": "1",
     "hasHeatedBed": "1",
-    "enableZProbing": "1",
+    "enableZProbing": "0",
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_YXZ",
     "featureController": 24,
