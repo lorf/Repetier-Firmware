@@ -396,12 +396,12 @@ It also can add a delay to wait for spindle to run on full speed.
 #define STEP_DOUBLER_FREQUENCY 12000
 #define ALLOW_QUADSTEPPING 1
 #define DOUBLE_STEP_DELAY 0 // time in microseconds
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 100
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 2000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 2000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 100
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 400
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 400
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 50
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 50
 #define INTERPOLATE_ACCELERATION_WITH_Z 1
 #define ACCELERATION_FACTOR_TOP 50
 #define MAX_JERK 20
@@ -712,16 +712,16 @@ Values must be in range 1..255
     "driveSystem": 0,
     "xMaxSpeed": 400,
     "xHomingSpeed": 100,
-    "xTravelAcceleration": 2000,
-    "xPrintAcceleration": 1000,
+    "xTravelAcceleration": 1000,
+    "xPrintAcceleration": 400,
     "yMaxSpeed": 400,
     "yHomingSpeed": 100,
-    "yTravelAcceleration": 2000,
-    "yPrintAcceleration": 1000,
+    "yTravelAcceleration": 1000,
+    "yPrintAcceleration": 400,
     "zMaxSpeed": 5,
     "zHomingSpeed": 4,
-    "zTravelAcceleration": 100,
-    "zPrintAcceleration": 100,
+    "zTravelAcceleration": 50,
+    "zPrintAcceleration": 50,
     "xMotor": {
         "name": "X motor",
         "step": "ORIG_X_STEP_PIN",
