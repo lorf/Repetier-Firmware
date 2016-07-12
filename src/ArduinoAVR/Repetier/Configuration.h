@@ -82,7 +82,7 @@
 #define EXT0_Y_OFFSET 0
 #define EXT0_Z_OFFSET 0
 #define EXT0_STEPS_PER_MM 95
-#define EXT0_TEMPSENSOR_TYPE 1
+#define EXT0_TEMPSENSOR_TYPE 14
 #define EXT0_TEMPSENSOR_PIN TEMP_0_PIN
 #define EXT0_HEATER_PIN HEATER_0_PIN
 #define EXT0_STEP_PIN ORIG_E0_STEP_PIN
@@ -166,16 +166,16 @@
 #define HEATED_BED_PREHEAT_TEMP 55
 #define HEATED_BED_MAX_TEMP 150
 #define SKIP_M190_IF_WITHIN 3
-#define HEATED_BED_SENSOR_TYPE 1
+#define HEATED_BED_SENSOR_TYPE 14
 #define HEATED_BED_SENSOR_PIN TEMP_1_PIN
 #define HEATED_BED_HEATER_PIN 12
 #define HEATED_BED_SET_INTERVAL 5000
 #define HEATED_BED_HEAT_MANAGER 1
 #define HEATED_BED_PID_INTEGRAL_DRIVE_MAX 255
 #define HEATED_BED_PID_INTEGRAL_DRIVE_MIN 80
-#define HEATED_BED_PID_PGAIN_OR_DEAD_TIME   260
-#define HEATED_BED_PID_IGAIN   114
-#define HEATED_BED_PID_DGAIN 149
+#define HEATED_BED_PID_PGAIN_OR_DEAD_TIME   178.25
+#define HEATED_BED_PID_IGAIN   21.62
+#define HEATED_BED_PID_DGAIN 367.37
 #define HEATED_BED_PID_MAX 255
 #define HEATED_BED_DECOUPLE_TEST_PERIOD 300000
 #define MIN_EXTRUDER_TEMP 150
@@ -647,7 +647,7 @@ Values must be in range 1..255
             "pidDriveMin": 130,
             "pidDriveMax": 230,
             "pidMax": 255,
-            "sensorType": 1,
+            "sensorType": 14,
             "sensorPin": "TEMP_0_PIN",
             "heaterPin": "HEATER_0_PIN",
             "maxFeedrate": 50,
@@ -869,7 +869,7 @@ Values must be in range 1..255
     "uiExtruderRetractDistance": 3,
     "uiSpeeddependentPositioning": "0",
     "maxBedTemperature": 150,
-    "bedSensorType": 1,
+    "bedSensorType": 14,
     "bedSensorPin": "TEMP_1_PIN",
     "bedHeaterPin": 12,
     "bedHeatManager": 1,
@@ -877,9 +877,9 @@ Values must be in range 1..255
     "bedUpdateInterval": 5000,
     "bedPidDriveMin": 80,
     "bedPidDriveMax": 255,
-    "bedPidP": 260,
-    "bedPidI": 114,
-    "bedPidD": 149,
+    "bedPidP": 178.25,
+    "bedPidI": 21.62,
+    "bedPidD": 367.37,
     "bedPidMax": 255,
     "bedDecoupleTestPeriod": 300,
     "caseLightPin": -1,
