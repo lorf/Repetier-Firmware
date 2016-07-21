@@ -103,9 +103,9 @@
 #define EXT0_WATCHPERIOD 1
 #define EXT0_PID_INTEGRAL_DRIVE_MAX 230
 #define EXT0_PID_INTEGRAL_DRIVE_MIN 130
-#define EXT0_PID_PGAIN_OR_DEAD_TIME 8
-#define EXT0_PID_I 0.35
-#define EXT0_PID_D 41
+#define EXT0_PID_PGAIN_OR_DEAD_TIME 6.6
+#define EXT0_PID_I 0.42
+#define EXT0_PID_D 34.01
 #define EXT0_PID_MAX 255
 #define EXT0_ADVANCE_K 0
 #define EXT0_ADVANCE_L 0
@@ -656,9 +656,9 @@ Values must be in range 1..255
             "invertEnable": "0",
             "acceleration": 5000,
             "watchPeriod": 1,
-            "pidP": 8,
-            "pidI": 0.35,
-            "pidD": 41,
+            "pidP": 6.6,
+            "pidI": 0.42,
+            "pidD": 34.01,
             "advanceK": 0,
             "advanceL": 0,
             "waitRetractTemp": 150,
