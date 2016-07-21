@@ -82,7 +82,7 @@
 #define EXT0_Y_OFFSET 0
 #define EXT0_Z_OFFSET 0
 #define EXT0_STEPS_PER_MM 95
-#define EXT0_TEMPSENSOR_TYPE 14
+#define EXT0_TEMPSENSOR_TYPE 5
 #define EXT0_TEMPSENSOR_PIN TEMP_0_PIN
 #define EXT0_HEATER_PIN HEATER_0_PIN
 #define EXT0_STEP_PIN ORIG_E0_STEP_PIN
@@ -149,8 +149,8 @@
 #define SCALE_PID_TO_MAX 1
 #define TEMP_HYSTERESIS 0
 #define EXTRUDE_MAXLENGTH 160
-#define NUM_TEMPS_USERTHERMISTOR0 0
-#define USER_THERMISTORTABLE0 {}
+#define NUM_TEMPS_USERTHERMISTOR0 22
+#define USER_THERMISTORTABLE0 {{68,2840},{121,2400},{232,1984},{263,1920},{304,1840},{348,1760},{404,1680},{476,1592},{552,1520},{644,1440},{768,1360},{891,1280},{1050,1200},{1456,1040},{1952,880},{2546,720},{3099,560},{3559,400},{3857,240},{4005,80},{4083,-216},{4091,-1600}}
 #define NUM_TEMPS_USERTHERMISTOR1 0
 #define USER_THERMISTORTABLE1 {}
 #define NUM_TEMPS_USERTHERMISTOR2 0
@@ -179,7 +179,7 @@
 #define HEATED_BED_PID_MAX 255
 #define HEATED_BED_DECOUPLE_TEST_PERIOD 300000
 #define MIN_EXTRUDER_TEMP 150
-#define MAXTEMP 240
+#define MAXTEMP 250
 #define MIN_DEFECT_TEMPERATURE -10
 #define MAX_DEFECT_TEMPERATURE 290
 #define MILLISECONDS_PREHEAT_TIME 30000
@@ -647,7 +647,7 @@ Values must be in range 1..255
             "pidDriveMin": 130,
             "pidDriveMax": 230,
             "pidMax": 255,
-            "sensorType": 14,
+            "sensorType": 5,
             "sensorPin": "TEMP_0_PIN",
             "heaterPin": "HEATER_0_PIN",
             "maxFeedrate": 50,
@@ -908,9 +908,120 @@ Values must be in range 1..255
     "gen3R2": 4700,
     "userTable0": {
         "r1": 0,
-        "r2": 4700,
-        "temps": [],
-        "numEntries": 0
+        "r2": 4720,
+        "temps": [
+            {
+                "t": 355,
+                "r": 79.682224428997,
+                "adc": 67.9833984375
+            },
+            {
+                "t": 300,
+                "r": 143.67798742138,
+                "adc": 120.97045898438
+            },
+            {
+                "t": 248,
+                "r": 283.39544513458,
+                "adc": 231.943359375
+            },
+            {
+                "t": 240,
+                "r": 323.8612053222,
+                "adc": 262.93579101563
+            },
+            {
+                "t": 230,
+                "r": 378.39662447257,
+                "adc": 303.92578125
+            },
+            {
+                "t": 220,
+                "r": 438.24973319103,
+                "adc": 347.9150390625
+            },
+            {
+                "t": 210,
+                "r": 516.48970747562,
+                "adc": 403.9013671875
+            },
+            {
+                "t": 199,
+                "r": 620.6408839779,
+                "adc": 475.8837890625
+            },
+            {
+                "t": 190,
+                "r": 735.16930022573,
+                "adc": 551.865234375
+            },
+            {
+                "t": 180,
+                "r": 880.55619930475,
+                "adc": 643.8427734375
+            },
+            {
+                "t": 170,
+                "r": 1089.2307692308,
+                "adc": 767.8125
+            },
+            {
+                "t": 160,
+                "r": 1312.1747269891,
+                "adc": 890.78247070313
+            },
+            {
+                "t": 150,
+                "r": 1627.0518713066,
+                "adc": 1049.7436523437
+            },
+            {
+                "t": 130,
+                "r": 2603.1515151515,
+                "adc": 1455.64453125
+            },
+            {
+                "t": 110,
+                "r": 4297.3134328358,
+                "adc": 1951.5234375
+            },
+            {
+                "t": 90,
+                "r": 7761.0329244674,
+                "adc": 2546.3781738281
+            },
+            {
+                "t": 70,
+                "r": 14690.763052209,
+                "adc": 3099.2431640625
+            },
+            {
+                "t": 50,
+                "r": 31349.253731343,
+                "adc": 3559.130859375
+            },
+            {
+                "t": 30,
+                "r": 76511.596638655,
+                "adc": 3857.0581054688
+            },
+            {
+                "t": 10,
+                "r": 210092.44444444,
+                "adc": 4005.0219726562
+            },
+            {
+                "t": -27,
+                "r": 1606373.3333333,
+                "adc": 4083.0029296875
+            },
+            {
+                "t": -200,
+                "r": 4828560,
+                "adc": 4091.0009765625
+            }
+        ],
+        "numEntries": 22
     },
     "userTable1": {
         "r1": 0,
@@ -929,7 +1040,7 @@ Values must be in range 1..255
     "skipM109Within": 2,
     "extruderFanCoolTemp": 50,
     "minTemp": 150,
-    "maxTemp": 240,
+    "maxTemp": 250,
     "minDefectTemp": -10,
     "maxDefectTemp": 290,
     "arcSupport": "1",
@@ -1281,7 +1392,7 @@ Values must be in range 1..255
     "hasGeneric1": false,
     "hasGeneric2": false,
     "hasGeneric3": false,
-    "hasUser0": false,
+    "hasUser0": true,
     "hasUser1": false,
     "hasUser2": false,
     "numExtruder": 1,
