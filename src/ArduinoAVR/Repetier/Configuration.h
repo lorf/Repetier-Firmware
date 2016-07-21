@@ -81,7 +81,7 @@
 #define EXT0_X_OFFSET 0
 #define EXT0_Y_OFFSET 0
 #define EXT0_Z_OFFSET 0
-#define EXT0_STEPS_PER_MM 95
+#define EXT0_STEPS_PER_MM 110.6
 #define EXT0_TEMPSENSOR_TYPE 5
 #define EXT0_TEMPSENSOR_PIN TEMP_0_PIN
 #define EXT0_HEATER_PIN HEATER_0_PIN
@@ -664,7 +664,7 @@ Values must be in range 1..255
             "waitRetractTemp": 150,
             "waitRetractUnits": 0,
             "waitRetract": 0,
-            "stepsPerMM": 95,
+            "stepsPerMM": 110.6,
             "coolerPin": -1,
             "coolerSpeed": 255,
             "selectCommands": "",
