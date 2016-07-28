@@ -399,9 +399,9 @@ It also can add a delay to wait for spindle to run on full speed.
 #define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 400
 #define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 400
 #define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 50
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 50
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 2000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 2000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 100
 #define INTERPOLATE_ACCELERATION_WITH_Z 1
 #define ACCELERATION_FACTOR_TOP 50
 #define MAX_JERK 20
@@ -712,15 +712,15 @@ Values must be in range 1..255
     "driveSystem": 0,
     "xMaxSpeed": 400,
     "xHomingSpeed": 100,
-    "xTravelAcceleration": 1000,
+    "xTravelAcceleration": 2000,
     "xPrintAcceleration": 400,
     "yMaxSpeed": 400,
     "yHomingSpeed": 100,
-    "yTravelAcceleration": 1000,
+    "yTravelAcceleration": 2000,
     "yPrintAcceleration": 400,
     "zMaxSpeed": 5,
     "zHomingSpeed": 4,
-    "zTravelAcceleration": 50,
+    "zTravelAcceleration": 100,
     "zPrintAcceleration": 50,
     "xMotor": {
         "name": "X motor",
@@ -918,7 +918,7 @@ Values must be in range 1..255
             {
                 "t": 300,
                 "r": 143.67798742138,
-                "adc": 120.97045898438
+                "adc": 120.97045898437
             },
             {
                 "t": 248,
@@ -928,7 +928,7 @@ Values must be in range 1..255
             {
                 "t": 240,
                 "r": 323.8612053222,
-                "adc": 262.93579101563
+                "adc": 262.93579101562
             },
             {
                 "t": 230,
@@ -963,12 +963,12 @@ Values must be in range 1..255
             {
                 "t": 170,
                 "r": 1089.2307692308,
-                "adc": 767.8125
+                "adc": 767.81250000002
             },
             {
                 "t": 160,
                 "r": 1312.1747269891,
-                "adc": 890.78247070313
+                "adc": 890.78247070314
             },
             {
                 "t": 150,
@@ -1003,7 +1003,7 @@ Values must be in range 1..255
             {
                 "t": 30,
                 "r": 76511.596638655,
-                "adc": 3857.0581054688
+                "adc": 3857.0581054687
             },
             {
                 "t": 10,
