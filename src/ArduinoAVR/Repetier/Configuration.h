@@ -322,7 +322,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define HOMING_FEEDRATE_X 100
 #define HOMING_FEEDRATE_Y 100
 #define HOMING_FEEDRATE_Z 4
-#define HOMING_ORDER HOME_ORDER_YXZ
+#define HOMING_ORDER HOME_ORDER_XYZ
 #define ZHOME_MIN_TEMPERATURE 0
 #define ZHOME_HEAT_ALL 1
 #define ZHOME_HEAT_HEIGHT 20
@@ -338,9 +338,9 @@ It also can add a delay to wait for spindle to run on full speed.
 #define STEP_DOUBLER_FREQUENCY 12000
 #define ALLOW_QUADSTEPPING 1
 #define DOUBLE_STEP_DELAY 0 // time in microseconds
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 400
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 400
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 50
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 100
 #define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 2000
 #define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 2000
 #define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 100
@@ -483,8 +483,8 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define LANGUAGE_CZ_ACTIVE 0
 #define LANGUAGE_PL_ACTIVE 0
 #define LANGUAGE_TR_ACTIVE 0
-#define UI_PRINTER_NAME "Anet A8-B"
-#define UI_PRINTER_COMPANY "RepRap"
+#define UI_PRINTER_NAME "A8-B"
+#define UI_PRINTER_COMPANY "Anet"
 #define UI_PAGES_DURATION 4000
 #define UI_ANIMATION 0
 #define UI_SPEEDDEPENDENT_POSITIONING 0
@@ -511,14 +511,14 @@ Values must be in range 1..255
 #define BEEPER_SHORT_SEQUENCE 2,2
 #define BEEPER_LONG_SEQUENCE 8,8
 #define UI_SET_PRESET_HEATED_BED_TEMP_PLA 75
-#define UI_SET_PRESET_EXTRUDER_TEMP_PLA   200
+#define UI_SET_PRESET_EXTRUDER_TEMP_PLA   180
 #define UI_SET_PRESET_HEATED_BED_TEMP_ABS 110
-#define UI_SET_PRESET_EXTRUDER_TEMP_ABS   240
+#define UI_SET_PRESET_EXTRUDER_TEMP_ABS   210
 #define UI_SET_MIN_HEATED_BED_TEMP  30
 #define UI_SET_MAX_HEATED_BED_TEMP 120
 #define UI_SET_MIN_EXTRUDER_TEMP   170
 #define UI_SET_MAX_EXTRUDER_TEMP   260
-#define UI_SET_EXTRUDER_FEEDRATE 2
+#define UI_SET_EXTRUDER_FEEDRATE 5
 #define UI_SET_EXTRUDER_RETRACT_DISTANCE 3
 
 
@@ -636,15 +636,15 @@ Values must be in range 1..255
     "xMaxSpeed": 400,
     "xHomingSpeed": 100,
     "xTravelAcceleration": 2000,
-    "xPrintAcceleration": 400,
+    "xPrintAcceleration": 1000,
     "yMaxSpeed": 400,
     "yHomingSpeed": 100,
     "yTravelAcceleration": 2000,
-    "yPrintAcceleration": 400,
+    "yPrintAcceleration": 1000,
     "zMaxSpeed": 5,
     "zHomingSpeed": 4,
     "zTravelAcceleration": 100,
-    "zPrintAcceleration": 50,
+    "zPrintAcceleration": 100,
     "xMotor": {
         "name": "X motor",
         "step": "ORIG_X_STEP_PIN",
@@ -761,10 +761,10 @@ Values must be in range 1..255
     "hasHeatedBed": "1",
     "enableZProbing": "0",
     "extrudeMaxLength": 160,
-    "homeOrder": "HOME_ORDER_YXZ",
+    "homeOrder": "HOME_ORDER_XYZ",
     "featureController": 24,
-    "uiPrinterName": "Anet A8-B",
-    "uiPrinterCompany": "RepRap",
+    "uiPrinterName": "A8-B",
+    "uiPrinterCompany": "Anet",
     "uiPagesDuration": 4000,
     "uiAnimation": "0",
     "uiDisablePageswitch": "1",
@@ -779,13 +779,13 @@ Values must be in range 1..255
     "featureBeeper": "0",
     "uiPresetBedTempPLA": 75,
     "uiPresetBedABS": 110,
-    "uiPresetExtruderPLA": 200,
-    "uiPresetExtruderABS": 240,
+    "uiPresetExtruderPLA": 180,
+    "uiPresetExtruderABS": 210,
     "uiMinHeatedBed": 30,
     "uiMaxHeatedBed": 120,
     "uiMinEtxruderTemp": 170,
     "uiMaxExtruderTemp": 260,
-    "uiExtruderFeedrate": 2,
+    "uiExtruderFeedrate": 5,
     "uiExtruderRetractDistance": 3,
     "uiSpeeddependentPositioning": "0",
     "maxBedTemperature": 150,
