@@ -103,9 +103,9 @@
 #define EXT0_WATCHPERIOD 1
 #define EXT0_PID_INTEGRAL_DRIVE_MAX 230
 #define EXT0_PID_INTEGRAL_DRIVE_MIN 130
-#define EXT0_PID_PGAIN_OR_DEAD_TIME 6.6
-#define EXT0_PID_I 0.42
-#define EXT0_PID_D 34.01
+#define EXT0_PID_PGAIN_OR_DEAD_TIME 7.95
+#define EXT0_PID_I 0.45
+#define EXT0_PID_D 35.07
 #define EXT0_PID_MAX 255
 #define EXT0_ADVANCE_K 0
 #define EXT0_ADVANCE_L 0
@@ -173,9 +173,9 @@
 #define HEATED_BED_HEAT_MANAGER 1
 #define HEATED_BED_PID_INTEGRAL_DRIVE_MAX 255
 #define HEATED_BED_PID_INTEGRAL_DRIVE_MIN 80
-#define HEATED_BED_PID_PGAIN_OR_DEAD_TIME   178.25
-#define HEATED_BED_PID_IGAIN   21.62
-#define HEATED_BED_PID_DGAIN 367.37
+#define HEATED_BED_PID_PGAIN_OR_DEAD_TIME   88.76
+#define HEATED_BED_PID_IGAIN   9.26
+#define HEATED_BED_PID_DGAIN 212.69
 #define HEATED_BED_PID_MAX 255
 #define HEATED_BED_DECOUPLE_TEST_PERIOD 300000
 #define MIN_EXTRUDER_TEMP 180
@@ -656,9 +656,9 @@ Values must be in range 1..255
             "invertEnable": "0",
             "acceleration": 5000,
             "watchPeriod": 1,
-            "pidP": 6.6,
-            "pidI": 0.42,
-            "pidD": 34.01,
+            "pidP": 7.95,
+            "pidI": 0.45,
+            "pidD": 35.07,
             "advanceK": 0,
             "advanceL": 0,
             "waitRetractTemp": 150,
@@ -877,9 +877,9 @@ Values must be in range 1..255
     "bedUpdateInterval": 5000,
     "bedPidDriveMin": 80,
     "bedPidDriveMax": 255,
-    "bedPidP": 178.25,
-    "bedPidI": 21.62,
-    "bedPidD": 367.37,
+    "bedPidP": 88.76,
+    "bedPidI": 9.26,
+    "bedPidD": 212.69,
     "bedPidMax": 255,
     "bedDecoupleTestPeriod": 300,
     "caseLightPin": -1,
