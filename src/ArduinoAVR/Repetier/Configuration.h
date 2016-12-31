@@ -286,7 +286,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define X_MIN_POS -36
 #define Y_MIN_POS -11
 #define Z_MIN_POS 0
-#define DISTORTION_CORRECTION 0
+#define DISTORTION_CORRECTION 1
 #define DISTORTION_CORRECTION_POINTS 5
 #define DISTORTION_CORRECTION_R 100
 #define DISTORTION_PERMANENT 1
@@ -294,10 +294,10 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DISTORTION_START_DEGRADE 0.5
 #define DISTORTION_END_HEIGHT 1
 #define DISTORTION_EXTRAPOLATE_CORNERS 0
-#define DISTORTION_XMIN 10
-#define DISTORTION_YMIN 10
-#define DISTORTION_XMAX 190
-#define DISTORTION_YMAX 190
+#define DISTORTION_XMIN 30
+#define DISTORTION_YMIN 30
+#define DISTORTION_XMAX 184
+#define DISTORTION_YMAX 184
 
 // ##########################################################################################
 // ##                           Movement settings                                          ##
@@ -413,30 +413,30 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_Z_OFFSET 0
 #define Z_PROBE_Z_OFFSET_MODE 0
 #define UI_BED_COATING 1
-#define FEATURE_Z_PROBE 0
+#define FEATURE_Z_PROBE 1
 #define Z_PROBE_BED_DISTANCE 5
 #define Z_PROBE_PIN ORIG_Z_MIN_PIN
 #define Z_PROBE_PULLUP 1
 #define Z_PROBE_ON_HIGH 0
-#define Z_PROBE_X_OFFSET -24
-#define Z_PROBE_Y_OFFSET -43
+#define Z_PROBE_X_OFFSET -26.5
+#define Z_PROBE_Y_OFFSET -38
 #define Z_PROBE_WAIT_BEFORE_TEST 0
 #define Z_PROBE_SPEED 2
 #define Z_PROBE_XY_SPEED 150
-#define Z_PROBE_SWITCHING_DISTANCE 1
-#define Z_PROBE_REPETITIONS 1
-#define Z_PROBE_HEIGHT 4.63
+#define Z_PROBE_SWITCHING_DISTANCE 1.5
+#define Z_PROBE_REPETITIONS 2
+#define Z_PROBE_HEIGHT 1.8
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define Z_PROBE_REQUIRES_HEATING 1
-#define Z_PROBE_MIN_TEMPERATURE 150
+#define Z_PROBE_MIN_TEMPERATURE 180
 #define FEATURE_AUTOLEVEL 1
-#define Z_PROBE_X1 55
-#define Z_PROBE_Y1 83
-#define Z_PROBE_X2 207
-#define Z_PROBE_Y2 83
-#define Z_PROBE_X3 55
-#define Z_PROBE_Y3 216
+#define Z_PROBE_X1 30
+#define Z_PROBE_Y1 30
+#define Z_PROBE_X2 184
+#define Z_PROBE_Y2 30
+#define Z_PROBE_X3 30
+#define Z_PROBE_Y3 184
 #define BED_LEVELING_METHOD 1
 #define BED_CORRECTION_METHOD 0
 #define BED_LEVELING_GRID_SIZE 2
@@ -450,7 +450,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define BENDING_CORRECTION_A 0
 #define BENDING_CORRECTION_B 0
 #define BENDING_CORRECTION_C 0
-#define FEATURE_AXISCOMP 0
+#define FEATURE_AXISCOMP 1
 #define AXISCOMP_TANXY 0
 #define AXISCOMP_TANYZ 0
 #define AXISCOMP_TANXZ 0
@@ -759,7 +759,7 @@ Values must be in range 1..255
     "servo3Pin": -1,
     "featureWatchdog": "1",
     "hasHeatedBed": "1",
-    "enableZProbing": "0",
+    "enableZProbing": "1",
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_XYZ",
     "featureController": 24,
@@ -982,23 +982,23 @@ Values must be in range 1..255
     "zProbeBedDistance": 5,
     "zProbePullup": "1",
     "zProbeOnHigh": "0",
-    "zProbeXOffset": -24,
-    "zProbeYOffset": -43,
+    "zProbeXOffset": -26.5,
+    "zProbeYOffset": -38,
     "zProbeWaitBeforeTest": "0",
     "zProbeSpeed": 2,
     "zProbeXYSpeed": 150,
-    "zProbeHeight": 4.63,
+    "zProbeHeight": 1.8,
     "zProbeStartScript": "",
     "zProbeFinishedScript": "",
     "featureAutolevel": "1",
-    "zProbeX1": 55,
-    "zProbeY1": 83,
-    "zProbeX2": 207,
-    "zProbeY2": 83,
-    "zProbeX3": 55,
-    "zProbeY3": 216,
-    "zProbeSwitchingDistance": 1,
-    "zProbeRepetitions": 1,
+    "zProbeX1": 30,
+    "zProbeY1": 30,
+    "zProbeX2": 184,
+    "zProbeY2": 30,
+    "zProbeX3": 30,
+    "zProbeY3": 184,
+    "zProbeSwitchingDistance": 1.5,
+    "zProbeRepetitions": 2,
     "sdSupport": "0",
     "sdCardDetectPin": -1,
     "sdCardDetectInverted": "0",
@@ -1026,14 +1026,14 @@ Values must be in range 1..255
     "mixingExtruder": "0",
     "decouplingTestMaxHoldVariance": 20,
     "decouplingTestMinTempRise": 1,
-    "featureAxisComp": "0",
+    "featureAxisComp": "1",
     "axisCompTanXY": 0,
     "axisCompTanXZ": 0,
     "axisCompTanYZ": 0,
     "retractOnPause": 2,
     "pauseStartCommands": "",
     "pauseEndCommands": "",
-    "distortionCorrection": "0",
+    "distortionCorrection": "1",
     "distortionCorrectionPoints": 5,
     "distortionCorrectionR": 100,
     "distortionPermanent": "1",
@@ -1041,10 +1041,10 @@ Values must be in range 1..255
     "distortionStartDegrade": 0.5,
     "distortionEndDegrade": 1,
     "distortionExtrapolateCorners": "0",
-    "distortionXMin": 10,
-    "distortionXMax": 190,
-    "distortionYMin": 10,
-    "distortionYMax": 190,
+    "distortionXMin": 30,
+    "distortionXMax": 184,
+    "distortionYMin": 30,
+    "distortionYMax": 184,
     "sdRunOnStop": "",
     "sdStopHeaterMotorsOnStop": "1",
     "featureRetraction": "1",
@@ -1197,7 +1197,7 @@ Values must be in range 1..255
     "bedMotor3X": 100,
     "bedMotor3Y": 200,
     "zProbeRequiresHeating": "1",
-    "zProbeMinTemperature": 150,
+    "zProbeMinTemperature": 180,
     "adcKeypadPin": "1",
     "sharedExtruderHeater": "0",
     "extruderSwitchXYSpeed": 100,
