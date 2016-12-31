@@ -178,8 +178,8 @@
 #define HEATED_BED_PID_DGAIN 367.37
 #define HEATED_BED_PID_MAX 255
 #define HEATED_BED_DECOUPLE_TEST_PERIOD 300000
-#define MIN_EXTRUDER_TEMP 150
-#define MAXTEMP 250
+#define MIN_EXTRUDER_TEMP 180
+#define MAXTEMP 260
 #define MIN_DEFECT_TEMPERATURE -10
 #define MAX_DEFECT_TEMPERATURE 290
 #define MILLISECONDS_PREHEAT_TIME 30000
@@ -536,7 +536,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define SD_EXTENDED_DIR 1 /** Show extended directory including file length. Don't use this with Pronterface! */
 #define SD_RUN_ON_STOP ""
 #define SD_STOP_HEATER_AND_MOTORS_ON_STOP 1
-#define ARC_SUPPORT 1
+#define ARC_SUPPORT 0
 #define FEATURE_MEMORY_POSITION 1
 #define FEATURE_CHECKSUM_FORCED 0
 #define FEATURE_FAN_CONTROL 1
@@ -1039,11 +1039,11 @@ Values must be in range 1..255
     "pidControlRange": 20,
     "skipM109Within": 2,
     "extruderFanCoolTemp": 50,
-    "minTemp": 150,
-    "maxTemp": 250,
+    "minTemp": 180,
+    "maxTemp": 260,
     "minDefectTemp": -10,
     "maxDefectTemp": 290,
-    "arcSupport": "1",
+    "arcSupport": "0",
     "featureMemoryPositionWatchdog": "1",
     "forceChecksum": "0",
     "sdExtendedDir": "1",
