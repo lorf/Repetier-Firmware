@@ -418,14 +418,14 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_PIN ORIG_Z_MIN_PIN
 #define Z_PROBE_PULLUP 1
 #define Z_PROBE_ON_HIGH 0
-#define Z_PROBE_X_OFFSET -26.5
-#define Z_PROBE_Y_OFFSET -38
+#define Z_PROBE_X_OFFSET 0
+#define Z_PROBE_Y_OFFSET 34
 #define Z_PROBE_WAIT_BEFORE_TEST 0
 #define Z_PROBE_SPEED 2
 #define Z_PROBE_XY_SPEED 150
-#define Z_PROBE_SWITCHING_DISTANCE 1.5
+#define Z_PROBE_SWITCHING_DISTANCE 1
 #define Z_PROBE_REPETITIONS 2
-#define Z_PROBE_HEIGHT 1.8
+#define Z_PROBE_HEIGHT 0.57
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define Z_PROBE_REQUIRES_HEATING 1
@@ -982,12 +982,12 @@ Values must be in range 1..255
     "zProbeBedDistance": 5,
     "zProbePullup": "1",
     "zProbeOnHigh": "0",
-    "zProbeXOffset": -26.5,
-    "zProbeYOffset": -38,
+    "zProbeXOffset": 0,
+    "zProbeYOffset": 34,
     "zProbeWaitBeforeTest": "0",
     "zProbeSpeed": 2,
     "zProbeXYSpeed": 150,
-    "zProbeHeight": 1.8,
+    "zProbeHeight": 0.57,
     "zProbeStartScript": "",
     "zProbeFinishedScript": "",
     "featureAutolevel": "1",
@@ -997,7 +997,7 @@ Values must be in range 1..255
     "zProbeY2": 30,
     "zProbeX3": 30,
     "zProbeY3": 184,
-    "zProbeSwitchingDistance": 1.5,
+    "zProbeSwitchingDistance": 1,
     "zProbeRepetitions": 2,
     "sdSupport": "0",
     "sdCardDetectPin": -1,
