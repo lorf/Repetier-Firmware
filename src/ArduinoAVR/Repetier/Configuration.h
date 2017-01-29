@@ -490,11 +490,11 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_X_OFFSET 0
 #define Z_PROBE_Y_OFFSET 34
 #define Z_PROBE_WAIT_BEFORE_TEST 0
-#define Z_PROBE_SPEED 2
+#define Z_PROBE_SPEED 5
 #define Z_PROBE_XY_SPEED 150
 #define Z_PROBE_SWITCHING_DISTANCE 1
 #define Z_PROBE_REPETITIONS 2
-#define Z_PROBE_HEIGHT 0.57
+#define Z_PROBE_HEIGHT 0.82
 #define Z_PROBE_DELAY 0
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
@@ -511,7 +511,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_Y3 184
 #define BED_LEVELING_METHOD 1
 #define BED_CORRECTION_METHOD 0
-#define BED_LEVELING_GRID_SIZE 2
+#define BED_LEVELING_GRID_SIZE 3
 #define BED_LEVELING_REPETITIONS 5
 #define BED_MOTOR_1_X 0
 #define BED_MOTOR_1_Y 0
@@ -1067,9 +1067,9 @@ Values must be in range 1..255
     "zProbeXOffset": 0,
     "zProbeYOffset": 34,
     "zProbeWaitBeforeTest": "0",
-    "zProbeSpeed": 2,
+    "zProbeSpeed": 5,
     "zProbeXYSpeed": 150,
-    "zProbeHeight": 0.57,
+    "zProbeHeight": 0.82,
     "zProbeStartScript": "",
     "zProbeFinishedScript": "",
     "featureAutolevel": "1",
@@ -1313,7 +1313,7 @@ Values must be in range 1..255
     "jsonOutput": "0",
     "bedLevelingMethod": 1,
     "bedCorrectionMethod": 0,
-    "bedLevelingGridSize": 2,
+    "bedLevelingGridSize": 3,
     "bedLevelingRepetitions": 5,
     "bedMotor1X": 0,
     "bedMotor1Y": 0,
