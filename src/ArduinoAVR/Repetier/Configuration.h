@@ -287,7 +287,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Y_MIN_POS -11
 #define Z_MIN_POS 0
 #define DISTORTION_CORRECTION 1
-#define DISTORTION_CORRECTION_POINTS 5
+#define DISTORTION_CORRECTION_POINTS 4
 #define DISTORTION_CORRECTION_R 100
 #define DISTORTION_PERMANENT 1
 #define DISTORTION_UPDATE_FREQUENCY 15
@@ -425,7 +425,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_XY_SPEED 150
 #define Z_PROBE_SWITCHING_DISTANCE 1
 #define Z_PROBE_REPETITIONS 2
-#define Z_PROBE_HEIGHT 0.08
+#define Z_PROBE_HEIGHT 0.61
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define Z_PROBE_REQUIRES_HEATING 1
@@ -987,7 +987,7 @@ Values must be in range 1..255
     "zProbeWaitBeforeTest": "0",
     "zProbeSpeed": 5,
     "zProbeXYSpeed": 150,
-    "zProbeHeight": 0.08,
+    "zProbeHeight": 0.61,
     "zProbeStartScript": "",
     "zProbeFinishedScript": "",
     "featureAutolevel": "1",
@@ -1034,7 +1034,7 @@ Values must be in range 1..255
     "pauseStartCommands": "",
     "pauseEndCommands": "",
     "distortionCorrection": "1",
-    "distortionCorrectionPoints": 5,
+    "distortionCorrectionPoints": 4,
     "distortionCorrectionR": 100,
     "distortionPermanent": "1",
     "distortionUpdateFrequency": 15,
