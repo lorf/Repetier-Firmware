@@ -27,7 +27,7 @@
    to see and change the data. You can also upload it to newer/older versions. The system
    will silently add new options, so compilation continues to work.
 
-   This file is optimized for version 1.0.3dev
+   This file is optimized for version 1.0.0dev
    generator: http://www.repetier.com/firmware/dev/
 
    If you are in doubt which named functions use which pins on your board, please check the
@@ -36,17 +36,16 @@
 
 */
 
-#define NUM_EXTRUDER 4
-#define MOTHERBOARD 35
+#define NUM_EXTRUDER 1
+#define MOTHERBOARD 63
 #include "pins.h"
 
 // ################## EDIT THESE SETTINGS MANUALLY ################
 
 // ################ END MANUAL SETTINGS ##########################
 
-#define HOST_RESCUE 1
 #undef FAN_BOARD_PIN
-#define FAN_BOARD_PIN ORIG_FAN_PIN
+#define FAN_BOARD_PIN -1
 #define BOARD_FAN_SPEED 255
 #define BOARD_FAN_MIN_SPEED 0
 #define FAN_THERMO_PIN -1
@@ -66,31 +65,31 @@
 #define MIXING_EXTRUDER 0
 
 #define DRIVE_SYSTEM 0
-#define XAXIS_STEPS_PER_MM 72.72
-#define YAXIS_STEPS_PER_MM 72.72
-#define ZAXIS_STEPS_PER_MM 520
+#define XAXIS_STEPS_PER_MM 100
+#define YAXIS_STEPS_PER_MM 100
+#define ZAXIS_STEPS_PER_MM 1600
 #define EXTRUDER_FAN_COOL_TEMP 50
 #define PDM_FOR_EXTRUDER 0
 #define PDM_FOR_COOLER 0
 #define DECOUPLING_TEST_MAX_HOLD_VARIANCE 20
 #define DECOUPLING_TEST_MIN_TEMP_RISE 1
-#define KILL_IF_SENSOR_DEFECT 1
-#define RETRACT_ON_PAUSE 4
+#define KILL_IF_SENSOR_DEFECT 0
+#define RETRACT_ON_PAUSE 2
 #define PAUSE_START_COMMANDS ""
 #define PAUSE_END_COMMANDS ""
 #define SHARED_EXTRUDER_HEATER 0
 #define EXT0_X_OFFSET 0
 #define EXT0_Y_OFFSET 0
 #define EXT0_Z_OFFSET 0
-#define EXT0_STEPS_PER_MM 255
-#define EXT0_TEMPSENSOR_TYPE 5
+#define EXT0_STEPS_PER_MM 95
+#define EXT0_TEMPSENSOR_TYPE 1
 #define EXT0_TEMPSENSOR_PIN TEMP_0_PIN
 #define EXT0_HEATER_PIN HEATER_0_PIN
 #define EXT0_STEP_PIN ORIG_E0_STEP_PIN
 #define EXT0_DIR_PIN ORIG_E0_DIR_PIN
-#define EXT0_INVERSE 1
+#define EXT0_INVERSE 0
 #define EXT0_ENABLE_PIN ORIG_E0_ENABLE_PIN
-#define EXT0_ENABLE_ON 1
+#define EXT0_ENABLE_ON 0
 #define EXT0_MIRROR_STEPPER 0
 #define EXT0_STEP2_PIN ORIG_E0_STEP_PIN
 #define EXT0_DIR2_PIN ORIG_E0_DIR_PIN
@@ -99,14 +98,14 @@
 #define EXT0_MAX_FEEDRATE 50
 #define EXT0_MAX_START_FEEDRATE 20
 #define EXT0_MAX_ACCELERATION 5000
-#define EXT0_HEAT_MANAGER 1
+#define EXT0_HEAT_MANAGER 3
 #define EXT0_PREHEAT_TEMP 190
 #define EXT0_WATCHPERIOD 1
-#define EXT0_PID_INTEGRAL_DRIVE_MAX 255
+#define EXT0_PID_INTEGRAL_DRIVE_MAX 230
 #define EXT0_PID_INTEGRAL_DRIVE_MIN 40
-#define EXT0_PID_PGAIN_OR_DEAD_TIME 8.94
-#define EXT0_PID_I 0.51
-#define EXT0_PID_D 20
+#define EXT0_PID_PGAIN_OR_DEAD_TIME 7
+#define EXT0_PID_I 2
+#define EXT0_PID_D 40
 #define EXT0_PID_MAX 255
 #define EXT0_ADVANCE_K 0
 #define EXT0_ADVANCE_L 0
@@ -117,132 +116,9 @@
 #define EXT0_DESELECT_COMMANDS ""
 #define EXT0_EXTRUDER_COOLER_PIN -1
 #define EXT0_EXTRUDER_COOLER_SPEED 255
-#define EXT0_DECOUPLE_TEST_PERIOD 30000
+#define EXT0_DECOUPLE_TEST_PERIOD 20000
 #define EXT0_JAM_PIN -1
 #define EXT0_JAM_PULLUP 0
-#define EXT1_X_OFFSET 0
-#define EXT1_Y_OFFSET 0
-#define EXT1_Z_OFFSET 0
-#define EXT1_STEPS_PER_MM 257
-#define EXT1_TEMPSENSOR_TYPE 5
-#define EXT1_TEMPSENSOR_PIN TEMP_2_PIN
-#define EXT1_HEATER_PIN HEATER_2_PIN
-#define EXT1_STEP_PIN ORIG_E1_STEP_PIN
-#define EXT1_DIR_PIN ORIG_E1_DIR_PIN
-#define EXT1_INVERSE 1
-#define EXT1_ENABLE_PIN ORIG_E1_ENABLE_PIN
-#define EXT1_ENABLE_ON 1
-#define EXT1_MIRROR_STEPPER 0
-#define EXT1_STEP2_PIN ORIG_E1_STEP_PIN
-#define EXT1_DIR2_PIN ORIG_E1_DIR_PIN
-#define EXT1_INVERSE2 0
-#define EXT1_ENABLE2_PIN ORIG_E1_ENABLE_PIN
-#define EXT1_MAX_FEEDRATE 100
-#define EXT1_MAX_START_FEEDRATE 40
-#define EXT1_MAX_ACCELERATION 5000
-#define EXT1_HEAT_MANAGER 1
-#define EXT1_PREHEAT_TEMP 190
-#define EXT1_WATCHPERIOD 1
-#define EXT1_PID_INTEGRAL_DRIVE_MAX 255
-#define EXT1_PID_INTEGRAL_DRIVE_MIN 40
-#define EXT1_PID_PGAIN_OR_DEAD_TIME 8.94
-#define EXT1_PID_I 0.51
-#define EXT1_PID_D 20
-#define EXT1_PID_MAX 255
-#define EXT1_ADVANCE_K 0
-#define EXT1_ADVANCE_L 0
-#define EXT1_ADVANCE_BACKLASH_STEPS 0
-#define EXT1_WAIT_RETRACT_TEMP 150
-#define EXT1_WAIT_RETRACT_UNITS 0
-#define EXT1_SELECT_COMMANDS ""
-#define EXT1_DESELECT_COMMANDS ""
-#define EXT1_EXTRUDER_COOLER_PIN -1
-#define EXT1_EXTRUDER_COOLER_SPEED 255
-#define EXT1_DECOUPLE_TEST_PERIOD 30000
-#define EXT1_JAM_PIN -1
-#define EXT1_JAM_PULLUP 0
-#define EXT2_X_OFFSET 0
-#define EXT2_Y_OFFSET 0
-#define EXT2_Z_OFFSET 0
-#define EXT2_STEPS_PER_MM 257
-#define EXT2_TEMPSENSOR_TYPE 5
-#define EXT2_TEMPSENSOR_PIN TEMP_3_PIN
-#define EXT2_HEATER_PIN HEATER_3_PIN
-#define EXT2_STEP_PIN ORIG_E2_STEP_PIN
-#define EXT2_DIR_PIN ORIG_E2_DIR_PIN
-#define EXT2_INVERSE 1
-#define EXT2_ENABLE_PIN ORIG_E2_ENABLE_PIN
-#define EXT2_ENABLE_ON 1
-#define EXT2_MIRROR_STEPPER 0
-#define EXT2_STEP2_PIN ORIG_E2_STEP_PIN
-#define EXT2_DIR2_PIN ORIG_E2_DIR_PIN
-#define EXT2_INVERSE2 0
-#define EXT2_ENABLE2_PIN ORIG_E2_ENABLE_PIN
-#define EXT2_MAX_FEEDRATE 100
-#define EXT2_MAX_START_FEEDRATE 40
-#define EXT2_MAX_ACCELERATION 5000
-#define EXT2_HEAT_MANAGER 1
-#define EXT2_PREHEAT_TEMP 190
-#define EXT2_WATCHPERIOD 1
-#define EXT2_PID_INTEGRAL_DRIVE_MAX 255
-#define EXT2_PID_INTEGRAL_DRIVE_MIN 40
-#define EXT2_PID_PGAIN_OR_DEAD_TIME 8.94
-#define EXT2_PID_I 0.51
-#define EXT2_PID_D 20
-#define EXT2_PID_MAX 255
-#define EXT2_ADVANCE_K 0
-#define EXT2_ADVANCE_L 0
-#define EXT2_ADVANCE_BACKLASH_STEPS 0
-#define EXT2_WAIT_RETRACT_TEMP 150
-#define EXT2_WAIT_RETRACT_UNITS 0
-#define EXT2_SELECT_COMMANDS ""
-#define EXT2_DESELECT_COMMANDS ""
-#define EXT2_EXTRUDER_COOLER_PIN -1
-#define EXT2_EXTRUDER_COOLER_SPEED 255
-#define EXT2_DECOUPLE_TEST_PERIOD 30000
-#define EXT2_JAM_PIN -1
-#define EXT2_JAM_PULLUP 0
-#define EXT3_X_OFFSET 0
-#define EXT3_Y_OFFSET 0
-#define EXT3_Z_OFFSET 0
-#define EXT3_STEPS_PER_MM 257
-#define EXT3_TEMPSENSOR_TYPE 5
-#define EXT3_TEMPSENSOR_PIN TEMP_4_PIN
-#define EXT3_HEATER_PIN HEATER_4_PIN
-#define EXT3_STEP_PIN ORIG_E3_STEP_PIN
-#define EXT3_DIR_PIN ORIG_E3_DIR_PIN
-#define EXT3_INVERSE 1
-#define EXT3_ENABLE_PIN ORIG_E3_ENABLE_PIN
-#define EXT3_ENABLE_ON 1
-#define EXT3_MIRROR_STEPPER 0
-#define EXT3_STEP2_PIN ORIG_E3_STEP_PIN
-#define EXT3_DIR2_PIN ORIG_E3_DIR_PIN
-#define EXT3_INVERSE2 0
-#define EXT3_ENABLE2_PIN ORIG_E3_ENABLE_PIN
-#define EXT3_MAX_FEEDRATE 100
-#define EXT3_MAX_START_FEEDRATE 40
-#define EXT3_MAX_ACCELERATION 5000
-#define EXT3_HEAT_MANAGER 1
-#define EXT3_PREHEAT_TEMP 190
-#define EXT3_WATCHPERIOD 1
-#define EXT3_PID_INTEGRAL_DRIVE_MAX 255
-#define EXT3_PID_INTEGRAL_DRIVE_MIN 40
-#define EXT3_PID_PGAIN_OR_DEAD_TIME 8.94
-#define EXT3_PID_I 0.51
-#define EXT3_PID_D 20
-#define EXT3_PID_MAX 255
-#define EXT3_ADVANCE_K 0
-#define EXT3_ADVANCE_L 0
-#define EXT3_ADVANCE_BACKLASH_STEPS 0
-#define EXT3_WAIT_RETRACT_TEMP 150
-#define EXT3_WAIT_RETRACT_UNITS 0
-#define EXT3_SELECT_COMMANDS ""
-#define EXT3_DESELECT_COMMANDS ""
-#define EXT3_EXTRUDER_COOLER_PIN -1
-#define EXT3_EXTRUDER_COOLER_SPEED 255
-#define EXT3_DECOUPLE_TEST_PERIOD 30000
-#define EXT3_JAM_PIN -1
-#define EXT3_JAM_PULLUP 0
 
 #define FEATURE_RETRACTION 1
 #define AUTORETRACT_ENABLED 0
@@ -252,7 +128,7 @@
 #define RETRACTION_Z_LIFT 0
 #define RETRACTION_UNDO_EXTRA_LENGTH 0
 #define RETRACTION_UNDO_EXTRA_LONG_LENGTH 0
-#define RETRACTION_UNDO_SPEED 40
+#define RETRACTION_UNDO_SPEED 20
 #define FILAMENTCHANGE_X_POS 0
 #define FILAMENTCHANGE_Y_POS 0
 #define FILAMENTCHANGE_Z_ADD  2
@@ -270,18 +146,17 @@
 #define RETRACT_DURING_HEATUP true
 #define PID_CONTROL_RANGE 20
 #define SKIP_M109_IF_WITHIN 2
-#define SCALE_PID_TO_MAX 0
+#define SCALE_PID_TO_MAX 1
 #define TEMP_HYSTERESIS 0
 #define EXTRUDE_MAXLENGTH 160
-#define NUM_TEMPS_USERTHERMISTOR0 29
-#define USER_THERMISTORTABLE0 {{0,8000},{69,2280},{79,2200},{92,2120},{107,2040},{125,1960},{146,1886},{172,1810},{204,1736},{243,1661},{291,1586},{350,1511},{422,1437},{512,1362},{622,1287},{756,1212},{919,1138},{1345,988},{3139,539},{3388,464},{3591,390},{3749,314},{3866,240},{3949,160},{4005,80},{4041,0},{4064,-80},{4086,-240},{4093,-400}}
+#define NUM_TEMPS_USERTHERMISTOR0 0
+#define USER_THERMISTORTABLE0 {}
 #define NUM_TEMPS_USERTHERMISTOR1 0
 #define USER_THERMISTORTABLE1 {}
 #define NUM_TEMPS_USERTHERMISTOR2 0
 #define USER_THERMISTORTABLE2 {}
 #define GENERIC_THERM_VREF 5
 #define GENERIC_THERM_NUM_ENTRIES 33
-#define TEMP_GAIN 1
 #define HEATER_PWM_SPEED 0
 #define COOLER_PWM_SPEED 0
 
@@ -291,11 +166,11 @@
 #define HEATED_BED_PREHEAT_TEMP 55
 #define HEATED_BED_MAX_TEMP 120
 #define SKIP_M190_IF_WITHIN 3
-#define HEATED_BED_SENSOR_TYPE 8
+#define HEATED_BED_SENSOR_TYPE 1
 #define HEATED_BED_SENSOR_PIN TEMP_1_PIN
-#define HEATED_BED_HEATER_PIN HEATER_1_PIN
+#define HEATED_BED_HEATER_PIN 12
 #define HEATED_BED_SET_INTERVAL 5000
-#define HEATED_BED_HEAT_MANAGER 1
+#define HEATED_BED_HEAT_MANAGER 0
 #define HEATED_BED_PID_INTEGRAL_DRIVE_MAX 255
 #define HEATED_BED_PID_INTEGRAL_DRIVE_MIN 80
 #define HEATED_BED_PID_PGAIN_OR_DEAD_TIME   196
@@ -304,9 +179,9 @@
 #define HEATED_BED_PID_MAX 255
 #define HEATED_BED_DECOUPLE_TEST_PERIOD 300000
 #define MIN_EXTRUDER_TEMP 150
-#define MAXTEMP 280
+#define MAXTEMP 275
 #define MIN_DEFECT_TEMPERATURE -10
-#define MAX_DEFECT_TEMPERATURE 300
+#define MAX_DEFECT_TEMPERATURE 290
 #define MILLISECONDS_PREHEAT_TIME 30000
 
 // ##########################################################################################
@@ -379,14 +254,14 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ENDSTOP_Z2_MINMAX_INVERTING false
 #define MINMAX_HARDWARE_ENDSTOP_Z2 false
 #define ENDSTOP_PULLUP_X_MAX true
-#define ENDSTOP_X_MAX_INVERTING true
-#define MAX_HARDWARE_ENDSTOP_X true
+#define ENDSTOP_X_MAX_INVERTING false
+#define MAX_HARDWARE_ENDSTOP_X false
 #define ENDSTOP_PULLUP_Y_MAX true
-#define ENDSTOP_Y_MAX_INVERTING true
-#define MAX_HARDWARE_ENDSTOP_Y true
+#define ENDSTOP_Y_MAX_INVERTING false
+#define MAX_HARDWARE_ENDSTOP_Y false
 #define ENDSTOP_PULLUP_Z_MAX true
-#define ENDSTOP_Z_MAX_INVERTING true
-#define MAX_HARDWARE_ENDSTOP_Z true
+#define ENDSTOP_Z_MAX_INVERTING false
+#define MAX_HARDWARE_ENDSTOP_Z false
 #define ENDSTOP_PULLUP_X2_MIN true
 #define ENDSTOP_PULLUP_Y2_MIN true
 #define ENDSTOP_PULLUP_Z2_MINMAX true
@@ -400,6 +275,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define MIN_HARDWARE_ENDSTOP_Y2 false
 #define MAX_HARDWARE_ENDSTOP_X2 false
 #define MAX_HARDWARE_ENDSTOP_Y2 false
+#define MINMAX_HARDWARE_ENDSTOP_Z2 false
 #define X2_MIN_PIN -1
 #define X2_MAX_PIN -1
 #define Y2_MIN_PIN -1
@@ -413,18 +289,18 @@ It also can add a delay to wait for spindle to run on full speed.
 #define min_software_endstop_x false
 #define min_software_endstop_y false
 #define min_software_endstop_z false
-#define max_software_endstop_x false
-#define max_software_endstop_y false
-#define max_software_endstop_z false
+#define max_software_endstop_x true
+#define max_software_endstop_y true
+#define max_software_endstop_z true
 #define DOOR_PIN -1
 #define DOOR_PULLUP 1
 #define DOOR_INVERTING 1
-#define ENDSTOP_X_BACK_MOVE 6
-#define ENDSTOP_Y_BACK_MOVE 6
-#define ENDSTOP_Z_BACK_MOVE 6
+#define ENDSTOP_X_BACK_MOVE 5
+#define ENDSTOP_Y_BACK_MOVE 5
+#define ENDSTOP_Z_BACK_MOVE 2
 #define ENDSTOP_X_RETEST_REDUCTION_FACTOR 3
 #define ENDSTOP_Y_RETEST_REDUCTION_FACTOR 3
-#define ENDSTOP_Z_RETEST_REDUCTION_FACTOR 6
+#define ENDSTOP_Z_RETEST_REDUCTION_FACTOR 3
 #define ENDSTOP_X_BACK_ON_HOME 1
 #define ENDSTOP_Y_BACK_ON_HOME 1
 #define ENDSTOP_Z_BACK_ON_HOME 0
@@ -435,33 +311,32 @@ It also can add a delay to wait for spindle to run on full speed.
 
 // ################# XYZ movements ###################
 
-#define X_ENABLE_ON 1
+#define X_ENABLE_ON 0
 #define Y_ENABLE_ON 0
-#define Z_ENABLE_ON 1
+#define Z_ENABLE_ON 0
 #define DISABLE_X 0
 #define DISABLE_Y 0
 #define DISABLE_Z 0
 #define DISABLE_E 0
-#define PREVENT_Z_DISABLE_ON_STEPPER_TIMEOUT
 #define INVERT_X_DIR 0
 #define INVERT_X2_DIR 0
-#define INVERT_Y_DIR 1
+#define INVERT_Y_DIR 0
 #define INVERT_Y2_DIR 0
-#define INVERT_Z_DIR 0
+#define INVERT_Z_DIR 1
 #define INVERT_Z2_DIR 0
 #define INVERT_Z3_DIR 0
 #define INVERT_Z4_DIR 0
 #define X_HOME_DIR -1
 #define Y_HOME_DIR -1
 #define Z_HOME_DIR -1
-#define X_MAX_LENGTH 418
-#define Y_MAX_LENGTH 240
-#define Z_MAX_LENGTH 210
-#define X_MIN_POS 0
-#define Y_MIN_POS 0
+#define X_MAX_LENGTH 245
+#define Y_MAX_LENGTH 210
+#define Z_MAX_LENGTH 230
+#define X_MIN_POS -38
+#define Y_MIN_POS -7
 #define Z_MIN_POS 0
 #define PARK_POSITION_X 0
-#define PARK_POSITION_Y 10
+#define PARK_POSITION_Y 220
 #define PARK_POSITION_Z_RAISE 10
 
 
@@ -496,12 +371,12 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DELTASEGMENTS_PER_PRINTLINE 24
 #define STEPPER_INACTIVE_TIME 360L
 #define MAX_INACTIVE_TIME 0L
-#define MAX_FEEDRATE_X 200
-#define MAX_FEEDRATE_Y 200
-#define MAX_FEEDRATE_Z 80
-#define HOMING_FEEDRATE_X 40
-#define HOMING_FEEDRATE_Y 40
-#define HOMING_FEEDRATE_Z 40
+#define MAX_FEEDRATE_X 400
+#define MAX_FEEDRATE_Y 400
+#define MAX_FEEDRATE_Z 5
+#define HOMING_FEEDRATE_X 100
+#define HOMING_FEEDRATE_Y 100
+#define HOMING_FEEDRATE_Z 4
 #define HOMING_ORDER HOME_ORDER_XYZ
 #define ZHOME_PRE_RAISE 0
 #define ZHOME_PRE_RAISE_DISTANCE 10
@@ -511,7 +386,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ZHOME_HEAT_HEIGHT 20
 #define ZHOME_X_POS 999999
 #define ZHOME_Y_POS 999999
-#define ENABLE_BACKLASH_COMPENSATION 1
+#define ENABLE_BACKLASH_COMPENSATION 0
 #define X_BACKLASH 0
 #define Y_BACKLASH 0
 #define Z_BACKLASH 0
@@ -520,18 +395,18 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DIRECTION_DELAY 0
 #define STEP_DOUBLER_FREQUENCY 12000
 #define ALLOW_QUADSTEPPING 1
-#define DOUBLE_STEP_DELAY 1 // time in microseconds
+#define DOUBLE_STEP_DELAY 0 // time in microseconds
 #define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
 #define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 50
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 50
-#define INTERPOLATE_ACCELERATION_WITH_Z 0
-#define ACCELERATION_FACTOR_TOP 100
-#define MAX_JERK 25
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 100
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 2000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 2000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 100
+#define INTERPOLATE_ACCELERATION_WITH_Z 1
+#define ACCELERATION_FACTOR_TOP 50
+#define MAX_JERK 20
 #define MAX_ZJERK 0.3
-#define PRINTLINE_CACHE_SIZE 24
+#define PRINTLINE_CACHE_SIZE 16
 #define MOVE_CACHE_LOW 10
 #define LOW_TICKS_PER_MOVE 250000
 #define EXTRUDER_SWITCH_XY_SPEED 100
@@ -558,27 +433,26 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z4_STEP_PIN   ORIG_E3_STEP_PIN
 #define Z4_DIR_PIN    ORIG_E3_DIR_PIN
 #define Z4_ENABLE_PIN ORIG_E3_ENABLE_PIN
-#define FEATURE_DITTO_PRINTING 1
-#define USE_ADVANCE 1
+#define FEATURE_DITTO_PRINTING 0
+#define USE_ADVANCE 0
 #define ENABLE_QUADRATIC_ADVANCE 0
 
 
 // ################# Misc. settings ##################
 
-#define BAUDRATE 250000
+#define BAUDRATE 115200
 #define ENABLE_POWER_ON_STARTUP 1
 #define POWER_INVERTING 0
 #define AUTOMATIC_POWERUP 0
 #define KILL_METHOD 1
-#define EMERGENCY_PARSER 1
 #define ACK_WITH_LINENUMBER 1
 #define KEEP_ALIVE_INTERVAL 2000
 #define WAITING_IDENTIFIER "wait"
 #define ECHO_ON_EXECUTE 1
 #define EEPROM_MODE 1
 #undef PS_ON_PIN
-#define PS_ON_PIN -1
-#define JSON_OUTPUT 1
+#define PS_ON_PIN ORIG_PS_ON_PIN
+#define JSON_OUTPUT 0
 
 /* ======== Servos =======
 Control the servos with
@@ -599,13 +473,13 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define FAN_KICKSTART_TIME  200
 #define MAX_FAN_PWM 255
 
-        #define FEATURE_WATCHDOG 1
+        #define FEATURE_WATCHDOG 0
 
 // #################### Z-Probing #####################
 
 #define Z_PROBE_Z_OFFSET 0
 #define Z_PROBE_Z_OFFSET_MODE 0
-#define UI_BED_COATING 0
+#define UI_BED_COATING 1
 #define FEATURE_Z_PROBE 0
 #define EXTRUDER_IS_Z_PROBE 0
 #define Z_PROBE_DISABLE_HEATERS 0
@@ -620,7 +494,6 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_XY_SPEED 150
 #define Z_PROBE_SWITCHING_DISTANCE 1
 #define Z_PROBE_REPETITIONS 1
-#define Z_PROBE_USE_MEDIAN 0
 #define Z_PROBE_HEIGHT 40
 #define Z_PROBE_DELAY 0
 #define Z_PROBE_START_SCRIPT ""
@@ -655,10 +528,9 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define AXISCOMP_TANXZ 0
 
 #ifndef SDSUPPORT  // Some boards have sd support on board. These define the values already in pins.h
-#define SDSUPPORT 1
+#define SDSUPPORT 0
 #undef SDCARDDETECT
-#define SDCARDDETECT ORIG_SDCARDDETECT
-#undef SDCARDDETECTINVERTED
+#define SDCARDDETECT -1
 #define SDCARDDETECTINVERTED 0
 #endif
 #define SD_EXTENDED_DIR 1 /** Show extended directory including file length. Don't use this with Pronterface! */
@@ -669,23 +541,22 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define FEATURE_CHECKSUM_FORCED 0
 #define FEATURE_FAN_CONTROL 1
 #define FEATURE_FAN2_CONTROL 0
-#define FEATURE_CONTROLLER 21
-#define ADC_KEYPAD_PIN -1
+#define FEATURE_CONTROLLER 24
+#define ADC_KEYPAD_PIN 1
 #define LANGUAGE_EN_ACTIVE 1
-#define LANGUAGE_DE_ACTIVE 1
+#define LANGUAGE_DE_ACTIVE 0
 #define LANGUAGE_NL_ACTIVE 0
-#define LANGUAGE_PT_ACTIVE 1
-#define LANGUAGE_IT_ACTIVE 1
-#define LANGUAGE_ES_ACTIVE 1
+#define LANGUAGE_PT_ACTIVE 0
+#define LANGUAGE_IT_ACTIVE 0
+#define LANGUAGE_ES_ACTIVE 0
 #define LANGUAGE_FI_ACTIVE 0
 #define LANGUAGE_SE_ACTIVE 0
-#define LANGUAGE_FR_ACTIVE 1
+#define LANGUAGE_FR_ACTIVE 0
 #define LANGUAGE_CZ_ACTIVE 0
 #define LANGUAGE_PL_ACTIVE 0
 #define LANGUAGE_TR_ACTIVE 0
-#define LANGUAGE_RU_ACTIVE 0
-#define UI_PRINTER_NAME "Stacker 500"
-#define UI_PRINTER_COMPANY "Stacker LLC"
+#define UI_PRINTER_NAME "P802_8_V1.5"
+#define UI_PRINTER_COMPANY "Zonestar 3D printer"
 #define UI_PAGES_DURATION 4000
 #define UI_SPEEDDEPENDENT_POSITIONING 0
 #define UI_DISABLE_AUTO_PAGESWITCH 1
@@ -693,14 +564,14 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define FEATURE_UI_KEYS 0
 #define UI_ENCODER_SPEED 1
 #define UI_REVERSE_ENCODER 0
-#define UI_KEY_BOUNCETIME 10
+#define UI_KEY_BOUNCETIME 20
 #define UI_KEY_FIRST_REPEAT 500
 #define UI_KEY_REDUCE_REPEAT 50
 #define UI_KEY_MIN_REPEAT 50
-#define FEATURE_BEEPER 1
+#define FEATURE_BEEPER 0
 #define CASE_LIGHTS_PIN -1
 #define CASE_LIGHT_DEFAULT_ON 1
-#define UI_START_SCREEN_DELAY 1000
+#define UI_START_SCREEN_DELAY 3000
 #define UI_DYNAMIC_ENCODER_SPEED 1
         /**
 Beeper sound definitions for short beeps during key actions
@@ -713,53 +584,35 @@ Values must be in range 1..255
 #define UI_SET_MIN_HEATED_BED_TEMP  30
 #define UI_SET_MAX_HEATED_BED_TEMP 120
 #define UI_SET_MIN_EXTRUDER_TEMP   170
-#define UI_SET_MAX_EXTRUDER_TEMP   280
+#define UI_SET_MAX_EXTRUDER_TEMP   260
 #define UI_SET_EXTRUDER_FEEDRATE 2
 #define UI_SET_EXTRUDER_RETRACT_DISTANCE 3
 
 
 #define NUM_MOTOR_DRIVERS 0
 
-#define DEBUG_ECHO_ASCII
-
-
-#define MACHINE_TYPE "STACKER"
-#define ALTERNATIVE_JERK
-#define REDUCE_ON_SMALL_SEGMENTS
-#define MAX_JERK_DISTANCE 0.8 
-#define ZHOME_WAIT_UNSWING 500
-#define BIG_OUTPUT_BUFFER // allows complete temperature line as output
-#define CUSTOM_LOGO
-#define LOGO_WIDTH 128
-#define LOGO_HEIGHT 13
-#define LOGO_BITMAP const unsigned char logo[] PROGMEM = {\
-0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,\
-0x0F, 0xFF, 0xF3, 0xFF, 0xF9, 0xFF, 0xFE, 0x7F, 0xFF, 0x9E, 0x0F, 0x87, 0xFF, 0xF7, 0xFF, 0xFC,\
-0x1F, 0xFF, 0xF3, 0xFF, 0xF3, 0xFF, 0xFC, 0xFF, 0xFF, 0x3C, 0x1F, 0x07, 0xFF, 0xE7, 0xFF, 0xF8,\
-0x1F, 0xFF, 0xE7, 0xFF, 0xF3, 0xFF, 0xFC, 0xFF, 0xFF, 0x3C, 0x3E, 0x0F, 0xFF, 0xEF, 0xFF, 0xF8,\
-0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x7C, 0x00, 0x00, 0x00, 0x00, 0x00,\
-0x38, 0x00, 0x00, 0x3C, 0x07, 0x80, 0x79, 0xE0, 0x00, 0x78, 0x00, 0x0E, 0x00, 0x0F, 0x00, 0xF8,\
-0x3F, 0xFF, 0x80, 0x3C, 0x07, 0x3F, 0xF9, 0xE0, 0x00, 0x7B, 0xF8, 0x1F, 0xFF, 0x8F, 0x01, 0xF0,\
-0x3F, 0xFF, 0xC0, 0x78, 0x0F, 0x7F, 0xF9, 0xC0, 0x00, 0x73, 0xF8, 0x1F, 0xFF, 0x8E, 0x7F, 0xE0,\
-0x00, 0x03, 0xC0, 0x78, 0x0E, 0x00, 0x73, 0xC0, 0x00, 0xF0, 0x7C, 0x1E, 0x00, 0x1E, 0xFF, 0xC0,\
-0x00, 0x03, 0xC0, 0x70, 0x0E, 0x00, 0xF3, 0xC0, 0x00, 0xF0, 0x3E, 0x3C, 0x00, 0x1E, 0xFF, 0xC0,\
-0x7F, 0xFF, 0x80, 0xF0, 0x1E, 0x00, 0xF3, 0xFF, 0xFC, 0xF0, 0x1E, 0x3F, 0xFF, 0x9C, 0x07, 0xC0,\
-0xFF, 0xFF, 0x00, 0xF0, 0x1E, 0x01, 0xE7, 0xFF, 0xFD, 0xE0, 0x1F, 0x3F, 0xFF, 0xBC, 0x03, 0xE0,\
-0xFF, 0xFE, 0x01, 0xE0, 0x3E, 0x01, 0xE7, 0xFF, 0xF9, 0xE0, 0x0F, 0xBF, 0xFF, 0x3C, 0x01, 0xF0\
-};
-
-#if 0
-Informations:
-
-Extruder temperatures use a user defined table for ATC 104GT sensor. Here a adjustment to
-real temperatures in nozzle is included. So in deviation to original temperature table these
-temperatures are used:
--50 - 30: Original T
-30-260: T-(T-30)*15/230
-260-300: T-15
-
-New table stops now at 285°C so max. settable temperature is 280°C
-#endif
+//----------------------------------------------------------------------------------
+// Sample configuration for Zonestar P802M 3D printer and similar models.
+// http://forum.repetier.com/discussion/1105/melzi-v2-0-with-lcd2004-and-5-keys
+//----------------------------------------------------------------------------------
+// A bit optimized settings for Zonestar 3D printer with Melzi board. Most important
+// settings are steps/mm, Z direction inversion, homing order, digital pin 12 for
+// bed heater (instead of default 10 set in Melzi configuration), Zonestar display
+// controller with analog pin 1 for keypad. This firmware is a bit faster than
+// Repetier firmware defaults.
+//
+// Do not forget to update X/Y/Z min positions for your printer (it homes with
+// negative values for X/Y) and then set X/Y/Z max travel so the printer does not
+// kick max ends (all set from General tab of web configurator or later via EEPROM
+// editor).
+//
+// Make sure you use this firmware settings and not previously stored ones. M502
+// (restore firmware defaults) and M500 (save to EEPROM) commands may help.
+//
+// By default the Enter/OK (center) key is mapped to the same action
+// as the Right one (ACTION_OK). It can be redefined here if desired:
+//#define ADC_KEYPAD_CENTER_ACTION UI_ACTION_TOP_MENU
+//----------------------------------------------------------------------------------
 
 #endif
 
@@ -769,49 +622,49 @@ New table stops now at 285°C so max. settable temperature is 280°C
 {
     "editMode": 2,
     "processor": 0,
-    "baudrate": 250000,
+    "baudrate": 115200,
     "bluetoothSerial": -1,
     "bluetoothBaudrate": 115200,
-    "xStepsPerMM": 72.72,
-    "yStepsPerMM": 72.72,
-    "zStepsPerMM": 520,
-    "xInvert": "0",
+    "xStepsPerMM": 100,
+    "yStepsPerMM": 100,
+    "zStepsPerMM": 1600,
+    "xInvert": 0,
     "x2Invert": 0,
-    "xInvertEnable": "1",
+    "xInvertEnable": 0,
     "eepromMode": 1,
-    "yInvert": "1",
+    "yInvert": 0,
     "y2Invert": 0,
     "yInvertEnable": 0,
-    "zInvert": "0",
+    "zInvert": "1",
     "z2Invert": 0,
     "z3Invert": 0,
     "z4Invert": 0,
-    "zInvertEnable": "1",
+    "zInvertEnable": 0,
     "extruder": [
         {
             "id": 0,
-            "heatManager": 1,
+            "heatManager": 3,
             "pidDriveMin": 40,
-            "pidDriveMax": 255,
+            "pidDriveMax": 230,
             "pidMax": 255,
-            "sensorType": 5,
+            "sensorType": 1,
             "sensorPin": "TEMP_0_PIN",
             "heaterPin": "HEATER_0_PIN",
             "maxFeedrate": 50,
             "startFeedrate": 20,
-            "invert": "1",
-            "invertEnable": "1",
+            "invert": "0",
+            "invertEnable": "0",
             "acceleration": 5000,
             "watchPeriod": 1,
-            "pidP": 8.94,
-            "pidI": 0.51,
-            "pidD": 20,
+            "pidP": 7,
+            "pidI": 2,
+            "pidD": 40,
             "advanceK": 0,
             "advanceL": 0,
             "waitRetractTemp": 150,
             "waitRetractUnits": 0,
             "waitRetract": 0,
-            "stepsPerMM": 255,
+            "stepsPerMM": 95,
             "coolerPin": -1,
             "coolerSpeed": 255,
             "selectCommands": "",
@@ -829,7 +682,7 @@ New table stops now at 285°C so max. settable temperature is 280°C
                 "enable": "ORIG_E0_ENABLE_PIN"
             },
             "advanceBacklashSteps": 0,
-            "decoupleTestPeriod": 30,
+            "decoupleTestPeriod": 20,
             "jamPin": -1,
             "jamPullup": "0",
             "mirror": "0",
@@ -839,168 +692,6 @@ New table stops now at 285°C so max. settable temperature is 280°C
                 "step": "ORIG_E0_STEP_PIN",
                 "dir": "ORIG_E0_DIR_PIN",
                 "enable": "ORIG_E0_ENABLE_PIN"
-            },
-            "preheat": 190
-        },
-        {
-            "id": 1,
-            "heatManager": 1,
-            "pidDriveMin": 40,
-            "pidDriveMax": 255,
-            "pidMax": 255,
-            "sensorType": 5,
-            "sensorPin": "TEMP_2_PIN",
-            "heaterPin": "HEATER_2_PIN",
-            "maxFeedrate": 100,
-            "startFeedrate": 40,
-            "invert": "1",
-            "invertEnable": "1",
-            "acceleration": 5000,
-            "watchPeriod": 1,
-            "pidP": 8.94,
-            "pidI": 0.51,
-            "pidD": 20,
-            "advanceK": 0,
-            "advanceL": 0,
-            "waitRetractTemp": 150,
-            "waitRetractUnits": 0,
-            "waitRetract": 0,
-            "stepsPerMM": 257,
-            "coolerPin": -1,
-            "coolerSpeed": 255,
-            "selectCommands": "",
-            "deselectCommands": "",
-            "xOffset": 0,
-            "yOffset": 0,
-            "zOffset": 0,
-            "xOffsetSteps": 0,
-            "yOffsetSteps": 0,
-            "zOffsetSteps": 0,
-            "stepper": {
-                "name": "Extruder 1",
-                "step": "ORIG_E1_STEP_PIN",
-                "dir": "ORIG_E1_DIR_PIN",
-                "enable": "ORIG_E1_ENABLE_PIN"
-            },
-            "advanceBacklashSteps": 0,
-            "decoupleTestPeriod": 30,
-            "jamPin": -1,
-            "jamPullup": "0",
-            "mirror": "0",
-            "invert2": "0",
-            "stepper2": {
-                "name": "Extruder 1",
-                "step": "ORIG_E1_STEP_PIN",
-                "dir": "ORIG_E1_DIR_PIN",
-                "enable": "ORIG_E1_ENABLE_PIN"
-            },
-            "preheat": 190
-        },
-        {
-            "id": 2,
-            "heatManager": 1,
-            "pidDriveMin": 40,
-            "pidDriveMax": 255,
-            "pidMax": 255,
-            "sensorType": 5,
-            "sensorPin": "TEMP_3_PIN",
-            "heaterPin": "HEATER_3_PIN",
-            "maxFeedrate": 100,
-            "startFeedrate": 40,
-            "invert": "1",
-            "invertEnable": "1",
-            "acceleration": 5000,
-            "watchPeriod": 1,
-            "pidP": 8.94,
-            "pidI": 0.51,
-            "pidD": 20,
-            "advanceK": 0,
-            "advanceL": 0,
-            "waitRetractTemp": 150,
-            "waitRetractUnits": 0,
-            "waitRetract": 0,
-            "stepsPerMM": 257,
-            "coolerPin": -1,
-            "coolerSpeed": 255,
-            "selectCommands": "",
-            "deselectCommands": "",
-            "xOffset": 0,
-            "yOffset": 0,
-            "zOffset": 0,
-            "xOffsetSteps": 0,
-            "yOffsetSteps": 0,
-            "zOffsetSteps": 0,
-            "stepper": {
-                "name": "Extruder 2",
-                "step": "ORIG_E2_STEP_PIN",
-                "dir": "ORIG_E2_DIR_PIN",
-                "enable": "ORIG_E2_ENABLE_PIN"
-            },
-            "advanceBacklashSteps": 0,
-            "decoupleTestPeriod": 30,
-            "jamPin": -1,
-            "jamPullup": "0",
-            "mirror": "0",
-            "invert2": "0",
-            "stepper2": {
-                "name": "Extruder 2",
-                "step": "ORIG_E2_STEP_PIN",
-                "dir": "ORIG_E2_DIR_PIN",
-                "enable": "ORIG_E2_ENABLE_PIN"
-            },
-            "preheat": 190
-        },
-        {
-            "id": 3,
-            "heatManager": 1,
-            "pidDriveMin": 40,
-            "pidDriveMax": 255,
-            "pidMax": 255,
-            "sensorType": 5,
-            "sensorPin": "TEMP_4_PIN",
-            "heaterPin": "HEATER_4_PIN",
-            "maxFeedrate": 100,
-            "startFeedrate": 40,
-            "invert": "1",
-            "invertEnable": "1",
-            "acceleration": 5000,
-            "watchPeriod": 1,
-            "pidP": 8.94,
-            "pidI": 0.51,
-            "pidD": 20,
-            "advanceK": 0,
-            "advanceL": 0,
-            "waitRetractTemp": 150,
-            "waitRetractUnits": 0,
-            "waitRetract": 0,
-            "stepsPerMM": 257,
-            "coolerPin": -1,
-            "coolerSpeed": 255,
-            "selectCommands": "",
-            "deselectCommands": "",
-            "xOffset": 0,
-            "yOffset": 0,
-            "zOffset": 0,
-            "xOffsetSteps": 0,
-            "yOffsetSteps": 0,
-            "zOffsetSteps": 0,
-            "stepper": {
-                "name": "Extruder 3",
-                "step": "ORIG_E3_STEP_PIN",
-                "dir": "ORIG_E3_DIR_PIN",
-                "enable": "ORIG_E3_ENABLE_PIN"
-            },
-            "advanceBacklashSteps": 0,
-            "decoupleTestPeriod": 30,
-            "jamPin": -1,
-            "jamPullup": "0",
-            "mirror": "0",
-            "invert2": "0",
-            "stepper2": {
-                "name": "Extruder 3",
-                "step": "ORIG_E3_STEP_PIN",
-                "dir": "ORIG_E3_DIR_PIN",
-                "enable": "ORIG_E3_ENABLE_PIN"
             },
             "preheat": 190
         }
@@ -1010,27 +701,27 @@ New table stops now at 285°C so max. settable temperature is 280°C
     "xMinEndstop": 1,
     "yMinEndstop": 1,
     "zMinEndstop": 1,
-    "xMaxEndstop": 1,
-    "yMaxEndstop": 1,
-    "zMaxEndstop": 1,
+    "xMaxEndstop": 0,
+    "yMaxEndstop": 0,
+    "zMaxEndstop": 0,
     "x2MinEndstop": 0,
     "y2MinEndstop": 0,
     "x2MaxEndstop": 0,
     "y2MaxEndstop": 0,
-    "motherboard": 35,
+    "motherboard": 63,
     "driveSystem": 0,
-    "xMaxSpeed": 200,
-    "xHomingSpeed": 40,
-    "xTravelAcceleration": 1000,
+    "xMaxSpeed": 400,
+    "xHomingSpeed": 100,
+    "xTravelAcceleration": 2000,
     "xPrintAcceleration": 1000,
-    "yMaxSpeed": 200,
-    "yHomingSpeed": 40,
-    "yTravelAcceleration": 1000,
+    "yMaxSpeed": 400,
+    "yHomingSpeed": 100,
+    "yTravelAcceleration": 2000,
     "yPrintAcceleration": 1000,
-    "zMaxSpeed": 80,
-    "zHomingSpeed": 40,
-    "zTravelAcceleration": 50,
-    "zPrintAcceleration": 50,
+    "zMaxSpeed": 5,
+    "zHomingSpeed": 4,
+    "zTravelAcceleration": 100,
+    "zPrintAcceleration": 100,
     "xMotor": {
         "name": "X motor",
         "step": "ORIG_X_STEP_PIN",
@@ -1049,18 +740,18 @@ New table stops now at 285°C so max. settable temperature is 280°C
         "dir": "ORIG_Z_DIR_PIN",
         "enable": "ORIG_Z_ENABLE_PIN"
     },
-    "enableBacklash": "1",
+    "enableBacklash": "0",
     "backlashX": 0,
     "backlashY": 0,
     "backlashZ": 0,
     "stepperInactiveTime": 360,
     "maxInactiveTime": 0,
-    "xMinPos": 0,
-    "yMinPos": 0,
+    "xMinPos": -38,
+    "yMinPos": -7,
     "zMinPos": 0,
-    "xLength": 418,
-    "yLength": 240,
-    "zLength": 210,
+    "xLength": 245,
+    "yLength": 210,
+    "zLength": 230,
     "alwaysCheckEndstops": "1",
     "disableX": "0",
     "disableY": "0",
@@ -1095,10 +786,10 @@ New table stops now at 285°C so max. settable temperature is 280°C
     "directionDelay": 0,
     "stepDoublerFrequency": 12000,
     "allowQuadstepping": "1",
-    "doubleStepDelay": 1,
-    "maxJerk": 25,
+    "doubleStepDelay": 0,
+    "maxJerk": 20,
     "maxZJerk": 0.3,
-    "moveCacheSize": 24,
+    "moveCacheSize": 16,
     "moveCacheLow": 10,
     "lowTicksPerMove": 250000,
     "enablePowerOnStartup": "1",
@@ -1106,7 +797,7 @@ New table stops now at 285°C so max. settable temperature is 280°C
     "sendWaits": "1",
     "ackWithLineNumber": "1",
     "killMethod": 1,
-    "useAdvance": "1",
+    "useAdvance": "0",
     "useQuadraticAdvance": "0",
     "powerInverting": 0,
     "mirrorX": 0,
@@ -1123,7 +814,7 @@ New table stops now at 285°C so max. settable temperature is 280°C
         "dir": "ORIG_E1_DIR_PIN",
         "enable": "ORIG_E1_ENABLE_PIN"
     },
-    "mirrorZ": 0,
+    "mirrorZ": "0",
     "mirrorZMotor": {
         "name": "Extruder 1",
         "step": "ORIG_E1_STEP_PIN",
@@ -1144,20 +835,20 @@ New table stops now at 285°C so max. settable temperature is 280°C
         "dir": "ORIG_E3_DIR_PIN",
         "enable": "ORIG_E3_ENABLE_PIN"
     },
-    "dittoPrinting": "1",
+    "dittoPrinting": "0",
     "featureServos": "0",
     "servo0Pin": 11,
     "servo1Pin": -1,
     "servo2Pin": -1,
     "servo3Pin": -1,
-    "featureWatchdog": "1",
+    "featureWatchdog": "0",
     "hasHeatedBed": "1",
     "enableZProbing": "0",
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_XYZ",
-    "featureController": 21,
-    "uiPrinterName": "Stacker 500",
-    "uiPrinterCompany": "Stacker LLC",
+    "featureController": 24,
+    "uiPrinterName": "P802_8_V1.5",
+    "uiPrinterCompany": "Zonestar 3D printer",
     "uiPagesDuration": 4000,
     "uiHeadline": "",
     "uiDisablePageswitch": "1",
@@ -1165,23 +856,23 @@ New table stops now at 285°C so max. settable temperature is 280°C
     "featureKeys": "0",
     "uiEncoderSpeed": 1,
     "uiReverseEncoder": "0",
-    "uiKeyBouncetime": 10,
+    "uiKeyBouncetime": 20,
     "uiKeyFirstRepeat": 500,
     "uiKeyReduceRepeat": 50,
     "uiKeyMinRepeat": 50,
-    "featureBeeper": "1",
+    "featureBeeper": "0",
     "uiMinHeatedBed": 30,
     "uiMaxHeatedBed": 120,
     "uiMinEtxruderTemp": 170,
-    "uiMaxExtruderTemp": 280,
+    "uiMaxExtruderTemp": 260,
     "uiExtruderFeedrate": 2,
     "uiExtruderRetractDistance": 3,
     "uiSpeeddependentPositioning": "0",
     "maxBedTemperature": 120,
-    "bedSensorType": 8,
+    "bedSensorType": 1,
     "bedSensorPin": "TEMP_1_PIN",
-    "bedHeaterPin": "HEATER_1_PIN",
-    "bedHeatManager": 1,
+    "bedHeaterPin": 12,
+    "bedHeatManager": 0,
     "bedPreheat": 55,
     "bedUpdateInterval": 5000,
     "bedPidDriveMin": 80,
@@ -1218,154 +909,8 @@ New table stops now at 285°C so max. settable temperature is 280°C
     "userTable0": {
         "r1": 0,
         "r2": 4700,
-        "temps": [
-            {
-                "t": 1000,
-                "r": 0,
-                "adc": 0
-            },
-            {
-                "t": 285,
-                "r": 80.65,
-                "adc": 69.0830221832
-            },
-            {
-                "t": 275,
-                "r": 93,
-                "adc": 79.4564990611
-            },
-            {
-                "t": 265,
-                "r": 107.9,
-                "adc": 91.9009338797
-            },
-            {
-                "t": 255,
-                "r": 125.8,
-                "adc": 106.749347258
-            },
-            {
-                "t": 245,
-                "r": 147.5,
-                "adc": 124.602888087
-            },
-            {
-                "t": 235.7,
-                "r": 174,
-                "adc": 146.18998769
-            },
-            {
-                "t": 226.3,
-                "r": 206.5,
-                "adc": 172.346377255
-            },
-            {
-                "t": 217,
-                "r": 246.8,
-                "adc": 204.302983747
-            },
-            {
-                "t": 207.6,
-                "r": 296.9,
-                "adc": 243.311953411
-            },
-            {
-                "t": 198.3,
-                "r": 359.7,
-                "adc": 291.118346938
-            },
-            {
-                "t": 188.9,
-                "r": 439.3,
-                "adc": 350.034732357
-            },
-            {
-                "t": 179.6,
-                "r": 540.6,
-                "adc": 422.424340724
-            },
-            {
-                "t": 170.2,
-                "r": 671.4,
-                "adc": 511.855940723
-            },
-            {
-                "t": 160.9,
-                "r": 841.4,
-                "adc": 621.780236041
-            },
-            {
-                "t": 151.5,
-                "r": 1064,
-                "adc": 755.912560722
-            },
-            {
-                "t": 142.2,
-                "r": 1360,
-                "adc": 919.00990099
-            },
-            {
-                "t": 123.5,
-                "r": 2298,
-                "adc": 1344.71420406
-            },
-            {
-                "t": 67.4,
-                "r": 15440,
-                "adc": 3139.36444886
-            },
-            {
-                "t": 58,
-                "r": 22510,
-                "adc": 3387.66813671
-            },
-            {
-                "t": 48.7,
-                "r": 33490,
-                "adc": 3591.03299293
-            },
-            {
-                "t": 39.3,
-                "r": 50960,
-                "adc": 3749.21307941
-            },
-            {
-                "t": 30,
-                "r": 79360,
-                "adc": 3866.0385439
-            },
-            {
-                "t": 20,
-                "r": 126800,
-                "adc": 3948.63878327
-            },
-            {
-                "t": 10,
-                "r": 208600,
-                "adc": 4004.76793249
-            },
-            {
-                "t": 0,
-                "r": 353700,
-                "adc": 4041.29882812
-            },
-            {
-                "t": -10,
-                "r": 620000,
-                "adc": 4064.19081159
-            },
-            {
-                "t": -30,
-                "r": 2132000,
-                "adc": 4085.99241822
-            },
-            {
-                "t": -50,
-                "r": 8743000,
-                "adc": 4092.79982167
-            }
-        ],
-        "numEntries": 29
+        "temps": [],
+        "numEntries": 0
     },
     "userTable1": {
         "r1": 0,
@@ -1384,9 +929,9 @@ New table stops now at 285°C so max. settable temperature is 280°C
     "skipM109Within": 2,
     "extruderFanCoolTemp": 50,
     "minTemp": 150,
-    "maxTemp": 280,
+    "maxTemp": 275,
     "minDefectTemp": -10,
-    "maxDefectTemp": 300,
+    "maxDefectTemp": 290,
     "arcSupport": "1",
     "featureMemoryPositionWatchdog": "1",
     "forceChecksum": "0",
@@ -1402,7 +947,7 @@ New table stops now at 285°C so max. settable temperature is 280°C
     "fanThermoMaxTemp": 60,
     "fanThermoThermistorPin": -1,
     "fanThermoThermistorType": 1,
-    "scalePidToMax": 0,
+    "scalePidToMax": "1",
     "zProbePin": -1,
     "zProbeBedDistance": 10,
     "zProbeDisableHeaters": "0",
@@ -1425,18 +970,17 @@ New table stops now at 285°C so max. settable temperature is 280°C
     "zProbeY3": 160,
     "zProbeSwitchingDistance": 1,
     "zProbeRepetitions": 1,
-    "zProbeMedian": "0",
     "zProbeEveryPoint": "",
-    "sdSupport": "1",
-    "sdCardDetectPin": "ORIG_SDCARDDETECT",
+    "sdSupport": "0",
+    "sdCardDetectPin": -1,
     "sdCardDetectInverted": "0",
-    "uiStartScreenDelay": 1000,
-    "xEndstopBackMove": 6,
-    "yEndstopBackMove": 6,
-    "zEndstopBackMove": 6,
+    "uiStartScreenDelay": 3000,
+    "xEndstopBackMove": 5,
+    "yEndstopBackMove": 5,
+    "zEndstopBackMove": 2,
     "xEndstopRetestFactor": 3,
     "yEndstopRetestFactor": 3,
-    "zEndstopRetestFactor": 6,
+    "zEndstopRetestFactor": 3,
     "xMinPin": "ORIG_X_MIN_PIN",
     "yMinPin": "ORIG_Y_MIN_PIN",
     "zMinPin": "ORIG_Z_MIN_PIN",
@@ -1448,13 +992,13 @@ New table stops now at 285°C so max. settable temperature is 280°C
     "x2MaxPin": -1,
     "y2MaxPin": -1,
     "deltaHomeOnPower": "0",
-    "fanBoardPin": "ORIG_FAN_PIN",
+    "fanBoardPin": -1,
     "heaterPWMSpeed": 0,
     "featureBabystepping": "1",
     "babystepMultiplicator": 1,
     "pdmForHeater": "0",
     "pdmForCooler": "0",
-    "psOn": -1,
+    "psOn": "ORIG_PS_ON_PIN",
     "mixingExtruder": "0",
     "decouplingTestMaxHoldVariance": 20,
     "decouplingTestMinTempRise": 1,
@@ -1462,7 +1006,7 @@ New table stops now at 285°C so max. settable temperature is 280°C
     "axisCompTanXY": 0,
     "axisCompTanXZ": 0,
     "axisCompTanYZ": 0,
-    "retractOnPause": 4,
+    "retractOnPause": 2,
     "pauseStartCommands": "",
     "pauseEndCommands": "",
     "distortionCorrection": "0",
@@ -1481,13 +1025,13 @@ New table stops now at 285°C so max. settable temperature is 280°C
     "sdStopHeaterMotorsOnStop": "1",
     "featureRetraction": "1",
     "autoretractEnabled": "0",
-    "retractionLength": 2.5,
-    "retractionLongLength": 2.5,
-    "retractionSpeed": 50,
+    "retractionLength": 3,
+    "retractionLongLength": 13,
+    "retractionSpeed": 40,
     "retractionZLift": 0,
     "retractionUndoExtraLength": 0,
     "retractionUndoExtraLongLength": 0,
-    "retractionUndoSpeed": 40,
+    "retractionUndoSpeed": 20,
     "filamentChangeXPos": 0,
     "filamentChangeYPos": 0,
     "filamentChangeZAdd": 2,
@@ -1501,7 +1045,7 @@ New table stops now at 285°C so max. settable temperature is 280°C
     "servo3StartPos": -1,
     "uiDynamicEncoderSpeed": "1",
     "uiServoControl": 0,
-    "killIfSensorDefect": "1",
+    "killIfSensorDefect": "0",
     "jamSteps": 220,
     "jamSlowdownSteps": 320,
     "jamSlowdownTo": 70,
@@ -1609,7 +1153,7 @@ New table stops now at 285°C so max. settable temperature is 280°C
             "maxDistance": 20
         }
     ],
-    "manualConfig": "#define DEBUG_ECHO_ASCII\n\n\n#define MACHINE_TYPE \"STACKER\"\n#define ALTERNATIVE_JERK\n#define REDUCE_ON_SMALL_SEGMENTS\n#define MAX_JERK_DISTANCE 0.8 \n#define ZHOME_WAIT_UNSWING 500\n#define BIG_OUTPUT_BUFFER \/\/ allows complete temperature line as output\n#define CUSTOM_LOGO\n#define LOGO_WIDTH 128\n#define LOGO_HEIGHT 13\n#define LOGO_BITMAP const unsigned char logo[] PROGMEM = {\\\n0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,\\\n0x0F, 0xFF, 0xF3, 0xFF, 0xF9, 0xFF, 0xFE, 0x7F, 0xFF, 0x9E, 0x0F, 0x87, 0xFF, 0xF7, 0xFF, 0xFC,\\\n0x1F, 0xFF, 0xF3, 0xFF, 0xF3, 0xFF, 0xFC, 0xFF, 0xFF, 0x3C, 0x1F, 0x07, 0xFF, 0xE7, 0xFF, 0xF8,\\\n0x1F, 0xFF, 0xE7, 0xFF, 0xF3, 0xFF, 0xFC, 0xFF, 0xFF, 0x3C, 0x3E, 0x0F, 0xFF, 0xEF, 0xFF, 0xF8,\\\n0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x7C, 0x00, 0x00, 0x00, 0x00, 0x00,\\\n0x38, 0x00, 0x00, 0x3C, 0x07, 0x80, 0x79, 0xE0, 0x00, 0x78, 0x00, 0x0E, 0x00, 0x0F, 0x00, 0xF8,\\\n0x3F, 0xFF, 0x80, 0x3C, 0x07, 0x3F, 0xF9, 0xE0, 0x00, 0x7B, 0xF8, 0x1F, 0xFF, 0x8F, 0x01, 0xF0,\\\n0x3F, 0xFF, 0xC0, 0x78, 0x0F, 0x7F, 0xF9, 0xC0, 0x00, 0x73, 0xF8, 0x1F, 0xFF, 0x8E, 0x7F, 0xE0,\\\n0x00, 0x03, 0xC0, 0x78, 0x0E, 0x00, 0x73, 0xC0, 0x00, 0xF0, 0x7C, 0x1E, 0x00, 0x1E, 0xFF, 0xC0,\\\n0x00, 0x03, 0xC0, 0x70, 0x0E, 0x00, 0xF3, 0xC0, 0x00, 0xF0, 0x3E, 0x3C, 0x00, 0x1E, 0xFF, 0xC0,\\\n0x7F, 0xFF, 0x80, 0xF0, 0x1E, 0x00, 0xF3, 0xFF, 0xFC, 0xF0, 0x1E, 0x3F, 0xFF, 0x9C, 0x07, 0xC0,\\\n0xFF, 0xFF, 0x00, 0xF0, 0x1E, 0x01, 0xE7, 0xFF, 0xFD, 0xE0, 0x1F, 0x3F, 0xFF, 0xBC, 0x03, 0xE0,\\\n0xFF, 0xFE, 0x01, 0xE0, 0x3E, 0x01, 0xE7, 0xFF, 0xF9, 0xE0, 0x0F, 0xBF, 0xFF, 0x3C, 0x01, 0xF0\\\n};\n\n#if 0\nInformations:\n\nExtruder temperatures use a user defined table for ATC 104GT sensor. Here a adjustment to\nreal temperatures in nozzle is included. So in deviation to original temperature table these\ntemperatures are used:\n-50 - 30: Original T\n30-260: T-(T-30)*15\/230\n260-300: T-15\n\nNew table stops now at 285\u00b0C so max. settable temperature is 280\u00b0C\n#endif",
+    "manualConfig": "\/\/----------------------------------------------------------------------------------\n\/\/ Sample configuration for Zonestar P802M 3D printer and similar models.\n\/\/ http:\/\/forum.repetier.com\/discussion\/1105\/melzi-v2-0-with-lcd2004-and-5-keys\n\/\/----------------------------------------------------------------------------------\n\/\/ A bit optimized settings for Zonestar 3D printer with Melzi board. Most important\n\/\/ settings are steps\/mm, Z direction inversion, homing order, digital pin 12 for\n\/\/ bed heater (instead of default 10 set in Melzi configuration), Zonestar display\n\/\/ controller with analog pin 1 for keypad. This firmware is a bit faster than\n\/\/ Repetier firmware defaults.\n\/\/\n\/\/ Do not forget to update X\/Y\/Z min positions for your printer (it homes with\n\/\/ negative values for X\/Y) and then set X\/Y\/Z max travel so the printer does not\n\/\/ kick max ends (all set from General tab of web configurator or later via EEPROM\n\/\/ editor).\n\/\/\n\/\/ Make sure you use this firmware settings and not previously stored ones. M502\n\/\/ (restore firmware defaults) and M500 (save to EEPROM) commands may help.\n\/\/\n\/\/ By default the Enter\/OK (center) key is mapped to the same action\n\/\/ as the Right one (ACTION_OK). It can be redefined here if desired:\n\/\/#define ADC_KEYPAD_CENTER_ACTION UI_ACTION_TOP_MENU\n\/\/----------------------------------------------------------------------------------",
     "zHomeMinTemperature": 0,
     "zHomeXPos": 999999,
     "zHomeYPos": 999999,
@@ -1618,26 +1162,25 @@ New table stops now at 285°C so max. settable temperature is 280°C
     "zProbeZOffsetMode": 0,
     "zProbeZOffset": 0,
     "zProbeDelay": 0,
-    "uiBedCoating": "0",
+    "uiBedCoating": "1",
     "langEN": "1",
-    "langDE": "1",
+    "langDE": "0",
     "langNL": "0",
-    "langPT": "1",
-    "langIT": "1",
-    "langES": "1",
+    "langPT": "0",
+    "langIT": "0",
+    "langES": "0",
     "langFI": "0",
     "langSE": "0",
-    "langFR": "1",
+    "langFR": "0",
     "langCZ": "0",
     "langPL": "0",
     "langTR": "0",
-    "langRU": "0",
-    "interpolateAccelerationWithZ": 0,
-    "accelerationFactorTop": 100,
+    "interpolateAccelerationWithZ": 1,
+    "accelerationFactorTop": 50,
     "bendingCorrectionA": 0,
     "bendingCorrectionB": 0,
     "bendingCorrectionC": 0,
-    "preventZDisableOnStepperTimeout": "1",
+    "preventZDisableOnStepperTimeout": "0",
     "supportLaser": "0",
     "laserPin": -1,
     "laserOnHigh": "1",
@@ -1656,7 +1199,7 @@ New table stops now at 285°C so max. settable temperature is 280°C
     "cncRpmMax": 8000,
     "cncSafeZ": 150,
     "startupGCode": "",
-    "jsonOutput": "1",
+    "jsonOutput": "0",
     "bedLevelingMethod": 0,
     "bedCorrectionMethod": 0,
     "bedLevelingGridSize": 5,
@@ -1669,7 +1212,7 @@ New table stops now at 285°C so max. settable temperature is 280°C
     "bedMotor3Y": 200,
     "zProbeRequiresHeating": "0",
     "zProbeMinTemperature": 150,
-    "adcKeypadPin": -1,
+    "adcKeypadPin": "1",
     "sharedExtruderHeater": "0",
     "extruderSwitchXYSpeed": 100,
     "dualXAxis": "0",
@@ -1726,33 +1269,24 @@ New table stops now at 285°C so max. settable temperature is 280°C
     "microstepE1": 16,
     "microstepE2": 16,
     "parkPosX": 0,
-    "parkPosY": 200,
+    "parkPosY": 220,
     "parkPosZ": 10,
-    "emergencyParser": 1,
-    "hostRescue": "1",
-    "MAX31855SwCS": -1,
-    "MAX31855SwCLK": -1,
-    "tempGain": "1",
     "uiAnimation": "0",
     "uiPresetBedTempPLA": 60,
     "uiPresetBedABS": 110,
     "uiPresetExtruderPLA": 190,
     "uiPresetExtruderABS": 240,
-    "interpolateZAxis": "1",
-    "zAccelerationTop": 30,
-    "maxHalfstepInterval": 1999,
     "hasMAX6675": false,
     "hasMAX31855": false,
     "hasGeneric1": false,
     "hasGeneric2": false,
     "hasGeneric3": false,
-    "hasUser0": true,
+    "hasUser0": false,
     "hasUser1": false,
     "hasUser2": false,
-    "numExtruder": 4,
-    "version": 100.4,
-    "primaryPortName": "",
-    "hasMAX31855SW": false
+    "numExtruder": 1,
+    "version": 100.2,
+    "primaryPortName": ""
 }
 ========== End configuration string ==========
 
