@@ -384,8 +384,8 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ZHOME_MIN_TEMPERATURE 0
 #define ZHOME_HEAT_ALL 1
 #define ZHOME_HEAT_HEIGHT 20
-#define ZHOME_X_POS 999999
-#define ZHOME_Y_POS 999999
+#define ZHOME_X_POS 0
+#define ZHOME_Y_POS 0
 #define ENABLE_BACKLASH_COMPENSATION 0
 #define X_BACKLASH 0
 #define Y_BACKLASH 0
@@ -1266,8 +1266,8 @@ Values must be in range 1..255
     ],
     "manualConfig": "\/\/----------------------------------------------------------------------------------\n\/\/ Sample configuration for Zonestar P802M 3D printer and similar models.\n\/\/ http:\/\/forum.repetier.com\/discussion\/1105\/melzi-v2-0-with-lcd2004-and-5-keys\n\/\/----------------------------------------------------------------------------------\n\/\/ A bit optimized settings for Zonestar 3D printer with Melzi board. Most important\n\/\/ settings are steps\/mm, Z direction inversion, homing order, digital pin 12 for\n\/\/ bed heater (instead of default 10 set in Melzi configuration), Zonestar display\n\/\/ controller with analog pin 1 for keypad. This firmware is a bit faster than\n\/\/ Repetier firmware defaults.\n\/\/\n\/\/ Do not forget to update X\/Y\/Z min positions for your printer (it homes with\n\/\/ negative values for X\/Y) and then set X\/Y\/Z max travel so the printer does not\n\/\/ kick max ends (all set from General tab of web configurator or later via EEPROM\n\/\/ editor).\n\/\/\n\/\/ Make sure you use this firmware settings and not previously stored ones. M502\n\/\/ (restore firmware defaults) and M500 (save to EEPROM) commands may help.\n\/\/\n\/\/ By default the Enter\/OK (center) key is mapped to the same action\n\/\/ as the Right one (ACTION_OK). It can be redefined here if desired:\n\/\/#define ADC_KEYPAD_CENTER_ACTION UI_ACTION_TOP_MENU\n\/\/----------------------------------------------------------------------------------",
     "zHomeMinTemperature": 0,
-    "zHomeXPos": 999999,
-    "zHomeYPos": 999999,
+    "zHomeXPos": 0,
+    "zHomeYPos": 0,
     "zHomeHeatHeight": 20,
     "zHomeHeatAll": "1",
     "zProbeZOffsetMode": 0,
