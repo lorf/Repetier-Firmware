@@ -478,7 +478,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 // #################### Z-Probing #####################
 
 #define Z_PROBE_Z_OFFSET 0
-#define Z_PROBE_Z_OFFSET_MODE 0
+#define Z_PROBE_Z_OFFSET_MODE 1
 #define UI_BED_COATING 1
 #define FEATURE_Z_PROBE 1
 #define EXTRUDER_IS_Z_PROBE 0
@@ -499,7 +499,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define Z_PROBE_RUN_AFTER_EVERY_PROBE ""
-#define Z_PROBE_REQUIRES_HEATING 1
+#define Z_PROBE_REQUIRES_HEATING 0
 #define Z_PROBE_MIN_TEMPERATURE 180
 #define FEATURE_AUTOLEVEL 1
 #define FEATURE_SOFTWARE_LEVELING 0
@@ -1270,7 +1270,7 @@ Values must be in range 1..255
     "zHomeYPos": 0,
     "zHomeHeatHeight": 20,
     "zHomeHeatAll": "1",
-    "zProbeZOffsetMode": 0,
+    "zProbeZOffsetMode": 1,
     "zProbeZOffset": 0,
     "zProbeDelay": 0,
     "uiBedCoating": "1",
@@ -1321,7 +1321,7 @@ Values must be in range 1..255
     "bedMotor2Y": 0,
     "bedMotor3X": 100,
     "bedMotor3Y": 200,
-    "zProbeRequiresHeating": "1",
+    "zProbeRequiresHeating": "0",
     "zProbeMinTemperature": 180,
     "adcKeypadPin": "1",
     "sharedExtruderHeater": "0",
