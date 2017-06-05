@@ -513,7 +513,7 @@ Values must be in range 1..255
 #define UI_SET_PRESET_HEATED_BED_TEMP_PLA 75
 #define UI_SET_PRESET_EXTRUDER_TEMP_PLA   180
 #define UI_SET_PRESET_HEATED_BED_TEMP_ABS 110
-#define UI_SET_PRESET_EXTRUDER_TEMP_ABS   210
+#define UI_SET_PRESET_EXTRUDER_TEMP_ABS   205
 #define UI_SET_MIN_HEATED_BED_TEMP  30
 #define UI_SET_MAX_HEATED_BED_TEMP 120
 #define UI_SET_MIN_EXTRUDER_TEMP   170
@@ -787,7 +787,7 @@ Values must be in range 1..255
     "uiPresetBedTempPLA": 75,
     "uiPresetBedABS": 110,
     "uiPresetExtruderPLA": 180,
-    "uiPresetExtruderABS": 210,
+    "uiPresetExtruderABS": 205,
     "uiMinHeatedBed": 30,
     "uiMaxHeatedBed": 120,
     "uiMinEtxruderTemp": 170,
