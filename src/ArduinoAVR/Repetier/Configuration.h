@@ -406,7 +406,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ACCELERATION_FACTOR_TOP 50
 #define MAX_JERK 20
 #define MAX_ZJERK 0.3
-#define PRINTLINE_CACHE_SIZE 16
+#define PRINTLINE_CACHE_SIZE 32
 #define MOVE_CACHE_LOW 10
 #define LOW_TICKS_PER_MOVE 250000
 #define EXTRUDER_SWITCH_XY_SPEED 100
@@ -789,7 +789,7 @@ Values must be in range 1..255
     "doubleStepDelay": 0,
     "maxJerk": 20,
     "maxZJerk": 0.3,
-    "moveCacheSize": 16,
+    "moveCacheSize": 32,
     "moveCacheLow": 10,
     "lowTicksPerMove": 250000,
     "enablePowerOnStartup": "0",
