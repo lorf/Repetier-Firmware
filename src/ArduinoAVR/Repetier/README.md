@@ -38,9 +38,7 @@ G1 Z10 F10000 ; lift nozzle
 G90 ; use absolute coords
 G28 X Y ; home X and Y
 G1 X0 Y0 F10000; position on the center of the bed
-M140 S0 ; Switch off bed heater, this is for Mini Diff IR sensor to work more reliably.
 G32 ; autolevel
-M190 S[first_layer_bed_temperature] ; Hot bed cools about 5-10C during G32, set desired heat bed temperature and wait
 G1 Z5 F10000
 G1 X0 Y0 F10000
 ```
