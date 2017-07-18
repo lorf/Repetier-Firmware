@@ -129,12 +129,12 @@
 #define RETRACTION_UNDO_EXTRA_LENGTH 0
 #define RETRACTION_UNDO_EXTRA_LONG_LENGTH 0
 #define RETRACTION_UNDO_SPEED 20
-#define FILAMENTCHANGE_X_POS 0
-#define FILAMENTCHANGE_Y_POS 0
+#define FILAMENTCHANGE_X_POS -107
+#define FILAMENTCHANGE_Y_POS 107
 #define FILAMENTCHANGE_Z_ADD  2
-#define FILAMENTCHANGE_REHOME 1
+#define FILAMENTCHANGE_REHOME 0
 #define FILAMENTCHANGE_SHORTRETRACT 5
-#define FILAMENTCHANGE_LONGRETRACT 50
+#define FILAMENTCHANGE_LONGRETRACT -5
 #define JAM_METHOD 1
 #define JAM_STEPS 220
 #define JAM_SLOWDOWN_STEPS 320
@@ -1150,12 +1150,12 @@ Values must be in range 1..255
     "retractionUndoExtraLength": 0,
     "retractionUndoExtraLongLength": 0,
     "retractionUndoSpeed": 20,
-    "filamentChangeXPos": 0,
-    "filamentChangeYPos": 0,
+    "filamentChangeXPos": -107,
+    "filamentChangeYPos": 107,
     "filamentChangeZAdd": 2,
-    "filamentChangeRehome": 1,
+    "filamentChangeRehome": 0,
     "filamentChangeShortRetract": 5,
-    "filamentChangeLongRetract": 50,
+    "filamentChangeLongRetract": -5,
     "fanKickstart": 200,
     "servo0StartPos": -1,
     "servo1StartPos": -1,
