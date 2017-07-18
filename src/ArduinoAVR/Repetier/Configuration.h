@@ -98,11 +98,11 @@
 #define EXT0_MAX_FEEDRATE 50
 #define EXT0_MAX_START_FEEDRATE 20
 #define EXT0_MAX_ACCELERATION 5000
-#define EXT0_HEAT_MANAGER 1
+#define EXT0_HEAT_MANAGER 3
 #define EXT0_PREHEAT_TEMP 190
 #define EXT0_WATCHPERIOD 1
-#define EXT0_PID_INTEGRAL_DRIVE_MAX 230
-#define EXT0_PID_INTEGRAL_DRIVE_MIN 130
+#define EXT0_PID_INTEGRAL_DRIVE_MAX 60
+#define EXT0_PID_INTEGRAL_DRIVE_MIN 40
 #define EXT0_PID_PGAIN_OR_DEAD_TIME 7.95
 #define EXT0_PID_I 0.45
 #define EXT0_PID_D 35.07
@@ -650,9 +650,9 @@ Values must be in range 1..255
     "extruder": [
         {
             "id": 0,
-            "heatManager": 1,
-            "pidDriveMin": 130,
-            "pidDriveMax": 230,
+            "heatManager": 3,
+            "pidDriveMin": 40,
+            "pidDriveMax": 60,
             "pidMax": 255,
             "sensorType": 5,
             "sensorPin": "TEMP_0_PIN",
