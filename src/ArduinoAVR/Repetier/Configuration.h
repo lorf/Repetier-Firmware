@@ -97,7 +97,7 @@
 #define EXT0_ENABLE2_PIN ORIG_E0_ENABLE_PIN
 #define EXT0_MAX_FEEDRATE 50
 #define EXT0_MAX_START_FEEDRATE 20
-#define EXT0_MAX_ACCELERATION 5000
+#define EXT0_MAX_ACCELERATION 1500
 #define EXT0_HEAT_MANAGER 1
 #define EXT0_PREHEAT_TEMP 190
 #define EXT0_WATCHPERIOD 1
@@ -661,7 +661,7 @@ Values must be in range 1..255
             "startFeedrate": 20,
             "invert": "0",
             "invertEnable": "0",
-            "acceleration": 5000,
+            "acceleration": 1500,
             "watchPeriod": 1,
             "pidP": 10.7415,
             "pidI": 0.8034,
