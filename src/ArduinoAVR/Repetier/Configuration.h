@@ -105,7 +105,7 @@
 #define EXT0_PID_D 35.9022
 #define EXT0_PID_MAX 255
 #define EXT0_ADVANCE_K 0
-#define EXT0_ADVANCE_L 0
+#define EXT0_ADVANCE_L 16
 #define EXT0_ADVANCE_BACKLASH_STEPS 0
 #define EXT0_WAIT_RETRACT_TEMP 150
 #define EXT0_WAIT_RETRACT_UNITS 0
@@ -338,8 +338,8 @@ It also can add a delay to wait for spindle to run on full speed.
 #define STEP_DOUBLER_FREQUENCY 12000
 #define ALLOW_QUADSTEPPING 1
 #define DOUBLE_STEP_DELAY 0 // time in microseconds
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 1500
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1500
 #define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 100
 #define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 2000
 #define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 2000
@@ -370,7 +370,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z3_DIR_PIN    ORIG_E2_DIR_PIN
 #define Z3_ENABLE_PIN ORIG_E2_ENABLE_PIN
 #define FEATURE_DITTO_PRINTING 0
-#define USE_ADVANCE 0
+#define USE_ADVANCE 1
 #define ENABLE_QUADRATIC_ADVANCE 0
 
 
@@ -595,7 +595,7 @@ Values must be in range 1..255
             "pidI": 0.8034,
             "pidD": 35.9022,
             "advanceK": 0,
-            "advanceL": 0,
+            "advanceL": 16,
             "waitRetractTemp": 150,
             "waitRetractUnits": 0,
             "waitRetract": 0,
@@ -643,11 +643,11 @@ Values must be in range 1..255
     "xMaxSpeed": 400,
     "xHomingSpeed": 100,
     "xTravelAcceleration": 2000,
-    "xPrintAcceleration": 1000,
+    "xPrintAcceleration": 1500,
     "yMaxSpeed": 400,
     "yHomingSpeed": 100,
     "yTravelAcceleration": 2000,
-    "yPrintAcceleration": 1000,
+    "yPrintAcceleration": 1500,
     "zMaxSpeed": 5,
     "zHomingSpeed": 4,
     "zTravelAcceleration": 100,
@@ -727,7 +727,7 @@ Values must be in range 1..255
     "sendWaits": "1",
     "ackWithLineNumber": "1",
     "killMethod": 1,
-    "useAdvance": "0",
+    "useAdvance": "1",
     "useQuadraticAdvance": "0",
     "powerInverting": 0,
     "mirrorX": 0,
