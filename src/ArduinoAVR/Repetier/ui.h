@@ -2016,7 +2016,7 @@ void uiCheckKeys(uint16_t &action) {
 		{   570,   870, UI_ACTION_PREVIOUS       },    // Up
 		{  1150,  1450, ADC_KEYPAD_CENTER_ACTION },    // Center
 		{  1900,  2200, UI_ACTION_OK             },    // Right
-		{  2670,  2870, UI_ACTION_NEXT           }     // Down
+		{  2670,  3100, UI_ACTION_NEXT           }     // Down
 	};
 	const uint8_t numOfKeys = sizeof(keys) / sizeof(keys[0]);
 
