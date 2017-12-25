@@ -491,7 +491,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define FEATURE_CHECKSUM_FORCED 0
 #define FEATURE_FAN_CONTROL 1
 #define FEATURE_FAN2_CONTROL 0
-#define FEATURE_CONTROLLER 2
+#define FEATURE_CONTROLLER 11
 #define ADC_KEYPAD_PIN -1
 #define LANGUAGE_EN_ACTIVE 1
 #define LANGUAGE_DE_ACTIVE 0
@@ -546,7 +546,33 @@ Values must be in range 1..255
 
 #define NUM_MOTOR_DRIVERS 0
 
-
+// Override pins.h values for 408 (SMART RAMPS) board
+// The following values are for 24C32 at 3.3V VCC
+// http://www.atmel.com/images/doc0336.pdf
+#undef TWI_CLOCK_FREQ
+#define TWI_CLOCK_FREQ          100000
+//      20 or 70
+#undef SDA_PIN
+#define SDA_PIN                         20
+// 21 or 71
+#undef SCL_PIN
+#define SCL_PIN                         21
+#undef EEPROM_SERIAL_ADDR
+#define EEPROM_SERIAL_ADDR      0x50   // 7 bit i2c address (without R/W bit)
+#undef EEPROM_PAGE_SIZE
+#define EEPROM_PAGE_SIZE        32     // page write buffer size
+#undef EEPROM_PAGE_WRITE_TIME
+#define EEPROM_PAGE_WRITE_TIME  13      // page write time in milliseconds (docs say 10ms)
+// specify size of eeprom address register
+// TWI_MMR_IADRSZ_1_BYTE for 1 byte, or TWI_MMR_IADRSZ_2_BYTE for 2 byte
+#undef EEPROM_ADDRSZ_BYTES
+#define EEPROM_ADDRSZ_BYTES     TWI_MMR_IADRSZ_2_BYTE
+#undef EEPROM_AVAILABLE
+#define EEPROM_AVAILABLE 1
+// SDCARD on RRD 12864 using "hacked" RAMPS
+// 10 if using HW spi. 53 if using SW SPI
+#undef SDSS
+#define SDSS 53
 
 #endif
 
@@ -554,7 +580,7 @@ Values must be in range 1..255
 
 ========== Start configuration string ==========
 {
-    "editMode": 1,
+    "editMode": 2,
     "processor": 1,
     "baudrate": 115200,
     "bluetoothSerial": -1,
@@ -763,7 +789,7 @@ Values must be in range 1..255
     "enableZProbing": "0",
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_ZXY",
-    "featureController": 2,
+    "featureController": 11,
     "uiPrinterName": "RepRap",
     "uiPrinterCompany": "Home made",
     "uiPagesDuration": 4000,
@@ -1036,7 +1062,7 @@ Values must be in range 1..255
             "enablePin": -1
         }
     ],
-    "manualConfig": "",
+    "manualConfig": "\/\/ Override pins.h values for 408 (SMART RAMPS) board\n\/\/ The following values are for 24C32 at 3.3V VCC\n\/\/ http:\/\/www.atmel.com\/images\/doc0336.pdf\n#undef TWI_CLOCK_FREQ\n#define TWI_CLOCK_FREQ          100000\n\/\/      20 or 70\n#undef SDA_PIN\n#define SDA_PIN                         20\n\/\/ 21 or 71\n#undef SCL_PIN\n#define SCL_PIN                         21\n#undef EEPROM_SERIAL_ADDR\n#define EEPROM_SERIAL_ADDR      0x50   \/\/ 7 bit i2c address (without R\/W bit)\n#undef EEPROM_PAGE_SIZE\n#define EEPROM_PAGE_SIZE        32     \/\/ page write buffer size\n#undef EEPROM_PAGE_WRITE_TIME\n#define EEPROM_PAGE_WRITE_TIME  13      \/\/ page write time in milliseconds (docs say 10ms)\n\/\/ specify size of eeprom address register\n\/\/ TWI_MMR_IADRSZ_1_BYTE for 1 byte, or TWI_MMR_IADRSZ_2_BYTE for 2 byte\n#undef EEPROM_ADDRSZ_BYTES\n#define EEPROM_ADDRSZ_BYTES     TWI_MMR_IADRSZ_2_BYTE\n#undef EEPROM_AVAILABLE\n#define EEPROM_AVAILABLE 1\n\/\/ SDCARD on RRD 12864 using \"hacked\" RAMPS\n\/\/ 10 if using HW spi. 53 if using SW SPI\n#undef SDSS\n#define SDSS 53",
     "zHomeMinTemperature": 0,
     "zHomeXPos": 999999,
     "zHomeYPos": 999999,
