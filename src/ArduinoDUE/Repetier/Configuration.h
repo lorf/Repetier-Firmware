@@ -230,31 +230,31 @@ It also can add a delay to wait for spindle to run on full speed.
 // ################ Endstop configuration #####################
 
 #define ENDSTOP_PULLUP_X_MIN true
-#define ENDSTOP_X_MIN_INVERTING true
-#define MIN_HARDWARE_ENDSTOP_X true
+#define ENDSTOP_X_MIN_INVERTING false
+#define MIN_HARDWARE_ENDSTOP_X false
 #define ENDSTOP_PULLUP_Y_MIN true
-#define ENDSTOP_Y_MIN_INVERTING true
-#define MIN_HARDWARE_ENDSTOP_Y true
+#define ENDSTOP_Y_MIN_INVERTING false
+#define MIN_HARDWARE_ENDSTOP_Y false
 #define ENDSTOP_PULLUP_Z_MIN true
-#define ENDSTOP_Z_MIN_INVERTING true
-#define MIN_HARDWARE_ENDSTOP_Z true
+#define ENDSTOP_Z_MIN_INVERTING false
+#define MIN_HARDWARE_ENDSTOP_Z false
 #define ENDSTOP_PULLUP_X_MAX true
 #define ENDSTOP_X_MAX_INVERTING false
-#define MAX_HARDWARE_ENDSTOP_X false
+#define MAX_HARDWARE_ENDSTOP_X true
 #define ENDSTOP_PULLUP_Y_MAX true
 #define ENDSTOP_Y_MAX_INVERTING false
-#define MAX_HARDWARE_ENDSTOP_Y false
+#define MAX_HARDWARE_ENDSTOP_Y true
 #define ENDSTOP_PULLUP_Z_MAX true
 #define ENDSTOP_Z_MAX_INVERTING false
-#define MAX_HARDWARE_ENDSTOP_Z false
+#define MAX_HARDWARE_ENDSTOP_Z true
 #define max_software_endstop_r true
 
-#define min_software_endstop_x false
-#define min_software_endstop_y false
-#define min_software_endstop_z false
-#define max_software_endstop_x true
-#define max_software_endstop_y true
-#define max_software_endstop_z true
+#define min_software_endstop_x true
+#define min_software_endstop_y true
+#define min_software_endstop_z true
+#define max_software_endstop_x false
+#define max_software_endstop_y false
+#define max_software_endstop_z false
 #define ENDSTOP_X_BACK_MOVE 5
 #define ENDSTOP_Y_BACK_MOVE 5
 #define ENDSTOP_Z_BACK_MOVE 2
@@ -340,10 +340,10 @@ It also can add a delay to wait for spindle to run on full speed.
 #define MAX_INACTIVE_TIME 0L
 #define MAX_FEEDRATE_X 200
 #define MAX_FEEDRATE_Y 200
-#define MAX_FEEDRATE_Z 2
-#define HOMING_FEEDRATE_X 40
-#define HOMING_FEEDRATE_Y 40
-#define HOMING_FEEDRATE_Z 2
+#define MAX_FEEDRATE_Z 200
+#define HOMING_FEEDRATE_X 100
+#define HOMING_FEEDRATE_Y 100
+#define HOMING_FEEDRATE_Z 100
 #define HOMING_ORDER HOME_ORDER_ZXY
 #define ZHOME_MIN_TEMPERATURE 0
 #define ZHOME_HEAT_ALL 1
@@ -362,10 +362,10 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DOUBLE_STEP_DELAY 0 // time in microseconds
 #define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
 #define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 100
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 100
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 100
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 100
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 1000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 1000
 #define INTERPOLATE_ACCELERATION_WITH_Z 0
 #define ACCELERATION_FACTOR_TOP 100
 #define MAX_JERK 20
@@ -652,26 +652,26 @@ Values must be in range 1..255
     ],
     "uiLanguage": 0,
     "uiController": 0,
-    "xMinEndstop": 1,
-    "yMinEndstop": 1,
-    "zMinEndstop": 1,
-    "xMaxEndstop": 0,
-    "yMaxEndstop": 0,
-    "zMaxEndstop": 0,
+    "xMinEndstop": 0,
+    "yMinEndstop": 0,
+    "zMinEndstop": 0,
+    "xMaxEndstop": 2,
+    "yMaxEndstop": 2,
+    "zMaxEndstop": 2,
     "motherboard": 408,
     "driveSystem": 3,
     "xMaxSpeed": 200,
-    "xHomingSpeed": 40,
-    "xTravelAcceleration": 100,
+    "xHomingSpeed": 100,
+    "xTravelAcceleration": 1000,
     "xPrintAcceleration": 1000,
     "yMaxSpeed": 200,
-    "yHomingSpeed": 40,
-    "yTravelAcceleration": 100,
+    "yHomingSpeed": 100,
+    "yTravelAcceleration": 1000,
     "yPrintAcceleration": 1000,
-    "zMaxSpeed": 2,
-    "zHomingSpeed": 2,
-    "zTravelAcceleration": 100,
-    "zPrintAcceleration": 100,
+    "zMaxSpeed": 200,
+    "zHomingSpeed": 100,
+    "zTravelAcceleration": 1000,
+    "zPrintAcceleration": 1000,
     "xMotor": {
         "name": "X motor",
         "step": "ORIG_X_STEP_PIN",
