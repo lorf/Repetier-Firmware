@@ -81,7 +81,7 @@
 #define EXT0_Y_OFFSET 0
 #define EXT0_Z_OFFSET 0
 #define EXT0_STEPS_PER_MM 370
-#define EXT0_TEMPSENSOR_TYPE 1
+#define EXT0_TEMPSENSOR_TYPE 14
 #define EXT0_TEMPSENSOR_PIN TEMP_0_PIN
 #define EXT0_HEATER_PIN HEATER_0_PIN
 #define EXT0_STEP_PIN ORIG_E0_STEP_PIN
@@ -257,13 +257,13 @@ It also can add a delay to wait for spindle to run on full speed.
 #define max_software_endstop_z false
 #define ENDSTOP_X_BACK_MOVE 5
 #define ENDSTOP_Y_BACK_MOVE 5
-#define ENDSTOP_Z_BACK_MOVE 2
-#define ENDSTOP_X_RETEST_REDUCTION_FACTOR 3
-#define ENDSTOP_Y_RETEST_REDUCTION_FACTOR 3
-#define ENDSTOP_Z_RETEST_REDUCTION_FACTOR 3
-#define ENDSTOP_X_BACK_ON_HOME 1
-#define ENDSTOP_Y_BACK_ON_HOME 1
-#define ENDSTOP_Z_BACK_ON_HOME 0
+#define ENDSTOP_Z_BACK_MOVE 5
+#define ENDSTOP_X_RETEST_REDUCTION_FACTOR 10
+#define ENDSTOP_Y_RETEST_REDUCTION_FACTOR 10
+#define ENDSTOP_Z_RETEST_REDUCTION_FACTOR 10
+#define ENDSTOP_X_BACK_ON_HOME 10
+#define ENDSTOP_Y_BACK_ON_HOME 10
+#define ENDSTOP_Z_BACK_ON_HOME 10
 #define ALWAYS_CHECK_ENDSTOPS 1
 
 // ################# XYZ movements ###################
@@ -283,7 +283,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z_HOME_DIR 1
 #define X_MAX_LENGTH 200
 #define Y_MAX_LENGTH 200
-#define Z_MAX_LENGTH 120
+#define Z_MAX_LENGTH 440
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
@@ -312,7 +312,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define EXACT_DELTA_MOVES 1
 
 // Delta settings
-#define DELTA_DIAGONAL_ROD 445 // mm
+#define DELTA_DIAGONAL_ROD 328 // mm
 #define DELTA_ALPHA_A 210
 #define DELTA_ALPHA_B 330
 #define DELTA_ALPHA_C 90
@@ -324,9 +324,9 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DELTA_DIAGONAL_CORRECTION_C 0
 #define END_EFFECTOR_HORIZONTAL_OFFSET 0
 #define CARRIAGE_HORIZONTAL_OFFSET 0
-#define DELTA_MAX_RADIUS 150
-#define ROD_RADIUS 209.25
-#define PRINTER_RADIUS 209.25
+#define DELTA_MAX_RADIUS 125
+#define ROD_RADIUS 167.415
+#define PRINTER_RADIUS 167.415
 #define DELTA_HOME_ON_POWER 0
 #define STEP_COUNTER
 #define DELTA_X_ENDSTOP_OFFSET_STEPS 0
@@ -338,12 +338,12 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DELTASEGMENTS_PER_PRINTLINE 24
 #define STEPPER_INACTIVE_TIME 360L
 #define MAX_INACTIVE_TIME 0L
-#define MAX_FEEDRATE_X 200
-#define MAX_FEEDRATE_Y 200
-#define MAX_FEEDRATE_Z 200
-#define HOMING_FEEDRATE_X 100
-#define HOMING_FEEDRATE_Y 100
-#define HOMING_FEEDRATE_Z 100
+#define MAX_FEEDRATE_X 300
+#define MAX_FEEDRATE_Y 300
+#define MAX_FEEDRATE_Z 300
+#define HOMING_FEEDRATE_X 300
+#define HOMING_FEEDRATE_Y 300
+#define HOMING_FEEDRATE_Z 300
 #define HOMING_ORDER HOME_ORDER_ZXY
 #define ZHOME_MIN_TEMPERATURE 0
 #define ZHOME_HEAT_ALL 1
@@ -360,17 +360,17 @@ It also can add a delay to wait for spindle to run on full speed.
 #define STEP_DOUBLER_FREQUENCY 80000
 #define ALLOW_QUADSTEPPING 1
 #define DOUBLE_STEP_DELAY 0 // time in microseconds
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 1000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 1000
-#define INTERPOLATE_ACCELERATION_WITH_Z 0
-#define ACCELERATION_FACTOR_TOP 100
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 5000
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 5000
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 5000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 5000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 5000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 5000
+#define INTERPOLATE_ACCELERATION_WITH_Z 3
+#define ACCELERATION_FACTOR_TOP 50
 #define MAX_JERK 20
 #define MAX_ZJERK 0.3
-#define PRINTLINE_CACHE_SIZE 16
+#define PRINTLINE_CACHE_SIZE 32
 #define MOVE_CACHE_LOW 10
 #define LOW_TICKS_PER_MOVE 250000
 #define EXTRUDER_SWITCH_XY_SPEED 100
@@ -428,7 +428,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define UI_SERVO_CONTROL 0
 #define FAN_KICKSTART_TIME  200
 
-        #define FEATURE_WATCHDOG 0
+        #define FEATURE_WATCHDOG 1
 
 // #################### Z-Probing #####################
 
@@ -478,7 +478,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define AXISCOMP_TANXZ 0
 
 #ifndef SDSUPPORT  // Some boards have sd support on board. These define the values already in pins.h
-#define SDSUPPORT 0
+#define SDSUPPORT 1
 #undef SDCARDDETECT
 #define SDCARDDETECT -1
 #define SDCARDDETECTINVERTED 0
@@ -505,16 +505,16 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define LANGUAGE_CZ_ACTIVE 0
 #define LANGUAGE_PL_ACTIVE 0
 #define LANGUAGE_TR_ACTIVE 0
-#define UI_PRINTER_NAME "RepRap"
-#define UI_PRINTER_COMPANY "Home made"
+#define UI_PRINTER_NAME "Kossel"
+#define UI_PRINTER_COMPANY ""
 #define UI_PAGES_DURATION 4000
 #define UI_ANIMATION 0
 #define UI_SPEEDDEPENDENT_POSITIONING 0
 #define UI_DISABLE_AUTO_PAGESWITCH 1
 #define UI_AUTORETURN_TO_MENU_AFTER 30000
 #define FEATURE_UI_KEYS 0
-#define UI_ENCODER_SPEED 1
-#define UI_REVERSE_ENCODER 0
+#define UI_ENCODER_SPEED 2
+#define UI_REVERSE_ENCODER 1
 #define UI_KEY_BOUNCETIME 10
 #define UI_KEY_FIRST_REPEAT 500
 #define UI_KEY_REDUCE_REPEAT 50
@@ -602,7 +602,7 @@ Values must be in range 1..255
             "pidDriveMin": 40,
             "pidDriveMax": 230,
             "pidMax": 255,
-            "sensorType": 1,
+            "sensorType": 14,
             "sensorPin": "TEMP_0_PIN",
             "heaterPin": "HEATER_0_PIN",
             "maxFeedrate": 50,
@@ -660,18 +660,18 @@ Values must be in range 1..255
     "zMaxEndstop": 2,
     "motherboard": 408,
     "driveSystem": 3,
-    "xMaxSpeed": 200,
-    "xHomingSpeed": 100,
-    "xTravelAcceleration": 1000,
-    "xPrintAcceleration": 1000,
-    "yMaxSpeed": 200,
-    "yHomingSpeed": 100,
-    "yTravelAcceleration": 1000,
-    "yPrintAcceleration": 1000,
-    "zMaxSpeed": 200,
-    "zHomingSpeed": 100,
-    "zTravelAcceleration": 1000,
-    "zPrintAcceleration": 1000,
+    "xMaxSpeed": 300,
+    "xHomingSpeed": 300,
+    "xTravelAcceleration": 5000,
+    "xPrintAcceleration": 5000,
+    "yMaxSpeed": 300,
+    "yHomingSpeed": 300,
+    "yTravelAcceleration": 5000,
+    "yPrintAcceleration": 5000,
+    "zMaxSpeed": 300,
+    "zHomingSpeed": 300,
+    "zTravelAcceleration": 5000,
+    "zPrintAcceleration": 5000,
     "xMotor": {
         "name": "X motor",
         "step": "ORIG_X_STEP_PIN",
@@ -701,7 +701,7 @@ Values must be in range 1..255
     "zMinPos": 0,
     "xLength": 200,
     "yLength": 200,
-    "zLength": 120,
+    "zLength": 440,
     "alwaysCheckEndstops": "1",
     "disableX": "0",
     "disableY": "0",
@@ -710,20 +710,20 @@ Values must be in range 1..255
     "xHomeDir": "-1",
     "yHomeDir": "-1",
     "zHomeDir": 1,
-    "xEndstopBack": 1,
-    "yEndstopBack": 1,
-    "zEndstopBack": 0,
+    "xEndstopBack": 10,
+    "yEndstopBack": 10,
+    "zEndstopBack": 10,
     "deltaSegmentsPerSecondPrint": 180,
     "deltaSegmentsPerSecondTravel": 70,
-    "deltaDiagonalRod": 445,
-    "deltaHorizontalRadius": 209.25,
+    "deltaDiagonalRod": 328,
+    "deltaHorizontalRadius": 167.415,
     "deltaAlphaA": 210,
     "deltaAlphaB": 330,
     "deltaAlphaC": 90,
     "deltaDiagonalCorrA": 0,
     "deltaDiagonalCorrB": 0,
     "deltaDiagonalCorrC": 0,
-    "deltaMaxRadius": 150,
+    "deltaMaxRadius": 125,
     "deltaFloorSafetyMarginMM": 15,
     "deltaRadiusCorrA": 0,
     "deltaRadiusCorrB": 0,
@@ -739,7 +739,7 @@ Values must be in range 1..255
     "doubleStepDelay": 0,
     "maxJerk": 20,
     "maxZJerk": 0.3,
-    "moveCacheSize": 16,
+    "moveCacheSize": 32,
     "moveCacheLow": 10,
     "lowTicksPerMove": 250000,
     "enablePowerOnStartup": "1",
@@ -784,21 +784,21 @@ Values must be in range 1..255
     "servo1Pin": -1,
     "servo2Pin": -1,
     "servo3Pin": -1,
-    "featureWatchdog": "0",
+    "featureWatchdog": "1",
     "hasHeatedBed": "0",
     "enableZProbing": "0",
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_ZXY",
     "featureController": 11,
-    "uiPrinterName": "RepRap",
-    "uiPrinterCompany": "Home made",
+    "uiPrinterName": "Kossel",
+    "uiPrinterCompany": "",
     "uiPagesDuration": 4000,
     "uiAnimation": "0",
     "uiDisablePageswitch": "1",
     "uiAutoReturnAfter": 30000,
     "featureKeys": "0",
-    "uiEncoderSpeed": 1,
-    "uiReverseEncoder": "0",
+    "uiEncoderSpeed": 2,
+    "uiReverseEncoder": "1",
     "uiKeyBouncetime": 10,
     "uiKeyFirstRepeat": 500,
     "uiKeyReduceRepeat": 50,
@@ -915,16 +915,16 @@ Values must be in range 1..255
     "zProbeY3": 160,
     "zProbeSwitchingDistance": 1,
     "zProbeRepetitions": 1,
-    "sdSupport": "0",
+    "sdSupport": "1",
     "sdCardDetectPin": -1,
     "sdCardDetectInverted": "0",
     "uiStartScreenDelay": 1000,
     "xEndstopBackMove": 5,
     "yEndstopBackMove": 5,
-    "zEndstopBackMove": 2,
-    "xEndstopRetestFactor": 3,
-    "yEndstopRetestFactor": 3,
-    "zEndstopRetestFactor": 3,
+    "zEndstopBackMove": 5,
+    "xEndstopRetestFactor": 10,
+    "yEndstopRetestFactor": 10,
+    "zEndstopRetestFactor": 10,
     "xMinPin": "ORIG_X_MIN_PIN",
     "yMinPin": "ORIG_Y_MIN_PIN",
     "zMinPin": "ORIG_Z_MIN_PIN",
@@ -1083,8 +1083,8 @@ Values must be in range 1..255
     "langCZ": "0",
     "langPL": "0",
     "langTR": "0",
-    "interpolateAccelerationWithZ": 0,
-    "accelerationFactorTop": 100,
+    "interpolateAccelerationWithZ": 3,
+    "accelerationFactorTop": 50,
     "bendingCorrectionA": 0,
     "bendingCorrectionB": 0,
     "bendingCorrectionC": 0,
