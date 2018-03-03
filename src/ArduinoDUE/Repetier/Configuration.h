@@ -66,9 +66,9 @@
 #define MIXING_EXTRUDER 0
 
 #define DRIVE_SYSTEM 3
-#define XAXIS_STEPS_PER_MM 80
-#define YAXIS_STEPS_PER_MM 80
-#define ZAXIS_STEPS_PER_MM 80
+#define XAXIS_STEPS_PER_MM 640
+#define YAXIS_STEPS_PER_MM 640
+#define ZAXIS_STEPS_PER_MM 640
 #define EXTRUDER_FAN_COOL_TEMP 50
 #define PDM_FOR_EXTRUDER 0
 #define PDM_FOR_COOLER 0
@@ -652,9 +652,9 @@ Values must be in range 1..255
     "baudrate": 115200,
     "bluetoothSerial": -1,
     "bluetoothBaudrate": 115200,
-    "xStepsPerMM": 80,
-    "yStepsPerMM": 80,
-    "zStepsPerMM": 80,
+    "xStepsPerMM": 640,
+    "yStepsPerMM": 640,
+    "zStepsPerMM": 640,
     "xInvert": 0,
     "x2Invert": 0,
     "xInvertEnable": 0,
