@@ -302,9 +302,9 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ENDSTOP_X_RETEST_REDUCTION_FACTOR 10
 #define ENDSTOP_Y_RETEST_REDUCTION_FACTOR 10
 #define ENDSTOP_Z_RETEST_REDUCTION_FACTOR 10
-#define ENDSTOP_X_BACK_ON_HOME 10
-#define ENDSTOP_Y_BACK_ON_HOME 10
-#define ENDSTOP_Z_BACK_ON_HOME 10
+#define ENDSTOP_X_BACK_ON_HOME 1
+#define ENDSTOP_Y_BACK_ON_HOME 1
+#define ENDSTOP_Z_BACK_ON_HOME 1
 #define ALWAYS_CHECK_ENDSTOPS 1
 #define MOVE_X_WHEN_HOMED 0
 #define MOVE_Y_WHEN_HOMED 0
@@ -393,12 +393,12 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DELTASEGMENTS_PER_PRINTLINE 24
 #define STEPPER_INACTIVE_TIME 360L
 #define MAX_INACTIVE_TIME 0L
-#define MAX_FEEDRATE_X 300
-#define MAX_FEEDRATE_Y 300
-#define MAX_FEEDRATE_Z 300
-#define HOMING_FEEDRATE_X 300
-#define HOMING_FEEDRATE_Y 300
-#define HOMING_FEEDRATE_Z 300
+#define MAX_FEEDRATE_X 150
+#define MAX_FEEDRATE_Y 150
+#define MAX_FEEDRATE_Z 150
+#define HOMING_FEEDRATE_X 150
+#define HOMING_FEEDRATE_Y 150
+#define HOMING_FEEDRATE_Z 150
 #define HOMING_ORDER HOME_ORDER_ZXY
 #define ZHOME_PRE_RAISE 0
 #define ZHOME_PRE_RAISE_DISTANCE 10
@@ -418,12 +418,12 @@ It also can add a delay to wait for spindle to run on full speed.
 #define STEP_DOUBLER_FREQUENCY 80000
 #define ALLOW_QUADSTEPPING 1
 #define DOUBLE_STEP_DELAY 0 // time in microseconds
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 5000
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 5000
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 5000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 5000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 5000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 5000
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 3000
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 3000
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 3000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 3000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 3000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 3000
 #define INTERPOLATE_ACCELERATION_WITH_Z 3
 #define ACCELERATION_FACTOR_TOP 50
 #define MAX_JERK 20
@@ -737,18 +737,18 @@ Values must be in range 1..255
     "y2MaxEndstop": 0,
     "motherboard": 408,
     "driveSystem": 3,
-    "xMaxSpeed": 300,
-    "xHomingSpeed": 300,
-    "xTravelAcceleration": 5000,
-    "xPrintAcceleration": 5000,
-    "yMaxSpeed": 300,
-    "yHomingSpeed": 300,
-    "yTravelAcceleration": 5000,
-    "yPrintAcceleration": 5000,
-    "zMaxSpeed": 300,
-    "zHomingSpeed": 300,
-    "zTravelAcceleration": 5000,
-    "zPrintAcceleration": 5000,
+    "xMaxSpeed": 150,
+    "xHomingSpeed": 150,
+    "xTravelAcceleration": 3000,
+    "xPrintAcceleration": 3000,
+    "yMaxSpeed": 150,
+    "yHomingSpeed": 150,
+    "yTravelAcceleration": 3000,
+    "yPrintAcceleration": 3000,
+    "zMaxSpeed": 150,
+    "zHomingSpeed": 150,
+    "zTravelAcceleration": 3000,
+    "zPrintAcceleration": 3000,
     "xMotor": {
         "name": "X motor",
         "step": "ORIG_X_STEP_PIN",
@@ -787,9 +787,9 @@ Values must be in range 1..255
     "xHomeDir": "-1",
     "yHomeDir": "-1",
     "zHomeDir": 1,
-    "xEndstopBack": 10,
-    "yEndstopBack": 10,
-    "zEndstopBack": 10,
+    "xEndstopBack": 1,
+    "yEndstopBack": 1,
+    "zEndstopBack": 1,
     "deltaSegmentsPerSecondPrint": 180,
     "deltaSegmentsPerSecondTravel": 70,
     "deltaDiagonalRod": 328,
