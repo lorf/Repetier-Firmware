@@ -500,38 +500,38 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 // #################### Z-Probing #####################
 
 #define Z_PROBE_Z_OFFSET 0
-#define Z_PROBE_Z_OFFSET_MODE 0
+#define Z_PROBE_Z_OFFSET_MODE 1
 #define UI_BED_COATING 1
-#define FEATURE_Z_PROBE 0
-#define EXTRUDER_IS_Z_PROBE 0
+#define FEATURE_Z_PROBE 1
+#define EXTRUDER_IS_Z_PROBE 1
 #define Z_PROBE_DISABLE_HEATERS 0
 #define Z_PROBE_BED_DISTANCE 10
-#define Z_PROBE_PIN -1
+#define Z_PROBE_PIN ORIG_Z_MIN_PIN
 #define Z_PROBE_PULLUP 0
-#define Z_PROBE_ON_HIGH 0
+#define Z_PROBE_ON_HIGH 1
 #define Z_PROBE_X_OFFSET 0
 #define Z_PROBE_Y_OFFSET 0
 #define Z_PROBE_WAIT_BEFORE_TEST 0
-#define Z_PROBE_SPEED 2
+#define Z_PROBE_SPEED 5
 #define Z_PROBE_XY_SPEED 150
 #define Z_PROBE_SWITCHING_DISTANCE 1
-#define Z_PROBE_REPETITIONS 1
-#define Z_PROBE_HEIGHT 40
-#define Z_PROBE_DELAY 0
+#define Z_PROBE_REPETITIONS 2
+#define Z_PROBE_HEIGHT 0
+#define Z_PROBE_DELAY 200
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define Z_PROBE_RUN_AFTER_EVERY_PROBE ""
 #define Z_PROBE_REQUIRES_HEATING 0
-#define Z_PROBE_MIN_TEMPERATURE 150
-#define FEATURE_AUTOLEVEL 0
+#define Z_PROBE_MIN_TEMPERATURE 200
+#define FEATURE_AUTOLEVEL 1
 #define FEATURE_SOFTWARE_LEVELING 0
-#define Z_PROBE_X1 20
-#define Z_PROBE_Y1 20
-#define Z_PROBE_X2 160
-#define Z_PROBE_Y2 20
-#define Z_PROBE_X3 100
-#define Z_PROBE_Y3 160
-#define BED_LEVELING_METHOD 0
+#define Z_PROBE_X1 -80
+#define Z_PROBE_Y1 -80
+#define Z_PROBE_X2 80
+#define Z_PROBE_Y2 -80
+#define Z_PROBE_X3 -80
+#define Z_PROBE_Y3 80
+#define BED_LEVELING_METHOD 1
 #define BED_CORRECTION_METHOD 0
 #define BED_LEVELING_GRID_SIZE 5
 #define BED_LEVELING_REPETITIONS 5
@@ -849,7 +849,7 @@ Values must be in range 1..255
     "servo3Pin": -1,
     "featureWatchdog": "1",
     "hasHeatedBed": "0",
-    "enableZProbing": "0",
+    "enableZProbing": "1",
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_ZXY",
     "featureController": 11,
@@ -954,28 +954,28 @@ Values must be in range 1..255
     "fanThermoThermistorPin": -1,
     "fanThermoThermistorType": 1,
     "scalePidToMax": 0,
-    "zProbePin": -1,
+    "zProbePin": "ORIG_Z_MIN_PIN",
     "zProbeBedDistance": 10,
     "zProbeDisableHeaters": "0",
     "zProbePullup": "0",
-    "zProbeOnHigh": "0",
+    "zProbeOnHigh": "1",
     "zProbeXOffset": 0,
     "zProbeYOffset": 0,
     "zProbeWaitBeforeTest": "0",
-    "zProbeSpeed": 2,
+    "zProbeSpeed": 5,
     "zProbeXYSpeed": 150,
-    "zProbeHeight": 40,
+    "zProbeHeight": 0,
     "zProbeStartScript": "",
     "zProbeFinishedScript": "",
-    "featureAutolevel": "0",
-    "zProbeX1": 20,
-    "zProbeY1": 20,
-    "zProbeX2": 160,
-    "zProbeY2": 20,
-    "zProbeX3": 100,
-    "zProbeY3": 160,
+    "featureAutolevel": "1",
+    "zProbeX1": -80,
+    "zProbeY1": -80,
+    "zProbeX2": 80,
+    "zProbeY2": -80,
+    "zProbeX3": -80,
+    "zProbeY3": 80,
     "zProbeSwitchingDistance": 1,
-    "zProbeRepetitions": 1,
+    "zProbeRepetitions": 2,
     "zProbeEveryPoint": "",
     "sdSupport": "1",
     "sdCardDetectPin": -1,
@@ -1165,9 +1165,9 @@ Values must be in range 1..255
     "zHomeYPos": 999999,
     "zHomeHeatHeight": 20,
     "zHomeHeatAll": "1",
-    "zProbeZOffsetMode": 0,
+    "zProbeZOffsetMode": 1,
     "zProbeZOffset": 0,
-    "zProbeDelay": 0,
+    "zProbeDelay": 200,
     "uiBedCoating": "1",
     "langEN": "1",
     "langDE": "0",
@@ -1206,7 +1206,7 @@ Values must be in range 1..255
     "cncSafeZ": 150,
     "startupGCode": "",
     "jsonOutput": "0",
-    "bedLevelingMethod": 0,
+    "bedLevelingMethod": 1,
     "bedCorrectionMethod": 0,
     "bedLevelingGridSize": 5,
     "bedLevelingRepetitions": 5,
@@ -1217,7 +1217,7 @@ Values must be in range 1..255
     "bedMotor3X": 100,
     "bedMotor3Y": 200,
     "zProbeRequiresHeating": "0",
-    "zProbeMinTemperature": 150,
+    "zProbeMinTemperature": 200,
     "adcKeypadPin": -1,
     "sharedExtruderHeater": "0",
     "extruderSwitchXYSpeed": 100,
@@ -1231,7 +1231,7 @@ Values must be in range 1..255
     "multiZEndstopHoming": "0",
     "z2MinMaxPin": -1,
     "z2MinMaxEndstop": 0,
-    "extruderIsZProbe": "0",
+    "extruderIsZProbe": "1",
     "boardFanMinSpeed": 0,
     "doorPin": -1,
     "doorEndstop": 1,
