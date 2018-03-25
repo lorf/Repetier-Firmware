@@ -613,7 +613,12 @@ Values must be in range 1..255
 
 #define NUM_MOTOR_DRIVERS 0
 
+// Override config for STMicroelectronics M24256-BW EEPROM
 
+#undef TWI_CLOCK_FREQ
+#define TWI_CLOCK_FREQ 1000000
+#undef EEPROM_PAGE_SIZE
+#define EEPROM_PAGE_SIZE 64
 
 #endif
 
@@ -1154,7 +1159,7 @@ Values must be in range 1..255
             "maxDistance": 20
         }
     ],
-    "manualConfig": "",
+    "manualConfig": "\/\/ Override config for STMicroelectronics M24256-BW EEPROM\n\n#undef TWI_CLOCK_FREQ\n#define TWI_CLOCK_FREQ 1000000\n#undef EEPROM_PAGE_SIZE\n#define EEPROM_PAGE_SIZE 64",
     "zHomeMinTemperature": 0,
     "zHomeXPos": 999999,
     "zHomeYPos": 999999,
