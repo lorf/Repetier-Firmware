@@ -613,16 +613,7 @@ Values must be in range 1..255
 
 #define NUM_MOTOR_DRIVERS 0
 
-// Override pins.h values for 413 (SMART RAMPS with EEPROM) board
 
-// The following values are for 24C32 at 3.3V VCC
-// http://www.atmel.com/images/doc0336.pdf
-#undef TWI_CLOCK_FREQ
-#define TWI_CLOCK_FREQ          100000
-#undef EEPROM_PAGE_SIZE
-#define EEPROM_PAGE_SIZE        32     // page write buffer size
-#undef EEPROM_PAGE_WRITE_TIME
-#define EEPROM_PAGE_WRITE_TIME  13      // page write time in milliseconds (docs say 10ms)
 
 #endif
 
@@ -1163,7 +1154,7 @@ Values must be in range 1..255
             "maxDistance": 20
         }
     ],
-    "manualConfig": "\/\/ Override pins.h values for 413 (SMART RAMPS with EEPROM) board\n\n\/\/ The following values are for 24C32 at 3.3V VCC\n\/\/ http:\/\/www.atmel.com\/images\/doc0336.pdf\n#undef TWI_CLOCK_FREQ\n#define TWI_CLOCK_FREQ          100000\n#undef EEPROM_PAGE_SIZE\n#define EEPROM_PAGE_SIZE        32     \/\/ page write buffer size\n#undef EEPROM_PAGE_WRITE_TIME\n#define EEPROM_PAGE_WRITE_TIME  13      \/\/ page write time in milliseconds (docs say 10ms)",
+    "manualConfig": "",
     "zHomeMinTemperature": 0,
     "zHomeXPos": 999999,
     "zHomeYPos": 999999,
