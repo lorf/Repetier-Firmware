@@ -332,7 +332,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z_HOME_DIR 1
 #define X_MAX_LENGTH 200
 #define Y_MAX_LENGTH 200
-#define Z_MAX_LENGTH 440
+#define Z_MAX_LENGTH 432.57
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
@@ -368,8 +368,8 @@ It also can add a delay to wait for spindle to run on full speed.
 
 // Delta settings
 #define DELTA_DIAGONAL_ROD 328 // mm
-#define DELTA_ALPHA_A 210
-#define DELTA_ALPHA_B 330
+#define DELTA_ALPHA_A 209.76
+#define DELTA_ALPHA_B 329.77
 #define DELTA_ALPHA_C 90
 #define DELTA_RADIUS_CORRECTION_A 0
 #define DELTA_RADIUS_CORRECTION_B 0
@@ -380,8 +380,8 @@ It also can add a delay to wait for spindle to run on full speed.
 #define END_EFFECTOR_HORIZONTAL_OFFSET 0
 #define CARRIAGE_HORIZONTAL_OFFSET 0
 #define DELTA_MAX_RADIUS 125
-#define ROD_RADIUS 167.415
-#define PRINTER_RADIUS 167.415
+#define ROD_RADIUS 164.37
+#define PRINTER_RADIUS 164.37
 #define DELTA_HOME_ON_POWER 0
 #define STEP_COUNTER
 #define DELTA_X_ENDSTOP_OFFSET_STEPS 0
@@ -620,6 +620,14 @@ Values must be in range 1..255
 #undef EEPROM_PAGE_SIZE
 #define EEPROM_PAGE_SIZE 64
 
+// After Escher calibration
+#undef DELTA_X_ENDSTOP_OFFSET_STEPS
+#define DELTA_X_ENDSTOP_OFFSET_STEPS 217
+#undef DELTA_Y_ENDSTOP_OFFSET_STEPS
+#define DELTA_Y_ENDSTOP_OFFSET_STEPS 396
+#undef DELTA_Z_ENDSTOP_OFFSET_STEPS
+#define DELTA_Z_ENDSTOP_OFFSET_STEPS 0
+
 #endif
 
 /* Below you will find the configuration string, that created this Configuration.h
@@ -757,7 +765,7 @@ Values must be in range 1..255
     "zMinPos": 0,
     "xLength": 200,
     "yLength": 200,
-    "zLength": 440,
+    "zLength": 432.57,
     "alwaysCheckEndstops": "1",
     "disableX": "0",
     "disableY": "0",
@@ -772,9 +780,9 @@ Values must be in range 1..255
     "deltaSegmentsPerSecondPrint": 180,
     "deltaSegmentsPerSecondTravel": 70,
     "deltaDiagonalRod": 328,
-    "deltaHorizontalRadius": 167.415,
-    "deltaAlphaA": 210,
-    "deltaAlphaB": 330,
+    "deltaHorizontalRadius": 164.37,
+    "deltaAlphaA": 209.76,
+    "deltaAlphaB": 329.77,
     "deltaAlphaC": 90,
     "deltaDiagonalCorrA": 0,
     "deltaDiagonalCorrB": 0,
@@ -1159,7 +1167,7 @@ Values must be in range 1..255
             "maxDistance": 20
         }
     ],
-    "manualConfig": "\/\/ Override config for STMicroelectronics M24256-BW EEPROM\n\n#undef TWI_CLOCK_FREQ\n#define TWI_CLOCK_FREQ 1000000\n#undef EEPROM_PAGE_SIZE\n#define EEPROM_PAGE_SIZE 64",
+    "manualConfig": "\/\/ Override config for STMicroelectronics M24256-BW EEPROM\n\n#undef TWI_CLOCK_FREQ\n#define TWI_CLOCK_FREQ 1000000\n#undef EEPROM_PAGE_SIZE\n#define EEPROM_PAGE_SIZE 64\n\n\/\/ After Escher calibration\n#undef DELTA_X_ENDSTOP_OFFSET_STEPS\n#define DELTA_X_ENDSTOP_OFFSET_STEPS 217\n#undef DELTA_Y_ENDSTOP_OFFSET_STEPS\n#define DELTA_Y_ENDSTOP_OFFSET_STEPS 396\n#undef DELTA_Z_ENDSTOP_OFFSET_STEPS\n#define DELTA_Z_ENDSTOP_OFFSET_STEPS 0",
     "zHomeMinTemperature": 0,
     "zHomeXPos": 999999,
     "zHomeYPos": 999999,
