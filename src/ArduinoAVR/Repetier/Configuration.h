@@ -537,7 +537,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define SD_RUN_ON_STOP ""
 #define SD_STOP_HEATER_AND_MOTORS_ON_STOP 1
 #define ARC_SUPPORT 0
-#define FEATURE_MEMORY_POSITION 1
+#define FEATURE_MEMORY_POSITION 0
 #define FEATURE_CHECKSUM_FORCED 0
 #define FEATURE_FAN_CONTROL 1
 #define FEATURE_FAN2_CONTROL 0
@@ -621,6 +621,11 @@ Values must be in range 1..255
 //        {id:3, name:"122Hz, 32 values"} - This setting doesn't work
 #undef COOLER_PWM_SPEED
 #define COOLER_PWM_SPEED 2
+
+// Disable SD card support to save 20kB space,
+// needed to compile recent Repetier-Firmware for ATmega1284P
+#undef SDSUPPORT
+#define SDSUPPORT 0
 
 #endif
 
@@ -1052,7 +1057,7 @@ Values must be in range 1..255
     "minDefectTemp": -10,
     "maxDefectTemp": 290,
     "arcSupport": "0",
-    "featureMemoryPositionWatchdog": "1",
+    "featureMemoryPositionWatchdog": "0",
     "forceChecksum": "0",
     "sdExtendedDir": "1",
     "featureFanControl": "1",
@@ -1272,7 +1277,7 @@ Values must be in range 1..255
             "maxDistance": 20
         }
     ],
-    "manualConfig": "\/\/----------------------------------------------------------------------------------\n\/\/ Sample configuration for Zonestar P802M 3D printer and similar models.\n\/\/ http:\/\/forum.repetier.com\/discussion\/1105\/melzi-v2-0-with-lcd2004-and-5-keys\n\/\/----------------------------------------------------------------------------------\n\/\/ A bit optimized settings for Zonestar 3D printer with Melzi board. Most important\n\/\/ settings are steps\/mm, Z direction inversion, homing order, digital pin 12 for\n\/\/ bed heater (instead of default 10 set in Melzi configuration), Zonestar display\n\/\/ controller with analog pin 1 for keypad. This firmware is a bit faster than\n\/\/ Repetier firmware defaults.\n\/\/\n\/\/ Do not forget to update X\/Y\/Z min positions for your printer (it homes with\n\/\/ negative values for X\/Y) and then set X\/Y\/Z max travel so the printer does not\n\/\/ kick max ends (all set from General tab of web configurator or later via EEPROM\n\/\/ editor).\n\/\/\n\/\/ Make sure you use this firmware settings and not previously stored ones. M502\n\/\/ (restore firmware defaults) and M500 (save to EEPROM) commands may help.\n\/\/\n\/\/ By default the Enter\/OK (center) key is mapped to the same action\n\/\/ as the Right one (ACTION_OK). It can be redefined here if desired:\n\/\/#define ADC_KEYPAD_CENTER_ACTION UI_ACTION_TOP_MENU\n\/\/----------------------------------------------------------------------------------\n\n\/\/ Increase cooler PWM speed so fan speed < 10% actually works. Speed is defined like this:\n\/\/        {id:0, name:\"15Hz, 256 values\"},\n\/\/        {id:1, name:\"30Hz, 128 values\"},\n\/\/        {id:2, name:\"61Hz, 64 values\"},\n\/\/        {id:3, name:\"122Hz, 32 values\"} - This setting doesn't work\n#undef COOLER_PWM_SPEED\n#define COOLER_PWM_SPEED 2",
+    "manualConfig": "\/\/----------------------------------------------------------------------------------\n\/\/ Sample configuration for Zonestar P802M 3D printer and similar models.\n\/\/ http:\/\/forum.repetier.com\/discussion\/1105\/melzi-v2-0-with-lcd2004-and-5-keys\n\/\/----------------------------------------------------------------------------------\n\/\/ A bit optimized settings for Zonestar 3D printer with Melzi board. Most important\n\/\/ settings are steps\/mm, Z direction inversion, homing order, digital pin 12 for\n\/\/ bed heater (instead of default 10 set in Melzi configuration), Zonestar display\n\/\/ controller with analog pin 1 for keypad. This firmware is a bit faster than\n\/\/ Repetier firmware defaults.\n\/\/\n\/\/ Do not forget to update X\/Y\/Z min positions for your printer (it homes with\n\/\/ negative values for X\/Y) and then set X\/Y\/Z max travel so the printer does not\n\/\/ kick max ends (all set from General tab of web configurator or later via EEPROM\n\/\/ editor).\n\/\/\n\/\/ Make sure you use this firmware settings and not previously stored ones. M502\n\/\/ (restore firmware defaults) and M500 (save to EEPROM) commands may help.\n\/\/\n\/\/ By default the Enter\/OK (center) key is mapped to the same action\n\/\/ as the Right one (ACTION_OK). It can be redefined here if desired:\n\/\/#define ADC_KEYPAD_CENTER_ACTION UI_ACTION_TOP_MENU\n\/\/----------------------------------------------------------------------------------\n\n\/\/ Increase cooler PWM speed so fan speed < 10% actually works. Speed is defined like this:\n\/\/        {id:0, name:\"15Hz, 256 values\"},\n\/\/        {id:1, name:\"30Hz, 128 values\"},\n\/\/        {id:2, name:\"61Hz, 64 values\"},\n\/\/        {id:3, name:\"122Hz, 32 values\"} - This setting doesn't work\n#undef COOLER_PWM_SPEED\n#define COOLER_PWM_SPEED 2\n\n\/\/ Disable SD card support to save 20kB space,\n\/\/ needed to compile recent Repetier-Firmware for ATmega1284P\n#undef SDSUPPORT\n#define SDSUPPORT 0",
     "zHomeMinTemperature": 0,
     "zHomeXPos": 0,
     "zHomeYPos": 0,
