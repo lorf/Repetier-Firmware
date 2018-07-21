@@ -27,7 +27,7 @@
    to see and change the data. You can also upload it to newer/older versions. The system
    will silently add new options, so compilation continues to work.
 
-   This file is optimized for version 1.0.0dev
+   This file is optimized for version 1.0.2
    generator: http://www.repetier.com/firmware/dev/
 
    If you are in doubt which named functions use which pins on your board, please check the
@@ -82,13 +82,13 @@
 #define EXT0_X_OFFSET 0
 #define EXT0_Y_OFFSET 0
 #define EXT0_Z_OFFSET 0
-#define EXT0_STEPS_PER_MM 370
+#define EXT0_STEPS_PER_MM 431
 #define EXT0_TEMPSENSOR_TYPE 14
 #define EXT0_TEMPSENSOR_PIN TEMP_0_PIN
 #define EXT0_HEATER_PIN HEATER_0_PIN
 #define EXT0_STEP_PIN ORIG_E0_STEP_PIN
 #define EXT0_DIR_PIN ORIG_E0_DIR_PIN
-#define EXT0_INVERSE 0
+#define EXT0_INVERSE 1
 #define EXT0_ENABLE_PIN ORIG_E0_ENABLE_PIN
 #define EXT0_ENABLE_ON 0
 #define EXT0_MIRROR_STEPPER 0
@@ -98,8 +98,8 @@
 #define EXT0_ENABLE2_PIN ORIG_E0_ENABLE_PIN
 #define EXT0_MAX_FEEDRATE 50
 #define EXT0_MAX_START_FEEDRATE 20
-#define EXT0_MAX_ACCELERATION 5000
-#define EXT0_HEAT_MANAGER 3
+#define EXT0_MAX_ACCELERATION 3000
+#define EXT0_HEAT_MANAGER 1
 #define EXT0_PREHEAT_TEMP 190
 #define EXT0_WATCHPERIOD 1
 #define EXT0_PID_INTEGRAL_DRIVE_MAX 230
@@ -163,15 +163,15 @@
 
 // ############# Heated bed configuration ########################
 
-#define HAVE_HEATED_BED 0
-#define HEATED_BED_PREHEAT_TEMP 55
+#define HAVE_HEATED_BED 1
+#define HEATED_BED_PREHEAT_TEMP 80
 #define HEATED_BED_MAX_TEMP 120
-#define SKIP_M190_IF_WITHIN 3
-#define HEATED_BED_SENSOR_TYPE 1
+#define SKIP_M190_IF_WITHIN 1
+#define HEATED_BED_SENSOR_TYPE 14
 #define HEATED_BED_SENSOR_PIN TEMP_1_PIN
 #define HEATED_BED_HEATER_PIN HEATER_1_PIN
 #define HEATED_BED_SET_INTERVAL 5000
-#define HEATED_BED_HEAT_MANAGER 0
+#define HEATED_BED_HEAT_MANAGER 1
 #define HEATED_BED_PID_INTEGRAL_DRIVE_MAX 255
 #define HEATED_BED_PID_INTEGRAL_DRIVE_MIN 80
 #define HEATED_BED_PID_PGAIN_OR_DEAD_TIME   196
@@ -276,7 +276,6 @@ It also can add a delay to wait for spindle to run on full speed.
 #define MIN_HARDWARE_ENDSTOP_Y2 false
 #define MAX_HARDWARE_ENDSTOP_X2 false
 #define MAX_HARDWARE_ENDSTOP_Y2 false
-#define MINMAX_HARDWARE_ENDSTOP_Z2 false
 #define X2_MIN_PIN -1
 #define X2_MAX_PIN -1
 #define Y2_MIN_PIN -1
@@ -392,7 +391,7 @@ It also can add a delay to wait for spindle to run on full speed.
 
 #define DELTASEGMENTS_PER_PRINTLINE 24
 #define STEPPER_INACTIVE_TIME 360L
-#define MAX_INACTIVE_TIME 0L
+#define MAX_INACTIVE_TIME 600L
 #define MAX_FEEDRATE_X 150
 #define MAX_FEEDRATE_Y 150
 #define MAX_FEEDRATE_Z 150
@@ -544,7 +543,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define BENDING_CORRECTION_A 0
 #define BENDING_CORRECTION_B 0
 #define BENDING_CORRECTION_C 0
-#define FEATURE_AXISCOMP 0
+#define FEATURE_AXISCOMP 1
 #define AXISCOMP_TANXY 0
 #define AXISCOMP_TANYZ 0
 #define AXISCOMP_TANXZ 0
@@ -606,8 +605,8 @@ Values must be in range 1..255
 #define UI_SET_MIN_HEATED_BED_TEMP  30
 #define UI_SET_MAX_HEATED_BED_TEMP 120
 #define UI_SET_MIN_EXTRUDER_TEMP   170
-#define UI_SET_MAX_EXTRUDER_TEMP   260
-#define UI_SET_EXTRUDER_FEEDRATE 2
+#define UI_SET_MAX_EXTRUDER_TEMP   270
+#define UI_SET_EXTRUDER_FEEDRATE 20
 #define UI_SET_EXTRUDER_RETRACT_DISTANCE 3
 
 
@@ -657,7 +656,7 @@ Values must be in range 1..255
     "extruder": [
         {
             "id": 0,
-            "heatManager": 3,
+            "heatManager": 1,
             "pidDriveMin": 40,
             "pidDriveMax": 230,
             "pidMax": 255,
@@ -666,9 +665,9 @@ Values must be in range 1..255
             "heaterPin": "HEATER_0_PIN",
             "maxFeedrate": 50,
             "startFeedrate": 20,
-            "invert": "0",
+            "invert": "1",
             "invertEnable": "0",
-            "acceleration": 5000,
+            "acceleration": 3000,
             "watchPeriod": 1,
             "pidP": 7,
             "pidI": 2,
@@ -678,7 +677,7 @@ Values must be in range 1..255
             "waitRetractTemp": 150,
             "waitRetractUnits": 0,
             "waitRetract": 0,
-            "stepsPerMM": 370,
+            "stepsPerMM": 431,
             "coolerPin": -1,
             "coolerSpeed": 255,
             "selectCommands": "",
@@ -759,7 +758,7 @@ Values must be in range 1..255
     "backlashY": 0,
     "backlashZ": 0,
     "stepperInactiveTime": 360,
-    "maxInactiveTime": 0,
+    "maxInactiveTime": 600,
     "xMinPos": 0,
     "yMinPos": 0,
     "zMinPos": 0,
@@ -856,7 +855,7 @@ Values must be in range 1..255
     "servo2Pin": -1,
     "servo3Pin": -1,
     "featureWatchdog": "1",
-    "hasHeatedBed": "0",
+    "hasHeatedBed": "1",
     "enableZProbing": "1",
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_ZXY",
@@ -878,16 +877,16 @@ Values must be in range 1..255
     "uiMinHeatedBed": 30,
     "uiMaxHeatedBed": 120,
     "uiMinEtxruderTemp": 170,
-    "uiMaxExtruderTemp": 260,
-    "uiExtruderFeedrate": 2,
+    "uiMaxExtruderTemp": 270,
+    "uiExtruderFeedrate": 20,
     "uiExtruderRetractDistance": 3,
     "uiSpeeddependentPositioning": "0",
     "maxBedTemperature": 120,
-    "bedSensorType": 1,
+    "bedSensorType": 14,
     "bedSensorPin": "TEMP_1_PIN",
     "bedHeaterPin": "HEATER_1_PIN",
-    "bedHeatManager": 0,
-    "bedPreheat": 55,
+    "bedHeatManager": 1,
+    "bedPreheat": 80,
     "bedUpdateInterval": 5000,
     "bedPidDriveMin": 80,
     "bedPidDriveMax": 255,
@@ -898,7 +897,7 @@ Values must be in range 1..255
     "bedDecoupleTestPeriod": 300,
     "caseLightPin": -1,
     "caseLightDefaultOn": "1",
-    "bedSkipIfWithin": 3,
+    "bedSkipIfWithin": 1,
     "gen1T0": 25,
     "gen1R0": 100000,
     "gen1Beta": 4036,
@@ -1016,7 +1015,7 @@ Values must be in range 1..255
     "mixingExtruder": "0",
     "decouplingTestMaxHoldVariance": 20,
     "decouplingTestMinTempRise": 1,
-    "featureAxisComp": "0",
+    "featureAxisComp": "1",
     "axisCompTanXY": 0,
     "axisCompTanXZ": 0,
     "axisCompTanYZ": 0,
