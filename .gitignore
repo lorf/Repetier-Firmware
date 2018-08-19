@@ -39,3 +39,7 @@ src/ArduinoAVR/.vscode
 src/SampleEventSystems/Stacker IDEX
 activateFelix.sh
 activateOriginal.sh
+
+.pioenvs
+.piolibdeps
+.pio
