@@ -511,12 +511,12 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_X_OFFSET 0
 #define Z_PROBE_Y_OFFSET 0
 #define Z_PROBE_WAIT_BEFORE_TEST 0
-#define Z_PROBE_SPEED 5
+#define Z_PROBE_SPEED 10
 #define Z_PROBE_XY_SPEED 150
-#define Z_PROBE_SWITCHING_DISTANCE 1
-#define Z_PROBE_REPETITIONS 2
+#define Z_PROBE_SWITCHING_DISTANCE 5
+#define Z_PROBE_REPETITIONS 1
 #define Z_PROBE_HEIGHT 0
-#define Z_PROBE_DELAY 200
+#define Z_PROBE_DELAY 0
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define Z_PROBE_RUN_AFTER_EVERY_PROBE ""
@@ -524,12 +524,12 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_MIN_TEMPERATURE 200
 #define FEATURE_AUTOLEVEL 1
 #define FEATURE_SOFTWARE_LEVELING 0
-#define Z_PROBE_X1 -80
-#define Z_PROBE_Y1 -80
-#define Z_PROBE_X2 80
-#define Z_PROBE_Y2 -80
-#define Z_PROBE_X3 -80
-#define Z_PROBE_Y3 80
+#define Z_PROBE_X1 -60
+#define Z_PROBE_Y1 -60
+#define Z_PROBE_X2 60
+#define Z_PROBE_Y2 -60
+#define Z_PROBE_X3 -60
+#define Z_PROBE_Y3 60
 #define BED_LEVELING_METHOD 1
 #define BED_CORRECTION_METHOD 0
 #define BED_LEVELING_GRID_SIZE 5
@@ -969,20 +969,20 @@ Values must be in range 1..255
     "zProbeXOffset": 0,
     "zProbeYOffset": 0,
     "zProbeWaitBeforeTest": "0",
-    "zProbeSpeed": 5,
+    "zProbeSpeed": 10,
     "zProbeXYSpeed": 150,
     "zProbeHeight": 0,
     "zProbeStartScript": "",
     "zProbeFinishedScript": "",
     "featureAutolevel": "1",
-    "zProbeX1": -80,
-    "zProbeY1": -80,
-    "zProbeX2": 80,
-    "zProbeY2": -80,
-    "zProbeX3": -80,
-    "zProbeY3": 80,
-    "zProbeSwitchingDistance": 1,
-    "zProbeRepetitions": 2,
+    "zProbeX1": -60,
+    "zProbeY1": -60,
+    "zProbeX2": 60,
+    "zProbeY2": -60,
+    "zProbeX3": -60,
+    "zProbeY3": 60,
+    "zProbeSwitchingDistance": 5,
+    "zProbeRepetitions": 1,
     "zProbeEveryPoint": "",
     "sdSupport": "1",
     "sdCardDetectPin": -1,
@@ -1174,7 +1174,7 @@ Values must be in range 1..255
     "zHomeHeatAll": "1",
     "zProbeZOffsetMode": 1,
     "zProbeZOffset": 0,
-    "zProbeDelay": 200,
+    "zProbeDelay": 0,
     "uiBedCoating": "1",
     "langEN": "1",
     "langDE": "0",
