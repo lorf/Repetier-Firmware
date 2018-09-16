@@ -341,7 +341,7 @@ It also can add a delay to wait for spindle to run on full speed.
 
 
 #define DISTORTION_CORRECTION 1
-#define DISTORTION_CORRECTION_POINTS 5
+#define DISTORTION_CORRECTION_POINTS 10
 #define DISTORTION_LIMIT_TO 2
 #define DISTORTION_CORRECTION_R 60
 #define DISTORTION_PERMANENT 1
@@ -404,7 +404,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define RAISE_Z_ON_TOOLCHANGE 0
 #define ZHOME_MIN_TEMPERATURE 0
 #define ZHOME_HEAT_ALL 1
-#define ZHOME_HEAT_HEIGHT 20
+#define ZHOME_HEAT_HEIGHT 5
 #define ZHOME_X_POS 999999
 #define ZHOME_Y_POS 999999
 #define ENABLE_BACKLASH_COMPENSATION 0
@@ -504,7 +504,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define FEATURE_Z_PROBE 1
 #define EXTRUDER_IS_Z_PROBE 1
 #define Z_PROBE_DISABLE_HEATERS 0
-#define Z_PROBE_BED_DISTANCE 10
+#define Z_PROBE_BED_DISTANCE 5
 #define Z_PROBE_PIN ORIG_Z_MIN_PIN
 #define Z_PROBE_PULLUP 0
 #define Z_PROBE_ON_HIGH 1
@@ -962,7 +962,7 @@ Values must be in range 1..255
     "fanThermoThermistorType": 1,
     "scalePidToMax": 0,
     "zProbePin": "ORIG_Z_MIN_PIN",
-    "zProbeBedDistance": 10,
+    "zProbeBedDistance": 5,
     "zProbeDisableHeaters": "0",
     "zProbePullup": "0",
     "zProbeOnHigh": "1",
@@ -1023,7 +1023,7 @@ Values must be in range 1..255
     "pauseStartCommands": "",
     "pauseEndCommands": "",
     "distortionCorrection": "1",
-    "distortionCorrectionPoints": 5,
+    "distortionCorrectionPoints": 10,
     "distortionCorrectionR": 60,
     "distortionPermanent": "1",
     "distortionUpdateFrequency": 10,
@@ -1170,7 +1170,7 @@ Values must be in range 1..255
     "zHomeMinTemperature": 0,
     "zHomeXPos": 999999,
     "zHomeYPos": 999999,
-    "zHomeHeatHeight": 20,
+    "zHomeHeatHeight": 5,
     "zHomeHeatAll": "1",
     "zProbeZOffsetMode": 1,
     "zProbeZOffset": 0,
