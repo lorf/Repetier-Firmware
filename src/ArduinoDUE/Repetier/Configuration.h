@@ -331,7 +331,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z_HOME_DIR 1
 #define X_MAX_LENGTH 200
 #define Y_MAX_LENGTH 200
-#define Z_MAX_LENGTH 429.35
+#define Z_MAX_LENGTH 429.29
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
@@ -341,9 +341,9 @@ It also can add a delay to wait for spindle to run on full speed.
 
 
 #define DISTORTION_CORRECTION 1
-#define DISTORTION_CORRECTION_POINTS 10
+#define DISTORTION_CORRECTION_POINTS 12
 #define DISTORTION_LIMIT_TO 2
-#define DISTORTION_CORRECTION_R 60
+#define DISTORTION_CORRECTION_R 88
 #define DISTORTION_PERMANENT 1
 #define DISTORTION_UPDATE_FREQUENCY 10
 #define DISTORTION_START_DEGRADE 0.5
@@ -367,8 +367,8 @@ It also can add a delay to wait for spindle to run on full speed.
 
 // Delta settings
 #define DELTA_DIAGONAL_ROD 328 // mm
-#define DELTA_ALPHA_A 209.71
-#define DELTA_ALPHA_B 330.25
+#define DELTA_ALPHA_A 210.03
+#define DELTA_ALPHA_B 330.35
 #define DELTA_ALPHA_C 90
 #define DELTA_RADIUS_CORRECTION_A 0
 #define DELTA_RADIUS_CORRECTION_B 0
@@ -379,8 +379,8 @@ It also can add a delay to wait for spindle to run on full speed.
 #define END_EFFECTOR_HORIZONTAL_OFFSET 0
 #define CARRIAGE_HORIZONTAL_OFFSET 0
 #define DELTA_MAX_RADIUS 125
-#define ROD_RADIUS 164.77
-#define PRINTER_RADIUS 164.77
+#define ROD_RADIUS 164.66
+#define PRINTER_RADIUS 164.66
 #define DELTA_HOME_ON_POWER 0
 #define STEP_COUNTER
 #define DELTA_X_ENDSTOP_OFFSET_STEPS 0
@@ -516,7 +516,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_SWITCHING_DISTANCE 5
 #define Z_PROBE_REPETITIONS 1
 #define Z_PROBE_HEIGHT 0
-#define Z_PROBE_DELAY 0
+#define Z_PROBE_DELAY 100
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define Z_PROBE_RUN_AFTER_EVERY_PROBE ""
@@ -524,12 +524,12 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_MIN_TEMPERATURE 200
 #define FEATURE_AUTOLEVEL 1
 #define FEATURE_SOFTWARE_LEVELING 0
-#define Z_PROBE_X1 -60
-#define Z_PROBE_Y1 -60
-#define Z_PROBE_X2 60
-#define Z_PROBE_Y2 -60
-#define Z_PROBE_X3 -60
-#define Z_PROBE_Y3 60
+#define Z_PROBE_X1 -88
+#define Z_PROBE_Y1 -88
+#define Z_PROBE_X2 88
+#define Z_PROBE_Y2 -88
+#define Z_PROBE_X3 -88
+#define Z_PROBE_Y3 88
 #define BED_LEVELING_METHOD 1
 #define BED_CORRECTION_METHOD 0
 #define BED_LEVELING_GRID_SIZE 5
@@ -621,9 +621,9 @@ Values must be in range 1..255
 
 // After Escher3D wizard calibration
 #undef DELTA_X_ENDSTOP_OFFSET_STEPS
-#define DELTA_X_ENDSTOP_OFFSET_STEPS 1005
+#define DELTA_X_ENDSTOP_OFFSET_STEPS 863
 #undef DELTA_Y_ENDSTOP_OFFSET_STEPS
-#define DELTA_Y_ENDSTOP_OFFSET_STEPS 1115
+#define DELTA_Y_ENDSTOP_OFFSET_STEPS 530
 #undef DELTA_Z_ENDSTOP_OFFSET_STEPS
 #define DELTA_Z_ENDSTOP_OFFSET_STEPS 0
 
@@ -764,7 +764,7 @@ Values must be in range 1..255
     "zMinPos": 0,
     "xLength": 200,
     "yLength": 200,
-    "zLength": 429.35,
+    "zLength": 429.29,
     "alwaysCheckEndstops": "1",
     "disableX": "0",
     "disableY": "0",
@@ -779,9 +779,9 @@ Values must be in range 1..255
     "deltaSegmentsPerSecondPrint": 180,
     "deltaSegmentsPerSecondTravel": 70,
     "deltaDiagonalRod": 328,
-    "deltaHorizontalRadius": 164.77,
-    "deltaAlphaA": 209.71,
-    "deltaAlphaB": 330.25,
+    "deltaHorizontalRadius": 164.66,
+    "deltaAlphaA": 210.03,
+    "deltaAlphaB": 330.35,
     "deltaAlphaC": 90,
     "deltaDiagonalCorrA": 0,
     "deltaDiagonalCorrB": 0,
@@ -975,12 +975,12 @@ Values must be in range 1..255
     "zProbeStartScript": "",
     "zProbeFinishedScript": "",
     "featureAutolevel": "1",
-    "zProbeX1": -60,
-    "zProbeY1": -60,
-    "zProbeX2": 60,
-    "zProbeY2": -60,
-    "zProbeX3": -60,
-    "zProbeY3": 60,
+    "zProbeX1": -88,
+    "zProbeY1": -88,
+    "zProbeX2": 88,
+    "zProbeY2": -88,
+    "zProbeX3": -88,
+    "zProbeY3": 88,
     "zProbeSwitchingDistance": 5,
     "zProbeRepetitions": 1,
     "zProbeEveryPoint": "",
@@ -1023,8 +1023,8 @@ Values must be in range 1..255
     "pauseStartCommands": "",
     "pauseEndCommands": "",
     "distortionCorrection": "1",
-    "distortionCorrectionPoints": 10,
-    "distortionCorrectionR": 60,
+    "distortionCorrectionPoints": 12,
+    "distortionCorrectionR": 88,
     "distortionPermanent": "1",
     "distortionUpdateFrequency": 10,
     "distortionStartDegrade": 0.5,
@@ -1166,7 +1166,7 @@ Values must be in range 1..255
             "maxDistance": 20
         }
     ],
-    "manualConfig": "\/\/ Override config for STMicroelectronics M24256-BW EEPROM\n\n#undef TWI_CLOCK_FREQ\n#define TWI_CLOCK_FREQ 1000000\n#undef EEPROM_PAGE_SIZE\n#define EEPROM_PAGE_SIZE 64\n\n\/\/ After Escher3D wizard calibration\n#undef DELTA_X_ENDSTOP_OFFSET_STEPS\n#define DELTA_X_ENDSTOP_OFFSET_STEPS 1005\n#undef DELTA_Y_ENDSTOP_OFFSET_STEPS\n#define DELTA_Y_ENDSTOP_OFFSET_STEPS 1115\n#undef DELTA_Z_ENDSTOP_OFFSET_STEPS\n#define DELTA_Z_ENDSTOP_OFFSET_STEPS 0",
+    "manualConfig": "\/\/ Override config for STMicroelectronics M24256-BW EEPROM\n\n#undef TWI_CLOCK_FREQ\n#define TWI_CLOCK_FREQ 1000000\n#undef EEPROM_PAGE_SIZE\n#define EEPROM_PAGE_SIZE 64\n\n\/\/ After Escher3D wizard calibration\n#undef DELTA_X_ENDSTOP_OFFSET_STEPS\n#define DELTA_X_ENDSTOP_OFFSET_STEPS 863\n#undef DELTA_Y_ENDSTOP_OFFSET_STEPS\n#define DELTA_Y_ENDSTOP_OFFSET_STEPS 530\n#undef DELTA_Z_ENDSTOP_OFFSET_STEPS\n#define DELTA_Z_ENDSTOP_OFFSET_STEPS 0",
     "zHomeMinTemperature": 0,
     "zHomeXPos": 999999,
     "zHomeYPos": 999999,
@@ -1174,7 +1174,7 @@ Values must be in range 1..255
     "zHomeHeatAll": "1",
     "zProbeZOffsetMode": 1,
     "zProbeZOffset": 0,
-    "zProbeDelay": 0,
+    "zProbeDelay": 100,
     "uiBedCoating": "1",
     "langEN": "1",
     "langDE": "0",
