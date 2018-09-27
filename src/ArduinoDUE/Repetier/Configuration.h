@@ -318,11 +318,11 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DISABLE_Y 0
 #define DISABLE_Z 0
 #define DISABLE_E 0
-#define INVERT_X_DIR 0
+#define INVERT_X_DIR 1
 #define INVERT_X2_DIR 0
-#define INVERT_Y_DIR 0
+#define INVERT_Y_DIR 1
 #define INVERT_Y2_DIR 0
-#define INVERT_Z_DIR 0
+#define INVERT_Z_DIR 1
 #define INVERT_Z2_DIR 0
 #define INVERT_Z3_DIR 0
 #define INVERT_Z4_DIR 0
@@ -641,14 +641,14 @@ Values must be in range 1..255
     "xStepsPerMM": 640,
     "yStepsPerMM": 640,
     "zStepsPerMM": 640,
-    "xInvert": 0,
+    "xInvert": "1",
     "x2Invert": 0,
     "xInvertEnable": 0,
     "eepromMode": 1,
-    "yInvert": 0,
+    "yInvert": "1",
     "y2Invert": 0,
     "yInvertEnable": 0,
-    "zInvert": 0,
+    "zInvert": "1",
     "z2Invert": 0,
     "z3Invert": 0,
     "z4Invert": 0,
