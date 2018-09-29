@@ -331,7 +331,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z_HOME_DIR 1
 #define X_MAX_LENGTH 200
 #define Y_MAX_LENGTH 200
-#define Z_MAX_LENGTH 429.29
+#define Z_MAX_LENGTH 431.07
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
@@ -367,8 +367,8 @@ It also can add a delay to wait for spindle to run on full speed.
 
 // Delta settings
 #define DELTA_DIAGONAL_ROD 328 // mm
-#define DELTA_ALPHA_A 210.03
-#define DELTA_ALPHA_B 330.35
+#define DELTA_ALPHA_A 209.7
+#define DELTA_ALPHA_B 330.19
 #define DELTA_ALPHA_C 90
 #define DELTA_RADIUS_CORRECTION_A 0
 #define DELTA_RADIUS_CORRECTION_B 0
@@ -379,8 +379,8 @@ It also can add a delay to wait for spindle to run on full speed.
 #define END_EFFECTOR_HORIZONTAL_OFFSET 0
 #define CARRIAGE_HORIZONTAL_OFFSET 0
 #define DELTA_MAX_RADIUS 125
-#define ROD_RADIUS 164.66
-#define PRINTER_RADIUS 164.66
+#define ROD_RADIUS 164.89
+#define PRINTER_RADIUS 164.89
 #define DELTA_HOME_ON_POWER 0
 #define STEP_COUNTER
 #define DELTA_X_ENDSTOP_OFFSET_STEPS 0
@@ -621,9 +621,9 @@ Values must be in range 1..255
 
 // After Escher3D wizard calibration
 #undef DELTA_X_ENDSTOP_OFFSET_STEPS
-#define DELTA_X_ENDSTOP_OFFSET_STEPS 863
+#define DELTA_X_ENDSTOP_OFFSET_STEPS 1270
 #undef DELTA_Y_ENDSTOP_OFFSET_STEPS
-#define DELTA_Y_ENDSTOP_OFFSET_STEPS 530
+#define DELTA_Y_ENDSTOP_OFFSET_STEPS 1582
 #undef DELTA_Z_ENDSTOP_OFFSET_STEPS
 #define DELTA_Z_ENDSTOP_OFFSET_STEPS 0
 
@@ -764,7 +764,7 @@ Values must be in range 1..255
     "zMinPos": 0,
     "xLength": 200,
     "yLength": 200,
-    "zLength": 429.29,
+    "zLength": 431.07,
     "alwaysCheckEndstops": "1",
     "disableX": "0",
     "disableY": "0",
@@ -779,9 +779,9 @@ Values must be in range 1..255
     "deltaSegmentsPerSecondPrint": 180,
     "deltaSegmentsPerSecondTravel": 70,
     "deltaDiagonalRod": 328,
-    "deltaHorizontalRadius": 164.66,
-    "deltaAlphaA": 210.03,
-    "deltaAlphaB": 330.35,
+    "deltaHorizontalRadius": 164.89,
+    "deltaAlphaA": 209.7,
+    "deltaAlphaB": 330.19,
     "deltaAlphaC": 90,
     "deltaDiagonalCorrA": 0,
     "deltaDiagonalCorrB": 0,
@@ -1166,7 +1166,7 @@ Values must be in range 1..255
             "maxDistance": 20
         }
     ],
-    "manualConfig": "\/\/ Override config for STMicroelectronics M24256-BW EEPROM\n\n#undef TWI_CLOCK_FREQ\n#define TWI_CLOCK_FREQ 1000000\n#undef EEPROM_PAGE_SIZE\n#define EEPROM_PAGE_SIZE 64\n\n\/\/ After Escher3D wizard calibration\n#undef DELTA_X_ENDSTOP_OFFSET_STEPS\n#define DELTA_X_ENDSTOP_OFFSET_STEPS 863\n#undef DELTA_Y_ENDSTOP_OFFSET_STEPS\n#define DELTA_Y_ENDSTOP_OFFSET_STEPS 530\n#undef DELTA_Z_ENDSTOP_OFFSET_STEPS\n#define DELTA_Z_ENDSTOP_OFFSET_STEPS 0",
+    "manualConfig": "\/\/ Override config for STMicroelectronics M24256-BW EEPROM\n\n#undef TWI_CLOCK_FREQ\n#define TWI_CLOCK_FREQ 1000000\n#undef EEPROM_PAGE_SIZE\n#define EEPROM_PAGE_SIZE 64\n\n\/\/ After Escher3D wizard calibration\n#undef DELTA_X_ENDSTOP_OFFSET_STEPS\n#define DELTA_X_ENDSTOP_OFFSET_STEPS 1270\n#undef DELTA_Y_ENDSTOP_OFFSET_STEPS\n#define DELTA_Y_ENDSTOP_OFFSET_STEPS 1582\n#undef DELTA_Z_ENDSTOP_OFFSET_STEPS\n#define DELTA_Z_ENDSTOP_OFFSET_STEPS 0",
     "zHomeMinTemperature": 0,
     "zHomeXPos": 999999,
     "zHomeYPos": 999999,
