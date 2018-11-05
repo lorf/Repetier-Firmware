@@ -27,7 +27,7 @@
    to see and change the data. You can also upload it to newer/older versions. The system
    will silently add new options, so compilation continues to work.
 
-   This file is optimized for version 1.0.2
+   This file is optimized for version 1.0.3
    generator: http://www.repetier.com/firmware/dev/
 
    If you are in doubt which named functions use which pins on your board, please check the
@@ -331,7 +331,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z_HOME_DIR 1
 #define X_MAX_LENGTH 200
 #define Y_MAX_LENGTH 200
-#define Z_MAX_LENGTH 431.07
+#define Z_MAX_LENGTH 430.21
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
@@ -366,9 +366,9 @@ It also can add a delay to wait for spindle to run on full speed.
 #define EXACT_DELTA_MOVES 1
 
 // Delta settings
-#define DELTA_DIAGONAL_ROD 328 // mm
-#define DELTA_ALPHA_A 209.7
-#define DELTA_ALPHA_B 330.19
+#define DELTA_DIAGONAL_ROD 329.3 // mm
+#define DELTA_ALPHA_A 209.68
+#define DELTA_ALPHA_B 330.11
 #define DELTA_ALPHA_C 90
 #define DELTA_RADIUS_CORRECTION_A 0
 #define DELTA_RADIUS_CORRECTION_B 0
@@ -379,8 +379,8 @@ It also can add a delay to wait for spindle to run on full speed.
 #define END_EFFECTOR_HORIZONTAL_OFFSET 0
 #define CARRIAGE_HORIZONTAL_OFFSET 0
 #define DELTA_MAX_RADIUS 125
-#define ROD_RADIUS 164.89
-#define PRINTER_RADIUS 164.89
+#define ROD_RADIUS 165.34
+#define PRINTER_RADIUS 165.34
 #define DELTA_HOME_ON_POWER 0
 #define STEP_COUNTER
 #define DELTA_X_ENDSTOP_OFFSET_STEPS 0
@@ -515,6 +515,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_XY_SPEED 150
 #define Z_PROBE_SWITCHING_DISTANCE 5
 #define Z_PROBE_REPETITIONS 1
+#define Z_PROBE_USE_MEDIAN 0
 #define Z_PROBE_HEIGHT 0
 #define Z_PROBE_DELAY 100
 #define Z_PROBE_START_SCRIPT ""
@@ -552,6 +553,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define SDSUPPORT 1
 #undef SDCARDDETECT
 #define SDCARDDETECT -1
+#undef SDCARDDETECTINVERTED
 #define SDCARDDETECTINVERTED 0
 #endif
 #define SD_EXTENDED_DIR 1 /** Show extended directory including file length. Don't use this with Pronterface! */
@@ -621,11 +623,11 @@ Values must be in range 1..255
 
 // After Escher3D wizard calibration
 #undef DELTA_X_ENDSTOP_OFFSET_STEPS
-#define DELTA_X_ENDSTOP_OFFSET_STEPS 1270
+#define DELTA_X_ENDSTOP_OFFSET_STEPS 1136
 #undef DELTA_Y_ENDSTOP_OFFSET_STEPS
-#define DELTA_Y_ENDSTOP_OFFSET_STEPS 1582
+#define DELTA_Y_ENDSTOP_OFFSET_STEPS 0
 #undef DELTA_Z_ENDSTOP_OFFSET_STEPS
-#define DELTA_Z_ENDSTOP_OFFSET_STEPS 0
+#define DELTA_Z_ENDSTOP_OFFSET_STEPS 492
 
 #endif
 
@@ -764,7 +766,7 @@ Values must be in range 1..255
     "zMinPos": 0,
     "xLength": 200,
     "yLength": 200,
-    "zLength": 431.07,
+    "zLength": 430.21,
     "alwaysCheckEndstops": "1",
     "disableX": "0",
     "disableY": "0",
@@ -778,10 +780,10 @@ Values must be in range 1..255
     "zEndstopBack": 1,
     "deltaSegmentsPerSecondPrint": 180,
     "deltaSegmentsPerSecondTravel": 70,
-    "deltaDiagonalRod": 328,
-    "deltaHorizontalRadius": 164.89,
-    "deltaAlphaA": 209.7,
-    "deltaAlphaB": 330.19,
+    "deltaDiagonalRod": 329.3,
+    "deltaHorizontalRadius": 165.34,
+    "deltaAlphaA": 209.68,
+    "deltaAlphaB": 330.11,
     "deltaAlphaC": 90,
     "deltaDiagonalCorrA": 0,
     "deltaDiagonalCorrB": 0,
@@ -983,6 +985,7 @@ Values must be in range 1..255
     "zProbeY3": 70,
     "zProbeSwitchingDistance": 5,
     "zProbeRepetitions": 1,
+    "zProbeMedian": "0",
     "zProbeEveryPoint": "",
     "sdSupport": "1",
     "sdCardDetectPin": -1,
@@ -1166,7 +1169,7 @@ Values must be in range 1..255
             "maxDistance": 20
         }
     ],
-    "manualConfig": "\/\/ Override config for STMicroelectronics M24256-BW EEPROM\n\n#undef TWI_CLOCK_FREQ\n#define TWI_CLOCK_FREQ 1000000\n#undef EEPROM_PAGE_SIZE\n#define EEPROM_PAGE_SIZE 64\n\n\/\/ After Escher3D wizard calibration\n#undef DELTA_X_ENDSTOP_OFFSET_STEPS\n#define DELTA_X_ENDSTOP_OFFSET_STEPS 1270\n#undef DELTA_Y_ENDSTOP_OFFSET_STEPS\n#define DELTA_Y_ENDSTOP_OFFSET_STEPS 1582\n#undef DELTA_Z_ENDSTOP_OFFSET_STEPS\n#define DELTA_Z_ENDSTOP_OFFSET_STEPS 0",
+    "manualConfig": "\/\/ Override config for STMicroelectronics M24256-BW EEPROM\n\n#undef TWI_CLOCK_FREQ\n#define TWI_CLOCK_FREQ 1000000\n#undef EEPROM_PAGE_SIZE\n#define EEPROM_PAGE_SIZE 64\n\n\/\/ After Escher3D wizard calibration\n#undef DELTA_X_ENDSTOP_OFFSET_STEPS\n#define DELTA_X_ENDSTOP_OFFSET_STEPS 1136\n#undef DELTA_Y_ENDSTOP_OFFSET_STEPS\n#define DELTA_Y_ENDSTOP_OFFSET_STEPS 0\n#undef DELTA_Z_ENDSTOP_OFFSET_STEPS\n#define DELTA_Z_ENDSTOP_OFFSET_STEPS 492",
     "zHomeMinTemperature": 0,
     "zHomeXPos": 999999,
     "zHomeYPos": 999999,
