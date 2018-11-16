@@ -180,9 +180,9 @@
 #define HEATED_BED_PID_MAX 255
 #define HEATED_BED_DECOUPLE_TEST_PERIOD 300000
 #define MIN_EXTRUDER_TEMP 150
-#define MAXTEMP 275
+#define MAXTEMP 290
 #define MIN_DEFECT_TEMPERATURE -10
-#define MAX_DEFECT_TEMPERATURE 290
+#define MAX_DEFECT_TEMPERATURE 310
 #define MILLISECONDS_PREHEAT_TIME 30000
 
 // ##########################################################################################
@@ -944,9 +944,9 @@ Values must be in range 1..255
     "skipM109Within": 2,
     "extruderFanCoolTemp": 50,
     "minTemp": 150,
-    "maxTemp": 275,
+    "maxTemp": 290,
     "minDefectTemp": -10,
-    "maxDefectTemp": 290,
+    "maxDefectTemp": 310,
     "arcSupport": "1",
     "featureMemoryPositionWatchdog": "1",
     "forceChecksum": "0",
