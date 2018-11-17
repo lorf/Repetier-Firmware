@@ -331,7 +331,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z_HOME_DIR 1
 #define X_MAX_LENGTH 200
 #define Y_MAX_LENGTH 200
-#define Z_MAX_LENGTH 429.51
+#define Z_MAX_LENGTH 429.508
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
@@ -516,7 +516,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_SWITCHING_DISTANCE 5
 #define Z_PROBE_REPETITIONS 1
 #define Z_PROBE_USE_MEDIAN 0
-#define Z_PROBE_HEIGHT -0.1
+#define Z_PROBE_HEIGHT -0.05
 #define Z_PROBE_DELAY 100
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
@@ -766,7 +766,7 @@ Values must be in range 1..255
     "zMinPos": 0,
     "xLength": 200,
     "yLength": 200,
-    "zLength": 429.51,
+    "zLength": 429.508,
     "alwaysCheckEndstops": "1",
     "disableX": "0",
     "disableY": "0",
@@ -973,7 +973,7 @@ Values must be in range 1..255
     "zProbeWaitBeforeTest": "0",
     "zProbeSpeed": 10,
     "zProbeXYSpeed": 150,
-    "zProbeHeight": -0.1,
+    "zProbeHeight": -0.05,
     "zProbeStartScript": "",
     "zProbeFinishedScript": "",
     "featureAutolevel": "1",
