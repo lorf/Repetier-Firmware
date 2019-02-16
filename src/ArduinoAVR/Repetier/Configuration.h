@@ -120,7 +120,7 @@
 #define EXT0_JAM_PIN -1
 #define EXT0_JAM_PULLUP 0
 
-#define FEATURE_RETRACTION 1
+#define FEATURE_RETRACTION 0
 #define AUTORETRACT_ENABLED 0
 #define RETRACTION_LENGTH 2.5
 #define RETRACTION_LONG_LENGTH 2.5
@@ -478,7 +478,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 
 #define Z_PROBE_Z_OFFSET 0
 #define Z_PROBE_Z_OFFSET_MODE 1
-#define UI_BED_COATING 1
+#define UI_BED_COATING 0
 #define FEATURE_Z_PROBE 1
 #define EXTRUDER_IS_Z_PROBE 0
 #define Z_PROBE_DISABLE_HEATERS 0
@@ -534,7 +534,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #undef SDCARDDETECTINVERTED
 #define SDCARDDETECTINVERTED 0
 #endif
-#define SD_EXTENDED_DIR 1 /** Show extended directory including file length. Don't use this with Pronterface! */
+#define SD_EXTENDED_DIR 0 /** Show extended directory including file length. Don't use this with Pronterface! */
 #define SD_RUN_ON_STOP ""
 #define SD_STOP_HEATER_AND_MOTORS_ON_STOP 1
 #define ARC_SUPPORT 0
@@ -1062,7 +1062,7 @@ Values must be in range 1..255
     "arcSupport": "0",
     "featureMemoryPositionWatchdog": "0",
     "forceChecksum": "0",
-    "sdExtendedDir": "1",
+    "sdExtendedDir": "0",
     "featureFanControl": "1",
     "fanPin": "ORIG_FAN_PIN",
     "featureFan2Control": "0",
@@ -1151,7 +1151,7 @@ Values must be in range 1..255
     "distortionYMax": 77,
     "sdRunOnStop": "",
     "sdStopHeaterMotorsOnStop": "1",
-    "featureRetraction": "1",
+    "featureRetraction": "0",
     "autoretractEnabled": "0",
     "retractionLength": 3,
     "retractionLongLength": 13,
@@ -1290,7 +1290,7 @@ Values must be in range 1..255
     "zProbeZOffsetMode": 1,
     "zProbeZOffset": 0,
     "zProbeDelay": 0,
-    "uiBedCoating": "1",
+    "uiBedCoating": "0",
     "langEN": "1",
     "langDE": "0",
     "langNL": "0",
