@@ -27,7 +27,7 @@
    to see and change the data. You can also upload it to newer/older versions. The system
    will silently add new options, so compilation continues to work.
 
-   This file is optimized for version 1.0.3
+   This file is optimized for version 1.0.3dev
    generator: http://www.repetier.com/firmware/dev/
 
    If you are in doubt which named functions use which pins on your board, please check the
@@ -44,6 +44,7 @@
 
 // ################ END MANUAL SETTINGS ##########################
 
+#define HOST_RESCUE 0
 #undef FAN_BOARD_PIN
 #define FAN_BOARD_PIN -1
 #define BOARD_FAN_SPEED 255
@@ -157,6 +158,7 @@
 #define USER_THERMISTORTABLE2 {}
 #define GENERIC_THERM_VREF 5
 #define GENERIC_THERM_NUM_ENTRIES 33
+#define TEMP_GAIN 0
 #define HEATER_PWM_SPEED 0
 #define COOLER_PWM_SPEED 0
 
@@ -556,6 +558,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define LANGUAGE_CZ_ACTIVE 0
 #define LANGUAGE_PL_ACTIVE 0
 #define LANGUAGE_TR_ACTIVE 0
+#define LANGUAGE_RU_ACTIVE 0
 #define UI_PRINTER_NAME "A8-B"
 #define UI_PRINTER_COMPANY "Anet"
 #define UI_PAGES_DURATION 4000
@@ -1301,6 +1304,7 @@ Values must be in range 1..255
     "langCZ": "0",
     "langPL": "0",
     "langTR": "0",
+    "langRU": "0",
     "interpolateAccelerationWithZ": 1,
     "accelerationFactorTop": 50,
     "bendingCorrectionA": 0,
@@ -1379,12 +1383,16 @@ Values must be in range 1..255
     "TMC2130CSE0": -1,
     "TMC2130CSE1": -1,
     "TMC2130CSE2": -1,
+    "TMC2130CSE3": -1,
+    "TMC2130CSE4": -1,
     "TMC2130CurrentX": 1000,
     "TMC2130CurrentY": 1000,
     "TMC2130CurrentZ": 1000,
     "TMC2130CurrentE0": 1000,
     "TMC2130CurrentE1": 1000,
     "TMC2130CurrentE2": 1000,
+    "TMC2130CurrentE3": 1000,
+    "TMC2130CurrentE4": 1000,
     "TMC2130CoolstepTresholdX": 300,
     "TMC2130CoolstepTresholdY": 300,
     "TMC2130CoolstepTresholdZ": 300,
@@ -1394,9 +1402,16 @@ Values must be in range 1..255
     "microstepE0": 16,
     "microstepE1": 16,
     "microstepE2": 16,
+    "microstepE3": 16,
+    "microstepE4": 16,
     "parkPosX": 0,
     "parkPosY": 220,
     "parkPosZ": 10,
+    "emergencyParser": -1,
+    "hostRescue": "0",
+    "MAX31855SwCS": -1,
+    "MAX31855SwCLK": -1,
+    "tempGain": "0",
     "uiAnimation": "0",
     "uiPresetBedTempPLA": 60,
     "uiPresetBedABS": 110,
@@ -1411,8 +1426,9 @@ Values must be in range 1..255
     "hasUser1": false,
     "hasUser2": false,
     "numExtruder": 1,
-    "version": 100.2,
-    "primaryPortName": ""
+    "version": 100.4,
+    "primaryPortName": "",
+    "hasMAX31855SW": false
 }
 ========== End configuration string ==========
 
