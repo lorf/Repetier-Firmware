@@ -1,9 +1,16 @@
+try:
+    import configparser
+except ImportError:
+    import ConfigParser as configparser
+
 Import('env')
 from base64 import b64decode
 
-host = b64decode(ARGUMENTS.get("REMOTEUPLOAD_HOST"))
-port = b64decode(ARGUMENTS.get("REMOTEUPLOAD_PORT"))
-proto = b64decode(ARGUMENTS.get("REMOTEUPLOAD_PROTOCOL"))
+config = configparser.ConfigParser()
+config.read("platformio.ini")
+host = config.get("env:anet-v1.0", "remoteupload_host")
+port = config.get("env:anet-v1.0", "remoteupload_port")
+proto = config.get("env:anet-v1.0", "remoteupload_protocol")
 
 env.Replace(
     COPYFILESCMD='scp $BUILD_DIR/firmware.hex ' + host + ':/tmp/',
