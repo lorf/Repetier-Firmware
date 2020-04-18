@@ -376,7 +376,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define HOMING_FEEDRATE_X 100
 #define HOMING_FEEDRATE_Y 100
 #define HOMING_FEEDRATE_Z 4
-#define HOMING_ORDER HOME_ORDER_XYZ
+#define HOMING_ORDER HOME_ORDER_XYTZ
 #define ZHOME_PRE_RAISE 0
 #define ZHOME_PRE_RAISE_DISTANCE 10
 #define RAISE_Z_ON_TOOLCHANGE 0
@@ -859,7 +859,7 @@ Values must be in range 1..255
     "hasHeatedBed": "1",
     "enableZProbing": "1",
     "extrudeMaxLength": 160,
-    "homeOrder": "HOME_ORDER_XYZ",
+    "homeOrder": "HOME_ORDER_XYTZ",
     "featureController": 24,
     "uiPrinterName": "A8-B",
     "uiPrinterCompany": "Anet",
